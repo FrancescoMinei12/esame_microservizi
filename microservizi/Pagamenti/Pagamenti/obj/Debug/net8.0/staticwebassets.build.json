@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TBgB9rRhJENWvoGU8DoZ7tB2wPZvWShIWWSq735jK2c=",
+  "Source": "Pagamenti",
+  "BasePath": "_content/Pagamenti",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
