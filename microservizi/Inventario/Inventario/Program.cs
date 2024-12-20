@@ -1,4 +1,11 @@
+using Inventario.Business;
+// using Inventario.Business.Abstractions;
+using Inventario.Repository;
+// using Inventario.Inventario.Abstractions;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+string type = "";
 
 // Add services to the container.
 
