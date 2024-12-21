@@ -40,5 +40,16 @@ services:
       - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
     depends_on:
       - zookeeper
+      
+  inventario:
+    build:
+      context: ../
+      dockerfile: ./microservizi/Inventario/Inventario/Dockerfile
+    pull_policy: always
+    depends_on:
+      - mssql-server
+    environment:
+      TZ: Europe/Rome
+
 volumes:
   mssql-server:
