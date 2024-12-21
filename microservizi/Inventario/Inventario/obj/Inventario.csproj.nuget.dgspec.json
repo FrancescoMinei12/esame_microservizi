@@ -248,9 +248,6 @@
             "projectReferences": {
               "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Inventario.Business.csproj": {
                 "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Inventario.Business.csproj"
-              },
-              "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj": {
-                "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj"
               }
             }
           }

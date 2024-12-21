@@ -12,13 +12,6 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         await repository.CreateArticoloAsync(articoloDto.Nome, articoloDto.Descrizione, articoloDto.Prezzo, articoloDto.QuantitaDisponibile, articoloDto.CodiceSKU, articoloDto.Categoria, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
-
-    public async Task<ArticoloDto> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default)
-    {
-        // fixare con client
-        return await Task.FromResult<ArticoloDto>(new ArticoloDto());
-    }
-
     public async Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default)
     {
         var articolo = await repository.ReadArticoloAsync(id, cancellationToken);
@@ -34,5 +27,11 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
             CodiceSKU = articolo.CodiceSKU,
             Categoria = articolo.Categoria,
         };
+    }
+
+    public async Task<ArticoloDto> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default)
+    {
+        // fixare con client
+        return await Task.FromResult<ArticoloDto>(new ArticoloDto());
     }
 }

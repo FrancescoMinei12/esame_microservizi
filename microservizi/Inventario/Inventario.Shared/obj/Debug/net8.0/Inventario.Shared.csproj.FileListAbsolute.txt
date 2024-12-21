@@ -1,0 +1,12 @@
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\bin\Debug\net8.0\Inventario.Shared.deps.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\bin\Debug\net8.0\Inventario.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\bin\Debug\net8.0\Inventario.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.AssemblyInfoInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.AssemblyInfo.cs
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.csproj.CoreCompileInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.sourcelink.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\refint\Inventario.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\Inventario.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario.Shared\obj\Debug\net8.0\ref\Inventario.Shared.dll

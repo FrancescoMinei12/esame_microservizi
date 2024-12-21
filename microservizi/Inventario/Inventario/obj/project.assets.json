@@ -3379,7 +3379,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Inventario.Business >= 1.0.0",
-      "Inventario.Repository >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
@@ -3420,9 +3419,6 @@
           "projectReferences": {
             "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Inventario.Business.csproj": {
               "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Inventario.Business.csproj"
-            },
-            "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj": {
-              "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj"
             }
           }
         }
