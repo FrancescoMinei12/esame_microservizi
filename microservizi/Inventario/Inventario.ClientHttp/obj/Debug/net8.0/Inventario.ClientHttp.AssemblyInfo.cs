@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inventario.ClientHttp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7feda31a2bf5fe86987e4c655d6225ebfdf2fe94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3d2dea5c6507c416ca61811f73e0306c9ac5140")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inventario.ClientHttp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inventario.ClientHttp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

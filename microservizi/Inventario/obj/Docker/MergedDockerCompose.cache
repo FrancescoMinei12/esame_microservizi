@@ -1,0 +1,19 @@
+name: dockercompose6987192826510033684
+services:
+  inventario:
+    build:
+      context: C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario
+      dockerfile: Inventario/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: inventario
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose6987192826510033684_default

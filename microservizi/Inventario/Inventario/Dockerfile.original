@@ -1,0 +1,26 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER $APP_UID
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["microservizi/Inventario/Inventario/Inventario.csproj", "Inventario/"]
+COPY ["microservizi/Inventario/Inventario.Business/Inventario.Business.csproj", "Inventario.Business/"]
+COPY ["microservizi/Inventario/Inventario.Repository/Inventario.Repository.csproj", "Inventario.Repository/"]
+COPY ["microservizi/Inventario/Inventario.Shared/Inventario.Shared.csproj", "Inventario.Shared/"]
+RUN dotnet restore "microservizi/Inventario/Inventario.csproj"
+COPY . .
+WORKDIR "/src/Inventario"
+RUN dotnet build "./Inventario.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./Inventario.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Inventario.dll"]

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.Repository", "In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.ClientHttp", "Inventario.ClientHttp\Inventario.ClientHttp.csproj", "{F041D0E6-0AF6-46CB-AB65-8310B18183E6}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5704CA67-17DD-4A85-9F53-FCAD32256F1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F041D0E6-0AF6-46CB-AB65-8310B18183E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F041D0E6-0AF6-46CB-AB65-8310B18183E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F041D0E6-0AF6-46CB-AB65-8310B18183E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5704CA67-17DD-4A85-9F53-FCAD32256F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5704CA67-17DD-4A85-9F53-FCAD32256F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5704CA67-17DD-4A85-9F53-FCAD32256F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5704CA67-17DD-4A85-9F53-FCAD32256F1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

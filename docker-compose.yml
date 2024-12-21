@@ -43,8 +43,8 @@ services:
       
   inventario:
     build:
-      context: ../
-      dockerfile: ./microservizi/Inventario/Inventario/Dockerfile
+      context: .
+      dockerfile: microservizi/Inventario/Inventario/Dockerfile
     pull_policy: always
     depends_on:
       - mssql-server
