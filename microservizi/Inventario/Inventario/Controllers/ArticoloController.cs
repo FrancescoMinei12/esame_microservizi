@@ -32,8 +32,9 @@ public class ArticoloController : ControllerBase
     }
 
     [HttpGet(Name = "GetCodiceSku")]
-    public async Task<ArticoloDto> GetCodiceSku(string codiceSku)
+    public async Task<ActionResult<ArticoloDto?>> GetCodiceSku(string codiceSku)
     {
-        return await _business.GetSkuAsync(codiceSku);
+        var articolo = await _business.GetSkuAsync(codiceSku);
+        return new JsonResult(articolo);
     }
 }

@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Inventario/Dockerfile
+
   mssql-server:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
     environment:
@@ -14,6 +15,7 @@ services:
       - 2433:1433
     volumes:
       - "mssql-server:/var/opt/mssql"
+
   adminer:
     image: adminer:4.8.1
     ports:

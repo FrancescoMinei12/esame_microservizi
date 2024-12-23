@@ -24,6 +24,11 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
 
     public async Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken)
     {
-        return await inventarioDbContext.Articoli.Where(a => a.Id == id).FirstOrDefaultAsync(cancellationToken);
+        return await inventarioDbContext.Articoli.Where(a => a.Id == id).SingleOrDefaultAsync(cancellationToken);
+    }
+
+    public async Task<Articolo?> ReadArticoloAsync(string codiceSKU, CancellationToken cancellationToken)
+    {
+        return await inventarioDbContext.Articoli.Where(a => a.CodiceSKU == codiceSKU).SingleOrDefaultAsync(cancellationToken);
     }
 }

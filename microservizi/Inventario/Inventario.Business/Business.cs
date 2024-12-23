@@ -29,9 +29,20 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         };
     }
 
-    public async Task<ArticoloDto> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default)
+    public async Task<ArticoloDto?> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default)
     {
-        // fixare con client
-        return await Task.FromResult<ArticoloDto>(new ArticoloDto());
+        var articolo = await repository.ReadArticoloAsync(CodiceSKU, cancellationToken);
+        if (articolo == null)
+            return null;
+
+        return new ArticoloDto
+        {
+            Nome = articolo.Nome,
+            Descrizione = articolo.Descrizione,
+            Prezzo = articolo.Prezzo,
+            QuantitaDisponibile = articolo.QuantitaDisponibile,
+            CodiceSKU = articolo.CodiceSKU,
+            Categoria = articolo.Categoria,
+        };
     }
 }

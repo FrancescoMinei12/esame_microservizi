@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|solutionrelative:inventario\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|solutionrelative:inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\inventariodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\inventariodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario\\controllers\\articolocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|solutionrelative:inventario\\controllers\\articolocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|solutionrelative:inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|solutionrelative:inventario.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Dockerfile",
-              "RelativeDocumentMoniker": "Inventario\\Dockerfile",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Dockerfile",
-              "RelativeToolTip": "Inventario\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-21T13:29:53.242Z",
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Abstraction\\IRepository.cs",
+              "RelativeDocumentMoniker": "Inventario.Repository\\Abstraction\\IRepository.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Abstraction\\IRepository.cs",
+              "RelativeToolTip": "Inventario.Repository\\Abstraction\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T17:08:04.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeDocumentMoniker": "Inventario.Business\\Business.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeToolTip": "Inventario.Business\\Business.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwCEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T17:07:23.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "Inventario.Repository\\Repository.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Repository.cs",
+              "RelativeToolTip": "Inventario.Repository\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:46:37.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBusiness.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Abstractions\\IBusiness.cs",
+              "RelativeDocumentMoniker": "Inventario.Business\\Abstractions\\IBusiness.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Abstractions\\IBusiness.cs",
+              "RelativeToolTip": "Inventario.Business\\Abstractions\\IBusiness.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:46:06.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventarioDbContext.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\InventarioDbContext.cs",
+              "RelativeDocumentMoniker": "Inventario.Repository\\InventarioDbContext.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\InventarioDbContext.cs",
+              "RelativeToolTip": "Inventario.Repository\\InventarioDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:26:18.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Program.cs",
+              "RelativeDocumentMoniker": "Inventario\\Program.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Program.cs",
+              "RelativeToolTip": "Inventario\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T17:02:25.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArticoloController.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Controllers\\ArticoloController.cs",
+              "RelativeDocumentMoniker": "Inventario\\Controllers\\ArticoloController.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario\\Controllers\\ArticoloController.cs",
+              "RelativeToolTip": "Inventario\\Controllers\\ArticoloController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:46:55.093Z",
               "EditorCaption": ""
             }
           ]

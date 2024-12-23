@@ -7,6 +7,8 @@ public class InventarioDbContext(DbContextOptions<InventarioDbContext> dbContext
 {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Articolo>().ToTable("Articoli");
+
         modelBuilder.Entity<Articolo>().HasKey(x => x.Id);
         modelBuilder.Entity<Articolo>().Property(e => e.Id).ValueGeneratedOnAdd();
     }
