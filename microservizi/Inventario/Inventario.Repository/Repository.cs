@@ -31,4 +31,16 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
     {
         return await inventarioDbContext.Articoli.Where(a => a.CodiceSKU == codiceSKU).SingleOrDefaultAsync(cancellationToken);
     }
+
+    public async Task<List<Articolo?>> ReadArticoloCategoria(string categoria, CancellationToken cancellationToken = default)
+    {
+        return await inventarioDbContext.Articoli
+            .Where(a => a.Categoria == categoria)
+            .ToListAsync(cancellationToken);
+    }
+
+    public IQueryable<Articolo> ReadArticoli()
+    {
+        return inventarioDbContext.Articoli;
+    }
 }

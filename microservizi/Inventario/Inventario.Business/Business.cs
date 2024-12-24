@@ -45,4 +45,23 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
             Categoria = articolo.Categoria,
         };
     }
+
+    public async Task<List<ArticoloDto?>> GetCategoriaAsync(string categoria, CancellationToken cancellationToken = default)
+    {
+        var articoli = await repository.ReadArticoloCategoria(categoria, cancellationToken);
+        var articoliDto = articoli
+        .Where(a => a != null) // Ignora articoli null (se esistono)
+        .Select(a => new ArticoloDto
+        {
+            Id = a!.Id,
+            Nome = a.Nome,
+            Descrizione = a.Descrizione,
+            Prezzo = a.Prezzo,
+            QuantitaDisponibile = a.QuantitaDisponibile,
+            CodiceSKU = a.CodiceSKU,
+            Categoria = a.Categoria
+        })
+        .ToList();
+        return articoliDto;
+    }
 }

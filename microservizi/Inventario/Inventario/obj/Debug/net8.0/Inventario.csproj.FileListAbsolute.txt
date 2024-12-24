@@ -95,3 +95,4 @@ C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventa
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario\bin\Debug\net8.0\Inventario.Repository.pdb
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario\bin\Debug\net8.0\Inventario.Shared.pdb
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario\obj\Debug\net8.0\Inventario.sourcelink.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Inventario\Inventario\bin\Debug\net8.0\AutoMapper.dll

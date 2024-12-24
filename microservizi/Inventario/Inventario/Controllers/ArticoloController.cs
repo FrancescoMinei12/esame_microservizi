@@ -37,4 +37,15 @@ public class ArticoloController : ControllerBase
         var articolo = await _business.GetSkuAsync(codiceSku);
         return new JsonResult(articolo);
     }
+
+    [HttpGet(Name = "GetCategoria")]
+    public async Task<ActionResult<List<ArticoloDto>>> GetCategoria(string categoria)
+    {
+        var articoli = await _business.GetCategoriaAsync(categoria);
+        if (articoli == null || !articoli.Any())
+        {
+            return NotFound($"Nessun articolo trovato per la categoria '{categoria}'.");
+        }
+        return Ok(articoli);
+    }
 }
