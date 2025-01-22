@@ -15,5 +15,7 @@ public class Articolo
     public int QuantitaDisponibile { get; set; }
     public string CodiceSKU { get; set; } 
     public string Categoria { get; set; } 
-    public DateTime DataInserimento { get; set; } // Data di inserimento dell'articolo in magazzino
+    public DateTime DataInserimento { get; set; } 
+    public int Fk_fornitore {  get; set; }
+    public Fornitore Fornitore { get; set; } 
 }
