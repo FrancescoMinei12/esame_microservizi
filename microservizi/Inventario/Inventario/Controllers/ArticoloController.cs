@@ -52,6 +52,12 @@ public class ArticoloController : ControllerBase
         return Ok(articoli);
     }
 
+    [HttpGet(Name = "GetAllArticoli")]
+    public async Task<ActionResult<List<ArticoloDto>>> GetAllArticoli(CancellationToken cancellationToken = default)
+    {
+        var articoli = await _business.ReadAllArticoli();
+        return Ok(articoli);
+    }
 
     [HttpPut(Name = "UpdateArticolo")]
     public async Task<ActionResult> UpdateArticolo(int id, [FromBody] ArticoloDto articoloDto, CancellationToken cancellationToken = default)
@@ -62,26 +68,16 @@ public class ArticoloController : ControllerBase
         }
         try
         {
-            await _business.UpdateArticoloAsync(
-                id,
-                articoloDto.Nome,
-                articoloDto.Descrizione,
-                articoloDto.Prezzo,
-                articoloDto.QuantitaDisponibile,
-                articoloDto.CodiceSKU,
-                articoloDto.Categoria,
-                articoloDto.Fk_fornitore,
-                cancellationToken
-            );
+            await _business.UpdateArticoloAsync(id, articoloDto.Nome, articoloDto.Descrizione, articoloDto.Prezzo, articoloDto.QuantitaDisponibile, articoloDto.CodiceSKU, articoloDto.Categoria, articoloDto.Fk_fornitore, cancellationToken);
             return Ok($"Articolo con ID '{id}' aggiornato correttamente!");
         }
         catch (Exception ex)
         {
+            Console.WriteLine($"Errore durante l'aggiornamento dell'articolo: {ex.Message}");
             _logger.LogError(ex, $"Errore durante l'aggiornamento dell'articolo con ID '{id}'.");
             return StatusCode(500, "Errore interno del server.");
         }
     }
-
 
     [HttpDelete(Name = "DeleteArticolo")]
     public async Task<ActionResult> DeleteArticolo(int id)

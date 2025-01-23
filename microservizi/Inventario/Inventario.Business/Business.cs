@@ -29,7 +29,8 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
             Prezzo = articolo.Prezzo,
             QuantitaDisponibile = articolo.QuantitaDisponibile,
             CodiceSKU = articolo.CodiceSKU,
-            Categoria = articolo.Categoria
+            Categoria = articolo.Categoria,
+            Fk_fornitore = articolo.Fk_fornitore
         };
     }
 
@@ -47,7 +48,8 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
             Prezzo = articolo.Prezzo,
             QuantitaDisponibile = articolo.QuantitaDisponibile,
             CodiceSKU = articolo.CodiceSKU,
-            Categoria = articolo.Categoria
+            Categoria = articolo.Categoria,
+            Fk_fornitore = articolo.Fk_fornitore
         };
     }
 
@@ -64,7 +66,8 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
                 Prezzo = a.Prezzo,
                 QuantitaDisponibile = a.QuantitaDisponibile,
                 CodiceSKU = a.CodiceSKU,
-                Categoria = a.Categoria
+                Categoria = a.Categoria,
+                Fk_fornitore = a.Fk_fornitore
             })
             .ToList();
         return articoliDto;
@@ -83,9 +86,27 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
                 Prezzo = a.Prezzo,
                 QuantitaDisponibile = a.QuantitaDisponibile,
                 CodiceSKU = a.CodiceSKU,
-                Categoria = a.Categoria
+                Categoria = a.Categoria,
+                Fk_fornitore = a.Fk_fornitore
             })
             .ToList();
+        return articoliDto;
+    }
+    public async Task<List<ArticoloDto>> ReadAllArticoli(CancellationToken cancellationToken = default)
+    {
+        var articoli = await repository.ReadAllArticoli();
+        var articoliDto = articoli
+            .Select(a => new ArticoloDto
+            {
+                Id = a.Id,
+                Nome = a.Nome,
+                Descrizione = a.Descrizione,
+                Prezzo = a.Prezzo,
+                QuantitaDisponibile = a.QuantitaDisponibile,
+                CodiceSKU = a.CodiceSKU,
+                Categoria = a.Categoria,
+                Fk_fornitore = a.Fk_fornitore
+            }).ToList();
         return articoliDto;
     }
     public async Task UpdateArticoloAsync(int id, string nome, string descrizione, decimal prezzo, int quantitaDisponibile, string codiceSKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default)
@@ -147,4 +168,5 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         await repository.DeleteFornitoreAsync(id, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
+
 }

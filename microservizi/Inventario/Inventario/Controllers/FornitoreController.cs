@@ -83,21 +83,24 @@ public class FornitoreController : ControllerBase
     }
 
     [HttpPut(Name = "UpdateFornitore")]
-    public async Task<ActionResult> UpdateFornitore(
-        int id,
-        string nome,
-        string indirizzo,
-        string telefono,
-        string email)
+    public async Task<ActionResult> UpdateFornitore(int id, [FromBody] FornitoreDto fornitoreDto, CancellationToken cancellationToken = default)
     {
-        if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(email))
+        if (fornitoreDto == null)
         {
-            return BadRequest("Nome e email sono obbligatori.");
+            return BadRequest("Dati fornitore non validi.");
         }
-
         try
         {
-            await _business.UpdateFornitoreAsync(id, nome, indirizzo, telefono, email);
+            // Verifica se il fornitore esiste già prima di procedere con l'update
+            var fornitoreEsistente = await _business.ReadFornitoreAsync(id, cancellationToken);
+            if (fornitoreEsistente == null)
+            {
+                return NotFound($"Fornitore con ID '{id}' non trovato.");
+            }
+
+            // Chiama il metodo di business per eseguire l'aggiornamento del fornitore
+            await _business.UpdateFornitoreAsync(id, fornitoreDto.Nome, fornitoreDto.Indirizzo, fornitoreDto.Telefono, fornitoreDto.Email, cancellationToken);
+
             return Ok($"Fornitore con ID '{id}' aggiornato correttamente!");
         }
         catch (Exception ex)

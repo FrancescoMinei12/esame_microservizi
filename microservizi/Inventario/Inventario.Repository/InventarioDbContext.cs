@@ -13,10 +13,19 @@ public class InventarioDbContext(DbContextOptions<InventarioDbContext> dbContext
             articolo.HasKey(x => x.Id);
             articolo.Property(e => e.Id).ValueGeneratedOnAdd();
             articolo.Property(e => e.Nome).IsRequired().HasMaxLength(255);
-            articolo.Property(e => e.CodiceSKU).IsRequired().HasMaxLength(50);
+            articolo.Property(e => e.Descrizione).HasColumnType("TEXT");
+            articolo.Property(e => e.Prezzo).IsRequired().HasColumnType("DECIMAL(10, 2)");
+            articolo.Property(e => e.QuantitaDisponibile).IsRequired();
+            articolo.Property(e => e.CodiceSKU).IsRequired().HasMaxLength(50).IsUnicode(false);
+            articolo.HasIndex(e => e.CodiceSKU).IsUnique();
+            articolo.Property(e => e.Categoria).HasMaxLength(100);
+            articolo.Property(e => e.DataInserimento)
+                    .IsRequired()
+                    .HasDefaultValueSql("GETUTCDATE()");
             articolo.HasOne(e => e.Fornitore)
                   .WithMany(f => f.Articoli)
-                  .HasForeignKey(e => e.Fk_fornitore);
+                  .HasForeignKey(e => e.Fk_fornitore)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Fornitore>(fornitore =>
@@ -25,9 +34,11 @@ public class InventarioDbContext(DbContextOptions<InventarioDbContext> dbContext
             fornitore.HasKey(x => x.Id);
             fornitore.Property(e => e.Id).ValueGeneratedOnAdd();
             fornitore.Property(e => e.Nome).IsRequired().HasMaxLength(255);
+            fornitore.Property(e => e.Indirizzo).HasMaxLength(255);
+            fornitore.Property(e => e.Telefono).HasMaxLength(15);
             fornitore.Property(e => e.Email).IsRequired().HasMaxLength(100);
         });
     }
     public DbSet<Articolo> Articoli { get; set; }
-    public DbSet<Fornitore> Fornitore { get; set; }
+    public DbSet<Fornitore> Fornitori { get; set; }
 }

@@ -10,9 +10,9 @@ public interface IRepository
     Task<Articolo> CreateArticoloAsync(string nome, string descrizione, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default);
     Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default);
     Task<Articolo?> ReadArticoloAsync(string codiceSKU, CancellationToken cancellationToken = default);
-    Task<List<Articolo?>> ReadArticoloCategoria(string categoria, CancellationToken cancellationToken = default);
+    Task<List<Articolo>> ReadArticoloCategoria(string categoria, CancellationToken cancellationToken = default);
     Task<List<Articolo?>> ReadArticoloFornitore(int id_fornitore, CancellationToken cancellationToken = default);
-    IQueryable<Articolo> ReadArticoli();
+    Task<List<Articolo>> ReadAllArticoli();
     Task UpdateArticoloAsync(int id, string nome, string descrizione, decimal prezzo, int quantitaDisponibile, string codiceSKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default);
     Task DeleteArticoloAsync(int id, CancellationToken cancellationToken = default);
 
