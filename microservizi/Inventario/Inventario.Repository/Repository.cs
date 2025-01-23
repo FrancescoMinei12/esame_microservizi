@@ -7,6 +7,7 @@ namespace Inventario.Repository;
 
 public class Repository(InventarioDbContext inventarioDbContext) : IRepository
 {
+    // Articolo
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         return await inventarioDbContext.SaveChangesAsync(cancellationToken);

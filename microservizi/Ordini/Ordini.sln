@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordini.ClientHttp", "Ordini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordini.Shared", "Ordini.Shared\Ordini.Shared.csproj", "{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8C44775F-77DE-4351-A51E-ED8F831D2C4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C44775F-77DE-4351-A51E-ED8F831D2C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C44775F-77DE-4351-A51E-ED8F831D2C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C44775F-77DE-4351-A51E-ED8F831D2C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C44775F-77DE-4351-A51E-ED8F831D2C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

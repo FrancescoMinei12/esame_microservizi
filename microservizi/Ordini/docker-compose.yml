@@ -1,0 +1,6 @@
+services:
+  ordini:
+    image: ${DOCKER_REGISTRY-}ordini
+    build:
+      context: .
+      dockerfile: Ordini/Dockerfile

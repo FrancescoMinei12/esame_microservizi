@@ -54,8 +54,7 @@
               "RelativeToolTip": "Inventario.Repository\\Model\\Fornitore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T11:25:56.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T11:25:56.666Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Inventario.Repository\\Abstraction\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T11:25:37.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T11:25:37.158Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "Inventario.Repository\\InventarioDbContext.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAWwCgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T11:18:03.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T11:18:03.103Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "Inventario\\Controllers\\FornitoreController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwH0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T10:44:48.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T10:44:48.041Z"
             },
             {
               "$type": "Document",
@@ -106,8 +102,7 @@
               "RelativeToolTip": "Inventario\\Controllers\\ArticoloController.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAwwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T10:11:17.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T10:11:17.255Z"
             },
             {
               "$type": "Document",
@@ -119,8 +114,7 @@
               "RelativeToolTip": "Inventario.Business\\Business.cs",
               "ViewState": "AgIAAJkAAAAAAAAAAAAtwKkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T10:07:02.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T10:07:02.484Z"
             },
             {
               "$type": "Document",
@@ -132,8 +126,7 @@
               "RelativeToolTip": "Inventario.Repository\\Repository.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:08:59.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T10:08:59.067Z"
             }
           ]
         }
