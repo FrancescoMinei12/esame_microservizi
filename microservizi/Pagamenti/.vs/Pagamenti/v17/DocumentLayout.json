@@ -1,12 +1,92 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|solutionrelative:pagamenti\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\pagamentidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\pagamentidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\model\\metodopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\model\\metodopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Dockerfile",
+              "RelativeDocumentMoniker": "Pagamenti\\Dockerfile",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Dockerfile",
+              "RelativeToolTip": "Pagamenti\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-24T16:34:41.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MetodoPagamento.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Model\\MetodoPagamento.cs",
+              "RelativeDocumentMoniker": "Pagamenti.Repository\\Model\\MetodoPagamento.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Model\\MetodoPagamento.cs",
+              "RelativeToolTip": "Pagamenti.Repository\\Model\\MetodoPagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T14:58:01.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PagamentiDbContext.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\PagamentiDbContext.cs",
+              "RelativeDocumentMoniker": "Pagamenti.Repository\\PagamentiDbContext.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\PagamentiDbContext.cs",
+              "RelativeToolTip": "Pagamenti.Repository\\PagamentiDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T14:56:56.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "Pagamenti.Repository\\Repository.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Repository.cs",
+              "RelativeToolTip": "Pagamenti.Repository\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T14:56:54.246Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

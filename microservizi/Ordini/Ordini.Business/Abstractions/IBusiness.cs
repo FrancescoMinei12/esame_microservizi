@@ -22,6 +22,6 @@ public interface IBusiness
     Task AddOrdineProdottoAsync(int fk_ordine, int fk_prodotto, int quantita, CancellationToken cancellationToken = default);
     Task<OrdineProdottiDto?> GetOrdineProdottoByIdAsync(int id, CancellationToken cancellationToken = default);
     Task<List<OrdineProdottiDto>> GetProdottiByOrdineAsync(int fk_ordine, CancellationToken cancellationToken = default);
-    Task UpdateOrdineProdottoAsync(int id, int quantita, decimal prezzoUnitario, CancellationToken cancellationToken = default);
+    Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default);
     Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default);
 }

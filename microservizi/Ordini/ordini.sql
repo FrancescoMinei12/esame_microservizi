@@ -31,3 +31,26 @@ CREATE TABLE OrdiniProdotti (
     Fk_prodotto INT NOT NULL, -- Chiave esterna per Prodotti
     CONSTRAINT FK_Ordine FOREIGN KEY (Fk_ordine) REFERENCES Ordini(Id), -- Definizione della chiave esterna per Ordini
 );
+
+-- Inserimento dati nella tabella Clienti
+INSERT INTO Clienti (Nome, Cognome, Email, Telefono, Indirizzo)
+VALUES 
+('Mario', 'Rossi', 'mario.rossi@example.com', '1234567890', 'Via Roma 10, Milano'),
+('Luisa', 'Bianchi', 'luisa.bianchi@example.com', '0987654321', 'Via Napoli 20, Roma'),
+('Giulia', 'Verdi', 'giulia.verdi@example.com', '1122334455', 'Via Firenze 15, Torino');
+
+-- Inserimento dati nella tabella Ordini
+INSERT INTO Ordini (DataOrdine, Totale, Fk_cliente)
+VALUES 
+('2025-01-20', 150.50, 1), -- Ordine di Mario Rossi
+('2025-01-21', 200.00, 2), -- Ordine di Luisa Bianchi
+('2025-01-22', 120.75, 3); -- Ordine di Giulia Verdi
+
+-- Inserimento dati nella tabella OrdiniProdotti
+INSERT INTO OrdiniProdotti (Quantita, Fk_ordine, Fk_prodotto)
+VALUES 
+(1, 1, 1), -- Mario Rossi ha acquistato un Laptop
+(2, 1, 4), -- Mario Rossi ha acquistato 2 Cuffie
+(1, 2, 2), -- Luisa Bianchi ha acquistato uno Smartphone
+(3, 3, 5), -- Giulia Verdi ha acquistato 3 Mouse
+(1, 3, 3); -- Giulia Verdi ha acquistato un Tablet

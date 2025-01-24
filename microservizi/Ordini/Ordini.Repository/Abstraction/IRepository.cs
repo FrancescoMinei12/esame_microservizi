@@ -24,6 +24,6 @@ public interface IRepository
     Task<OrdineProdotti> AddProdottoToOrdineAsync(int fk_ordine, int fk_prodotto, int quantita, CancellationToken cancellationToken = default);
     Task<OrdineProdotti?> ReadOrdiniProdottiAsync(int id, CancellationToken cancellationToken = default);
     Task<List<OrdineProdotti>> GetProdottiByOrdineAsync(int fk_ordine, CancellationToken cancellationToken = default);
-    Task UpdateOrdiniProdottiAsync(int id, int quantita, CancellationToken cancellationToken = default);
+    Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default);
     Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default);
 }

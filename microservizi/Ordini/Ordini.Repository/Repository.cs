@@ -124,7 +124,7 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     {
         return await ordiniDbContext.OrdineProdotti.Where(op => op.Fk_ordine == fk_ordine).ToListAsync(cancellationToken);
     }
-    public async Task UpdateOrdiniProdottiAsync(int id, int quantita, CancellationToken cancellationToken = default)
+    public async Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default)
     {
         var ordineProdotti = await ordiniDbContext.OrdineProdotti.FirstOrDefaultAsync(op => op.Id == id, cancellationToken);
         if (ordineProdotti == null)
@@ -132,6 +132,8 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
             throw new ArgumentException("OrdineProdotti non trovato.", nameof(id));
         }
         ordineProdotti.Quantita = quantita;
+        ordineProdotti.Fk_ordine = fk_ordine;
+        ordineProdotti.Fk_prodotto = fk_prodotto;
     }
     public async Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default)
     {

@@ -95,6 +95,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Pagamenti.ClientHttp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Pagamenti.ClientHttp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pagamenti.ClientHttp.dll": {}
+        }
       }
     }
   },
@@ -526,11 +536,17 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Pagamenti.ClientHttp/1.0.0": {
+      "type": "project",
+      "path": "../Pagamenti.ClientHttp/Pagamenti.ClientHttp.csproj",
+      "msbuildProject": "../Pagamenti.ClientHttp/Pagamenti.ClientHttp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
+      "Pagamenti.ClientHttp >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -565,7 +581,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj": {
+              "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -612,7 +632,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

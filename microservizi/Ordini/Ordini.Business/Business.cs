@@ -2,6 +2,7 @@
 using Ordini.Repository.Abstraction;
 using Ordini.Shared;
 using Microsoft.Extensions.Logging;
+using System.Threading;
 
 namespace Ordini.Business;
 
@@ -140,9 +141,9 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
             }).ToList();
         return prodottiDto;
     }
-    public async Task UpdateOrdineProdottoAsync(int id, int quantita, decimal prezzoUnitario, CancellationToken cancellationToken = default)
+    public async Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default)
     {
-        await repository.UpdateOrdiniProdottiAsync(id, quantita, cancellationToken);
+        await repository.UpdateOrdineProdottoAsync(id, quantita, fk_ordine, fk_prodotto, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
     public async Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default)

@@ -69,16 +69,23 @@ public class OrdiniController : Controller
     }
 
     [HttpPut(Name = "UpdateOrdine")]
-    public async Task<ActionResult> UpdateOrdine(int id, decimal totale, int fk_cliente, CancellationToken cancellationToken = default)
+    public async Task<ActionResult> UpdateOrdine(int id, [FromBody] OrdineDto ordineDto, CancellationToken cancellationToken = default)
     {
+        if (ordineDto == null)
+        {
+            _logger.LogWarning("Richiesta non valida: il corpo dell'ordine è nullo.");
+            return BadRequest("Dati ordine non validi.");
+        }
+
         try
         {
-            await _business.UpdateOrdineAsync(id, totale, fk_cliente, cancellationToken);
+            await _business.UpdateOrdineAsync(id, ordineDto.Totale, ordineDto.Fk_cliente, cancellationToken);
+            _logger.LogInformation($"Ordine con ID '{id}' aggiornato con successo.");
             return Ok($"Ordine con ID '{id}' aggiornato con successo!");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Errore durante l'aggiornamento dell'ordine.");
+            _logger.LogError(ex, $"Errore durante l'aggiornamento dell'ordine con ID '{id}'.");
             return StatusCode(500, "Errore interno del server.");
         }
     }

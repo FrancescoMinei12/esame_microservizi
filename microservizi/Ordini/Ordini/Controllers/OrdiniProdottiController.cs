@@ -68,19 +68,21 @@ public class OrdiniProdottiController : Controller
     }
 
     [HttpPut(Name = "UpdateOrdineProdotto")]
-    public async Task<ActionResult> UpdateOrdineProdotto(int id, int quantita, decimal prezzoUnitario, CancellationToken cancellationToken = default)
+    public async Task<ActionResult> UpdateOrdineProdotto(int id, [FromBody] OrdineProdottiDto ordineProdottoDto, CancellationToken cancellationToken = default)
     {
         try
         {
-            await _business.UpdateOrdineProdottoAsync(id, quantita, prezzoUnitario, cancellationToken);
+            await _business.UpdateOrdineProdottoAsync(id, ordineProdottoDto.Quantita, ordineProdottoDto.Fk_ordine, ordineProdottoDto.Fk_prodotto, cancellationToken);
+            _logger.LogInformation($"OrdineProdotto con ID '{id}' aggiornato con successo.");
             return Ok($"OrdineProdotto con ID '{id}' aggiornato con successo!");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Errore durante l'aggiornamento dell'OrdineProdotto.");
+            _logger.LogError(ex, $"Errore durante l'aggiornamento di OrdineProdotto con ID '{id}'.");
             return StatusCode(500, "Errore interno del server.");
         }
     }
+
 
     [HttpDelete(Name = "RemoveProdottoFromOrdine")]
     public async Task<ActionResult> RemoveProdottoFromOrdine(int id, CancellationToken cancellationToken = default)

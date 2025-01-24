@@ -88,16 +88,17 @@ public class ClientiController : ControllerBase
     }
 
     [HttpPut(Name = "UpdateCliente")]
-    public async Task<ActionResult> UpdateCliente(int id, string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
+    public async Task<ActionResult> UpdateCliente(int id, [FromBody] ClienteDto clienteDto, CancellationToken cancellationToken = default)
     {
         try
         {
-            await _business.UpdateClienteAsync(id, nome, cognome, email, telefono, indirizzo, cancellationToken);
-            return Ok($"Cliente con ID '{id}' aggiornato con successo!");
+            await _business.UpdateClienteAsync(id, clienteDto.Nome, clienteDto.Cognome, clienteDto.Email, clienteDto.Telefono, clienteDto.Indirizzo, cancellationToken);
+            _logger.LogInformation($"Cliente con ID '{id}' aggiornato correttamente.");
+            return Ok($"Cliente con ID '{id}' aggiornato correttamente!");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Errore durante l'aggiornamento del cliente.");
+            _logger.LogError(ex, $"Errore durante l'aggiornamento del cliente con ID '{id}'.");
             return StatusCode(500, "Errore interno del server.");
         }
     }
