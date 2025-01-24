@@ -1,9 +1,7 @@
 ﻿using Inventario.Business.Abstractions;
 using Inventario.Repository.Abstraction;
-using Inventario.Repository.Model;
 using Inventario.Shared;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Primitives;
 
 namespace Inventario.Business;
 

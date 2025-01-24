@@ -1,8 +1,6 @@
-﻿using Inventario.Repository.Model;
-using Inventario.Shared;
+﻿using Inventario.Shared;
 
 namespace Inventario.Business.Abstractions;
-
 public interface IBusiness
 {
     // Articoli

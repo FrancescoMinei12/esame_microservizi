@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C44775F-77DE-4351-A51E-ED8F831D2C4C}|docker-compose.dcproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8C44775F-77DE-4351-A51E-ED8F831D2C4C}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini\\controllers\\ordinicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\controllers\\ordinicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini\\controllers\\ordiniprodotticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\controllers\\ordiniprodotticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.shared\\ordineprodottidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|solutionrelative:ordini.shared\\ordineprodottidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.shared\\ordinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|solutionrelative:ordini.shared\\ordinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.shared\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|solutionrelative:ordini.shared\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|solutionrelative:ordini.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.repository\\model\\ordine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|solutionrelative:ordini.repository\\model\\ordine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.repository\\model\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|solutionrelative:ordini.repository\\model\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|solutionrelative:ordini.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|solutionrelative:ordini.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.repository\\ordinidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|solutionrelative:ordini.repository\\ordinidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED5EB48-8D46-4E03-A07E-44CC73FB08A0}|Ordini.ClientHttp\\Ordini.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.clienthttp\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED5EB48-8D46-4E03-A07E-44CC73FB08A0}|Ordini.ClientHttp\\Ordini.ClientHttp.csproj|solutionrelative:ordini.clienthttp\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.business\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|solutionrelative:ordini.business\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\ordini\\ordini.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDEBB25-CFD1-498C-A082-CC49AB07390A}|Ordini.Repository\\Ordini.Repository.csproj|solutionrelative:ordini.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,28 +50,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "docker-compose",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\docker-compose.dcproj",
-              "RelativeDocumentMoniker": "docker-compose.dcproj",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\docker-compose.dcproj",
-              "RelativeToolTip": "docker-compose.dcproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-23T14:05:27.444Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "OrdineProdottiDto.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Shared\\OrdineProdottiDto.cs",
+              "RelativeDocumentMoniker": "Ordini.Shared\\OrdineProdottiDto.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Shared\\OrdineProdottiDto.cs",
+              "RelativeToolTip": "Ordini.Shared\\OrdineProdottiDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T11:10:24.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "OrdineDto.cs",
               "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Shared\\OrdineDto.cs",
               "RelativeDocumentMoniker": "Ordini.Shared\\OrdineDto.cs",
@@ -75,97 +79,110 @@
               "RelativeToolTip": "Ordini.Shared\\OrdineDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:05:05.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Ordine.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Model\\Ordine.cs",
-              "RelativeDocumentMoniker": "Ordini.Repository\\Model\\Ordine.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Model\\Ordine.cs",
-              "RelativeToolTip": "Ordini.Repository\\Model\\Ordine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:04:00.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Model\\Cliente.cs",
-              "RelativeDocumentMoniker": "Ordini.Repository\\Model\\Cliente.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Model\\Cliente.cs",
-              "RelativeToolTip": "Ordini.Repository\\Model\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:01:53.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "Ordini.Repository\\Repository.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Repository.cs",
-              "RelativeToolTip": "Ordini.Repository\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:01:14.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClienteDto.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Shared\\ClienteDto.cs",
-              "RelativeDocumentMoniker": "Ordini.Shared\\ClienteDto.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Shared\\ClienteDto.cs",
-              "RelativeToolTip": "Ordini.Shared\\ClienteDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T17:11:17.506Z",
+              "WhenOpened": "2025-01-24T11:10:23.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.ClientHttp\\Class1.cs",
-              "RelativeDocumentMoniker": "Ordini.ClientHttp\\Class1.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.ClientHttp\\Class1.cs",
-              "RelativeToolTip": "Ordini.ClientHttp\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "IBusiness.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Abstractions\\IBusiness.cs",
+              "RelativeDocumentMoniker": "Ordini.Business\\Abstractions\\IBusiness.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Abstractions\\IBusiness.cs",
+              "RelativeToolTip": "Ordini.Business\\Abstractions\\IBusiness.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T17:11:00.988Z"
+              "WhenOpened": "2025-01-24T11:00:31.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Business.cs",
+              "RelativeDocumentMoniker": "Ordini.Business\\Business.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Business.cs",
+              "RelativeToolTip": "Ordini.Business\\Business.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T10:58:32.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "OrdiniDbContext.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\OrdiniDbContext.cs",
-              "RelativeDocumentMoniker": "Ordini.Repository\\OrdiniDbContext.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\OrdiniDbContext.cs",
-              "RelativeToolTip": "Ordini.Repository\\OrdiniDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Program.cs",
+              "RelativeDocumentMoniker": "Ordini\\Program.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Program.cs",
+              "RelativeToolTip": "Ordini\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAWwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T17:10:43.796Z",
+              "WhenOpened": "2025-01-24T10:48:49.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Class1.cs",
-              "RelativeDocumentMoniker": "Ordini.Business\\Class1.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Class1.cs",
-              "RelativeToolTip": "Ordini.Business\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Dockerfile",
+              "RelativeDocumentMoniker": "Ordini\\Dockerfile",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Dockerfile",
+              "RelativeToolTip": "Ordini\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-24T10:41:34.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Abstraction\\IRepository.cs",
+              "RelativeDocumentMoniker": "Ordini.Repository\\Abstraction\\IRepository.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Repository\\Abstraction\\IRepository.cs",
+              "RelativeToolTip": "Ordini.Repository\\Abstraction\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T17:10:25.346Z"
+              "WhenOpened": "2025-01-24T10:35:55.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientiController.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\ClientiController.cs",
+              "RelativeDocumentMoniker": "Ordini\\Controllers\\ClientiController.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\ClientiController.cs",
+              "RelativeToolTip": "Ordini\\Controllers\\ClientiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T10:33:51.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdiniController.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\OrdiniController.cs",
+              "RelativeDocumentMoniker": "Ordini\\Controllers\\OrdiniController.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\OrdiniController.cs",
+              "RelativeToolTip": "Ordini\\Controllers\\OrdiniController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T10:31:02.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdiniProdottiController.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\OrdiniProdottiController.cs",
+              "RelativeDocumentMoniker": "Ordini\\Controllers\\OrdiniProdottiController.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini\\Controllers\\OrdiniProdottiController.cs",
+              "RelativeToolTip": "Ordini\\Controllers\\OrdiniProdottiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T10:20:17.507Z",
+              "EditorCaption": ""
             }
           ]
         }

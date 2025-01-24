@@ -12,6 +12,9 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Ordini/Ordini.csproj", "Ordini/"]
+COPY ["Ordini.Business/Ordini.Business.csproj", "Ordini.Business/"]
+COPY ["Ordini.Repository/Ordini.Repository.csproj", "Ordini.Repository/"]
+COPY ["Ordini.Shared/Ordini.Shared.csproj", "Ordini.Shared/"]
 RUN dotnet restore "./Ordini/Ordini.csproj"
 COPY . .
 WORKDIR "/src/Ordini"

@@ -27,7 +27,6 @@ CREATE TABLE Ordini (
 CREATE TABLE OrdiniProdotti (
     Id INT PRIMARY KEY IDENTITY(1,1), -- Chiave primaria
     Quantita INT NOT NULL DEFAULT 1, -- Quantità del prodotto nell'ordine
-    PrezzoUnitario DECIMAL(10, 2) NOT NULL, -- Prezzo del prodotto al momento dell'ordine
 	Fk_ordine INT NOT NULL, -- Chiave esterna per Ordini
     Fk_prodotto INT NOT NULL, -- Chiave esterna per Prodotti
     CONSTRAINT FK_Ordine FOREIGN KEY (Fk_ordine) REFERENCES Ordini(Id), -- Definizione della chiave esterna per Ordini

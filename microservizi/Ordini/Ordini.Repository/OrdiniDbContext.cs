@@ -1,5 +1,5 @@
-﻿using Ordini.Repository.Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Ordini.Repository.Model;
 
 namespace Ordini.Repository;
 

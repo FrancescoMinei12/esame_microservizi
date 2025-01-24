@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|solutionrelative:inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\inventariodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\inventariodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\model\\fornitore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\model\\fornitore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\inventario\\inventario.repository\\model\\articolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{249DD378-E20B-4EBA-8A28-5F6D3525AE2E}|Inventario.Repository\\Inventario.Repository.csproj|solutionrelative:inventario.repository\\model\\articolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Repository.cs",
               "RelativeDocumentMoniker": "Inventario.Repository\\Repository.cs",
@@ -43,58 +31,20 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T15:06:56.391Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Abstraction\\IRepository.cs",
-              "RelativeDocumentMoniker": "Inventario.Repository\\Abstraction\\IRepository.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Abstraction\\IRepository.cs",
-              "RelativeToolTip": "Inventario.Repository\\Abstraction\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:53:33.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventarioDbContext.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\InventarioDbContext.cs",
-              "RelativeDocumentMoniker": "Inventario.Repository\\InventarioDbContext.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\InventarioDbContext.cs",
-              "RelativeToolTip": "Inventario.Repository\\InventarioDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:21:34.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Fornitore.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Model\\Fornitore.cs",
-              "RelativeDocumentMoniker": "Inventario.Repository\\Model\\Fornitore.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Model\\Fornitore.cs",
-              "RelativeToolTip": "Inventario.Repository\\Model\\Fornitore.cs",
+              "DocumentIndex": 0,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeDocumentMoniker": "Inventario.Business\\Business.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeToolTip": "Inventario.Business\\Business.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:08:30.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Articolo.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Model\\Articolo.cs",
-              "RelativeDocumentMoniker": "Inventario.Repository\\Model\\Articolo.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Model\\Articolo.cs",
-              "RelativeToolTip": "Inventario.Repository\\Model\\Articolo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T14:08:21.404Z",
+              "WhenOpened": "2025-01-24T11:08:54.662Z",
               "EditorCaption": ""
             },
             {

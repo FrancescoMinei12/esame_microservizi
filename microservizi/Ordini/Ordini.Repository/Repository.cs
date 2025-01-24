@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Ordini.Repository.Abstraction;
 using Ordini.Repository.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ordini.Repository;
 
@@ -110,13 +105,13 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
 
     // OrdineProdotti
-    public async Task<OrdineProdotti> AddProdottoToOrdineAsync(int fk_ordine, int fk_prodotto, int quantita, CancellationToken cancellationToken = default)
+    public async Task<OrdineProdotti> AddProdottoToOrdineAsync(int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default)
     {
         var ordineProdotti = new OrdineProdotti
         {
+            Quantita = quantita,
             Fk_ordine = fk_ordine,
-            Fk_prodotto = fk_prodotto,
-            Quantita = quantita
+            Fk_prodotto = fk_prodotto
         };
         await ordiniDbContext.OrdineProdotti.AddAsync(ordineProdotti, cancellationToken);
         return ordineProdotti;

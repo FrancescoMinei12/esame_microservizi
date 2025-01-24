@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "j0sSMKCq6Qw=",
+  "dgSpecHash": "3kT9qMi+SaM=",
   "success": true,
   "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Business\\Inventario.Business.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Francesco\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0\\microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
