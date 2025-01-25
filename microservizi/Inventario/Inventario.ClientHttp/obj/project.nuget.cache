@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LQPfQqyNnho=",
+  "dgSpecHash": "hKS4ZtzQCZw=",
   "success": true,
-  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+  "projectFilePath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

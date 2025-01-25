@@ -1,0 +1,251 @@
+Elenco del percorso delle cartelle
+Numero di serie del volume: 3456-95F5
+C:.
++---.github
+|   \---workflows
+\---microservizi
+    +---Inventario
+    |   +---bin
+    |   |   \---Debug
+    |   +---Inventario
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   |           \---runtimes
+    |   |   |               +---browser
+    |   |   |               |   \---lib
+    |   |   |               |       \---net8.0
+    |   |   |               +---unix
+    |   |   |               |   \---lib
+    |   |   |               |       \---net6.0
+    |   |   |               +---win
+    |   |   |               |   \---lib
+    |   |   |               |       \---net6.0
+    |   |   |               +---win-arm
+    |   |   |               |   \---native
+    |   |   |               +---win-arm64
+    |   |   |               |   \---native
+    |   |   |               +---win-x64
+    |   |   |               |   \---native
+    |   |   |               \---win-x86
+    |   |   |                   \---native
+    |   |   +---Controllers
+    |   |   +---obj
+    |   |   |   +---Container
+    |   |   |   +---Debug
+    |   |   |   |   \---net8.0
+    |   |   |   |       +---ref
+    |   |   |   |       +---refint
+    |   |   |   |       \---staticwebassets
+    |   |   |   \---Docker
+    |   |   \---Properties
+    |   +---Inventario.Business
+    |   |   +---Abstractions
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   +---Inventario.ClientHttp
+    |   |   +---Abstraction
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   +---DependencyInjection
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   +---Inventario.Repository
+    |   |   +---Abstraction
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   +---Model
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   +---Inventario.Shared
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   \---obj
+    |       +---Debug
+    |       \---Docker
+    |           +---inventario
+    |           \---obj
+    |               \---Docker
+    +---Ordini
+    |   +---bin
+    |   |   \---Debug
+    |   +---obj
+    |   |   +---Debug
+    |   |   \---Docker
+    |   |       +---obj
+    |   |       |   \---Docker
+    |   |       \---ordini
+    |   +---Ordini
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   |           \---runtimes
+    |   |   |               +---browser
+    |   |   |               |   \---lib
+    |   |   |               |       \---net8.0
+    |   |   |               +---unix
+    |   |   |               |   \---lib
+    |   |   |               |       \---net6.0
+    |   |   |               +---win
+    |   |   |               |   \---lib
+    |   |   |               |       \---net6.0
+    |   |   |               +---win-arm
+    |   |   |               |   \---native
+    |   |   |               +---win-arm64
+    |   |   |               |   \---native
+    |   |   |               +---win-x64
+    |   |   |               |   \---native
+    |   |   |               \---win-x86
+    |   |   |                   \---native
+    |   |   +---Controllers
+    |   |   +---obj
+    |   |   |   +---Container
+    |   |   |   +---Debug
+    |   |   |   |   \---net8.0
+    |   |   |   |       +---ref
+    |   |   |   |       +---refint
+    |   |   |   |       \---staticwebassets
+    |   |   |   \---Docker
+    |   |   \---Properties
+    |   +---Ordini.Business
+    |   |   +---Abstractions
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   +---Ordini.ClientHttp
+    |   |   +---Abstraction
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   +---Ordini.Repository
+    |   |   +---Abstraction
+    |   |   +---bin
+    |   |   |   \---Debug
+    |   |   |       \---net8.0
+    |   |   +---Model
+    |   |   \---obj
+    |   |       \---Debug
+    |   |           \---net8.0
+    |   |               +---ref
+    |   |               \---refint
+    |   \---Ordini.Shared
+    |       +---bin
+    |       |   \---Debug
+    |       |       \---net8.0
+    |       \---obj
+    |           \---Debug
+    |               \---net8.0
+    |                   +---ref
+    |                   \---refint
+    \---Pagamenti
+        +---bin
+        |   \---Debug
+        +---obj
+        |   +---Debug
+        |   \---Docker
+        |       +---obj
+        |       |   \---Docker
+        |       \---pagamenti
+        +---Pagamenti
+        |   +---bin
+        |   |   \---Debug
+        |   |       \---net8.0
+        |   |           \---runtimes
+        |   |               +---browser
+        |   |               |   \---lib
+        |   |               |       \---net8.0
+        |   |               +---unix
+        |   |               |   \---lib
+        |   |               |       \---net6.0
+        |   |               +---win
+        |   |               |   \---lib
+        |   |               |       \---net6.0
+        |   |               +---win-arm
+        |   |               |   \---native
+        |   |               +---win-arm64
+        |   |               |   \---native
+        |   |               +---win-x64
+        |   |               |   \---native
+        |   |               \---win-x86
+        |   |                   \---native
+        |   +---Controllers
+        |   +---obj
+        |   |   +---Container
+        |   |   +---Debug
+        |   |   |   \---net8.0
+        |   |   |       +---ref
+        |   |   |       +---refint
+        |   |   |       \---staticwebassets
+        |   |   \---Docker
+        |   \---Properties
+        +---Pagamenti.Business
+        |   +---Abstractions
+        |   +---bin
+        |   |   \---Debug
+        |   |       \---net8.0
+        |   \---obj
+        |       \---Debug
+        |           \---net8.0
+        |               +---ref
+        |               \---refint
+        +---Pagamenti.ClientHttp
+        |   +---Abstraction
+        |   +---bin
+        |   |   \---Debug
+        |   |       \---net8.0
+        |   +---DependencyInjection
+        |   \---obj
+        |       \---Debug
+        |           \---net8.0
+        |               +---ref
+        |               \---refint
+        +---Pagamenti.Repository
+        |   +---Abstraction
+        |   +---bin
+        |   |   \---Debug
+        |   |       \---net8.0
+        |   +---Model
+        |   \---obj
+        |       \---Debug
+        |           \---net8.0
+        |               +---ref
+        |               \---refint
+        \---Pagamenti.Shared
+            +---bin
+            |   \---Debug
+            |       \---net8.0
+            \---obj
+                \---Debug
+                    \---net8.0
+                        +---ref
+                        \---refint

@@ -25,7 +25,7 @@ services:
       - '2181:2181'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
-  
+
   kafka:
     container_name: kafka
     image: 'bitnami/kafka:3.1.0'
@@ -40,6 +40,43 @@ services:
       - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
     depends_on:
       - zookeeper
+  inventario:
+    build:
+      context: ./microservizi/Inventario
+      dockerfile: Inventario/Dockerfile
+    depends_on:
+      - mssql-server
+    ports:
+      - "5000:5000"
+    environment:
+      TZ: Europe/Rome
+      ASPNETCORE_ENVIRONMENT: Development
+
+  ordini:
+    build:
+      context: ./microservizi/Ordini
+      dockerfile: Ordini/Dockerfile
+    depends_on:
+      - mssql-server
+      - kafka
+    ports:
+      - "5001:5000"
+    environment:
+      TZ: Europe/Rome
+      ASPNETCORE_ENVIRONMENT: Development
+
+  pagamenti:
+    build:
+      context: ./microservizi/Pagamenti
+      dockerfile: Pagamenti/Dockerfile
+    depends_on:
+      - mssql-server
+      - kafka
+    ports:
+      - "5002:5000"
+    environment:
+      TZ: Europe/Rome
+      ASPNETCORE_ENVIRONMENT: Development
 
 volumes:
   mssql-server:

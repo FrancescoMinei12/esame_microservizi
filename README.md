@@ -1,1 +1,0 @@
-Piccola applicazione in dotnet per la gestione di un e-commerce: inserimento degli ordini, pagamento online, gestione del magazzino, approvvigionamento dei prodotti (e quindi interfacciamento con i fornitori).

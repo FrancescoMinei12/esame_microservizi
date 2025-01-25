@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj": {}
+    "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj": {}
   },
   "projects": {
-    "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj": {
+    "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+        "projectUniqueName": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
         "projectName": "Inventario.ClientHttp",
-        "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+        "projectPath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
         "packagesPath": "C:\\Users\\Francesco\\.nuget\\packages\\",
-        "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\obj\\",
+        "outputPath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.ClientHttp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj": {
-                "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj"
+              "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj": {
+                "projectPath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj": {
+    "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj",
         "projectName": "Inventario.Shared",
-        "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj",
+        "projectPath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\Inventario.Shared.csproj",
         "packagesPath": "C:\\Users\\Francesco\\.nuget\\packages\\",
-        "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\obj\\",
+        "outputPath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

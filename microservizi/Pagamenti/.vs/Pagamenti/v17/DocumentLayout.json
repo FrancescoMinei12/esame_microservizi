@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|solutionrelative:pagamenti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.clienthttp\\dependencyinjection\\pagamenticlientextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|solutionrelative:pagamenti.clienthttp\\dependencyinjection\\pagamenticlientextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2ECAC1-58D0-44D6-8324-7164DBAB654B}|docker-compose.dcproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0A2ECAC1-58D0-44D6-8324-7164DBAB654B}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.clienthttp\\clienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|solutionrelative:pagamenti.clienthttp\\clienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti\\controllers\\metodipagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|solutionrelative:pagamenti\\controllers\\metodipagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.clienthttp\\pagamenti.clienthttp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|solutionrelative:pagamenti.clienthttp\\pagamenti.clienthttp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti\\controllers\\pagamenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{313778AF-442E-4FFE-8D37-107D4FCC0645}|Pagamenti\\Pagamenti.csproj|solutionrelative:pagamenti\\controllers\\pagamenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ADBA232-43A6-45FE-A73F-9169891D31E9}|Pagamenti.Business\\Pagamenti.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ADBA232-43A6-45FE-A73F-9169891D31E9}|Pagamenti.Business\\Pagamenti.Business.csproj|solutionrelative:pagamenti.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4ADBA232-43A6-45FE-A73F-9169891D31E9}|Pagamenti.Business\\Pagamenti.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ADBA232-43A6-45FE-A73F-9169891D31E9}|Pagamenti.Business\\Pagamenti.Business.csproj|solutionrelative:pagamenti.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\abstraction\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\pagamentidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\pagamentidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.repository\\model\\metodopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68FADBD8-C979-4B2D-913E-A13A280E520D}|Pagamenti.Repository\\Pagamenti.Repository.csproj|solutionrelative:pagamenti.repository\\model\\metodopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\progetto_esame\\microservizi\\pagamenti\\pagamenti.clienthttp\\abstraction\\iclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78E7FB51-B48A-4E77-9672-BEE29B534628}|Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj|solutionrelative:pagamenti.clienthttp\\abstraction\\iclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,37 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-01-25T09:57:48.98Z",
+              "DocumentIndex": 0,
+              "Title": "PagamentiClientExtensions.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\DependencyInjection\\PagamentiClientExtensions.cs",
+              "RelativeDocumentMoniker": "Pagamenti.ClientHttp\\DependencyInjection\\PagamentiClientExtensions.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\DependencyInjection\\PagamentiClientExtensions.cs",
+              "RelativeToolTip": "Pagamenti.ClientHttp\\DependencyInjection\\PagamentiClientExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:03:33.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MetodiPagamentoController.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Controllers\\MetodiPagamentoController.cs",
-              "RelativeDocumentMoniker": "Pagamenti\\Controllers\\MetodiPagamentoController.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Controllers\\MetodiPagamentoController.cs",
-              "RelativeToolTip": "Pagamenti\\Controllers\\MetodiPagamentoController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAiwFMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:39:39.432Z",
+              "Title": "Pagamenti.ClientHttp",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+              "RelativeDocumentMoniker": "Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+              "RelativeToolTip": "Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-25T14:02:09.587Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -90,100 +70,33 @@
               "RelativeDocumentMoniker": "Pagamenti\\Controllers\\PagamentiController.cs",
               "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Controllers\\PagamentiController.cs",
               "RelativeToolTip": "Pagamenti\\Controllers\\PagamentiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:39:26.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Program.cs",
-              "RelativeDocumentMoniker": "Pagamenti\\Program.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti\\Program.cs",
-              "RelativeToolTip": "Pagamenti\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:28:20.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Abstraction\\IRepository.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Repository\\Abstraction\\IRepository.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Abstraction\\IRepository.cs",
-              "RelativeToolTip": "Pagamenti.Repository\\Abstraction\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:06:55.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T11:04:12.585Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Business.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Business\\Business.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Business\\Business.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Business\\Business.cs",
-              "RelativeToolTip": "Pagamenti.Business\\Business.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAA9AAAAAAAAAA==",
+              "Title": "IClientHttp.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Abstraction\\IClientHttp.cs",
+              "RelativeDocumentMoniker": "Pagamenti.ClientHttp\\Abstraction\\IClientHttp.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Abstraction\\IClientHttp.cs",
+              "RelativeToolTip": "Pagamenti.ClientHttp\\Abstraction\\IClientHttp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:06:38.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T10:49:39.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IBusiness.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Business\\Abstractions\\IBusiness.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Business\\Abstractions\\IBusiness.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Business\\Abstractions\\IBusiness.cs",
-              "RelativeToolTip": "Pagamenti.Business\\Abstractions\\IBusiness.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ClientHttp.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\ClientHttp.cs",
+              "RelativeDocumentMoniker": "Pagamenti.ClientHttp\\ClientHttp.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\ClientHttp.cs",
+              "RelativeToolTip": "Pagamenti.ClientHttp\\ClientHttp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:06:29.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MetodoPagamento.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Model\\MetodoPagamento.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Repository\\Model\\MetodoPagamento.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Model\\MetodoPagamento.cs",
-              "RelativeToolTip": "Pagamenti.Repository\\Model\\MetodoPagamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:58:01.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PagamentiDbContext.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\PagamentiDbContext.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Repository\\PagamentiDbContext.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\PagamentiDbContext.cs",
-              "RelativeToolTip": "Pagamenti.Repository\\PagamentiDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:56:56.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "Pagamenti.Repository\\Repository.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Repository.cs",
-              "RelativeToolTip": "Pagamenti.Repository\\Repository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAowF0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:56:54.246Z",
+              "WhenOpened": "2025-01-25T10:40:37.466Z",
               "EditorCaption": ""
             }
           ]
