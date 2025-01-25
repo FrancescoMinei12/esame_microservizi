@@ -1,0 +1,12 @@
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\bin\Debug\net8.0\Pagamenti.Shared.deps.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\bin\Debug\net8.0\Pagamenti.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\bin\Debug\net8.0\Pagamenti.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.AssemblyInfoInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.AssemblyInfo.cs
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.csproj.CoreCompileInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.sourcelink.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\refint\Pagamenti.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\Pagamenti.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Shared\obj\Debug\net8.0\ref\Pagamenti.Shared.dll

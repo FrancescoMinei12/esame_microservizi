@@ -12,6 +12,10 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Pagamenti/Pagamenti.csproj", "Pagamenti/"]
+COPY ["Pagamenti.ClientHttp/Pagamenti.ClientHttp.csproj", "Pagamenti.ClientHttp/"]
+COPY ["Pagamenti.Business/Pagamenti.Business.csproj", "Pagamenti.Business/"]
+COPY ["Pagamenti.Repository/Pagamenti.Repository.csproj", "Pagamenti.Repository/"]
+COPY ["Pagamenti.Shared/Pagamenti.Shared.csproj", "Pagamenti.Shared/"]
 RUN dotnet restore "./Pagamenti/Pagamenti.csproj"
 COPY . .
 WORKDIR "/src/Pagamenti"

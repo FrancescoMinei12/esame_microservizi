@@ -19,3 +19,17 @@ CREATE TABLE Pagamenti (
     Fk_MetodoPagamento INT NOT NULL,          -- Metodo di pagamento utilizzato
     CONSTRAINT FK_MetodoPagamento FOREIGN KEY (Fk_MetodoPagamento) REFERENCES MetodiPagamento(Id)
 );
+
+-- Inserimento di metodi di pagamento
+INSERT INTO MetodiPagamento (Nome) VALUES ('Carta di Credito');
+INSERT INTO MetodiPagamento (Nome) VALUES ('PayPal');
+INSERT INTO MetodiPagamento (Nome) VALUES ('Bonifico Bancario');
+INSERT INTO MetodiPagamento (Nome) VALUES ('Google Pay');
+INSERT INTO MetodiPagamento (Nome) VALUES ('Apple Pay');
+
+-- Inserimento di pagamenti
+INSERT INTO Pagamenti (Importo, DataPagamento, Fk_Ordine, Fk_MetodoPagamento) VALUES (100.50, GETDATE(), 1, 1);
+INSERT INTO Pagamenti (Importo, DataPagamento, Fk_Ordine, Fk_MetodoPagamento) VALUES (250.75, GETDATE(), 2, 2);
+INSERT INTO Pagamenti (Importo, DataPagamento, Fk_Ordine, Fk_MetodoPagamento) VALUES (500.00, GETDATE(), 3, 3);
+INSERT INTO Pagamenti (Importo, DataPagamento, Fk_Ordine, Fk_MetodoPagamento) VALUES (75.00, GETDATE(), 4, 4);
+INSERT INTO Pagamenti (Importo, DataPagamento, Fk_Ordine, Fk_MetodoPagamento) VALUES (300.00, GETDATE(), 5, 5);

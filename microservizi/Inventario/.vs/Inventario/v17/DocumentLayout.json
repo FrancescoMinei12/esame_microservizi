@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -30,8 +34,7 @@
               "RelativeToolTip": "Inventario.Repository\\Model\\Articolo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:57:35.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T14:57:35.724Z"
             },
             {
               "$type": "Document",
@@ -43,12 +46,7 @@
               "RelativeToolTip": "Inventario\\Controllers\\ArticoloController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAA4wDYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:16:29.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2025-01-24T14:16:29.828Z"
             }
           ]
         }

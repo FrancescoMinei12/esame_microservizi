@@ -1,0 +1,15 @@
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\bin\Debug\net8.0\Pagamenti.Repository.deps.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\bin\Debug\net8.0\Pagamenti.Repository.runtimeconfig.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\bin\Debug\net8.0\Pagamenti.Repository.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\bin\Debug\net8.0\Pagamenti.Repository.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.csproj.AssemblyReference.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.AssemblyInfoInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.AssemblyInfo.cs
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.csproj.CoreCompileInputs.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.sourcelink.json
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\refint\Pagamenti.Repository.dll
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.pdb
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\Pagamenti.Repository.genruntimeconfig.cache
+C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Pagamenti\Pagamenti.Repository\obj\Debug\net8.0\ref\Pagamenti.Repository.dll

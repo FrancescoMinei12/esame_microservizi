@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pagamenti.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05ceca22600f206759b0ae5ea18fb62dde7d161d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e2fd1ef76a1086f13223676788126360bd2a827")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pagamenti.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pagamenti.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
