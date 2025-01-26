@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E2yny58XIcM=",
+  "dgSpecHash": "RSVaJsQ7++Q=",
   "success": true,
-  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Ordini\\Ordini.Business\\Ordini.Business.csproj",
+  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Ordini.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.1\\microsoft.entityframeworkcore.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.1\\microsoft.entityframeworkcore.abstractions.9.0.1.nupkg.sha512",

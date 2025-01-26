@@ -2,6 +2,8 @@ using Ordini.Business;
 using Ordini.Business.Abstractions;
 using Ordini.Repository;
 using Ordini.Repository.Abstraction;
+using Ordini.ClientHttp;
+using Ordini.ClientHttp.Abstraction;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,11 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(5000);
 });
 // Add services to the container.
+
+builder.Services.AddHttpClient<IOrdiniClientHttp, OrdiniClientHttp>(client =>
+{
+    client.BaseAddress = new Uri("http://ordini:5000");
+});
 
 string connectionString = "Server=mssql-server;Database=Ordini;User Id=sa;Password=p4ssw0rD;Encrypt=False";
 builder.Services.AddDbContext<OrdiniDbContext>(p => p.UseSqlServer(connectionString));

@@ -13,6 +13,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Ordini/Ordini.csproj", "Ordini/"]
 COPY ["Ordini.Business/Ordini.Business.csproj", "Ordini.Business/"]
+COPY ["Ordini.ClientHttp/Ordini.ClientHttp.csproj", "Ordini.ClientHttp/"]
 COPY ["Ordini.Repository/Ordini.Repository.csproj", "Ordini.Repository/"]
 COPY ["Ordini.Shared/Ordini.Shared.csproj", "Ordini.Shared/"]
 RUN dotnet restore "./Ordini/Ordini.csproj"

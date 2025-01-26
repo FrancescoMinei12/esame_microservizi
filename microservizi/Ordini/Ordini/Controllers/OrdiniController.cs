@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ordini.Business.Abstractions;
+using Ordini.ClientHttp.Abstraction;
 using Ordini.Shared;
 
 namespace Ordini.Controllers;
@@ -10,11 +11,13 @@ public class OrdiniController : Controller
 {
     private readonly IBusiness _business;
     private readonly ILogger<OrdiniController> _logger;
+    private readonly IOrdiniClientHttp _ordiniClientHttp;
 
-    public OrdiniController(IBusiness business, ILogger<OrdiniController> logger)
+    public OrdiniController(IBusiness business, ILogger<OrdiniController> logger, IOrdiniClientHttp ordiniClientHttp)
     {
         _business = business;
         _logger = logger;
+        _ordiniClientHttp = ordiniClientHttp;
     }
 
     [HttpPost(Name = "CreateOrdine")]
@@ -66,6 +69,13 @@ public class OrdiniController : Controller
             _logger.LogError(ex, "Errore durante il recupero degli ordini.");
             return StatusCode(500, "Errore interno del server.");
         }
+    }
+
+    [HttpGet(Name = "GetAllOrdiniHttp")]
+    public async Task<IActionResult> GetAllOrdiniHttp(CancellationToken cancellationToken)
+    {
+        var ordini = await _ordiniClientHttp.GetAllOrdiniAsync(cancellationToken);
+        return Ok(ordini);
     }
 
     [HttpPut(Name = "UpdateOrdine")]

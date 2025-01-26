@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IJ/sWyyKXZQ=",
+  "dgSpecHash": "lDyebQI5a4o=",
   "success": true,
-  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",

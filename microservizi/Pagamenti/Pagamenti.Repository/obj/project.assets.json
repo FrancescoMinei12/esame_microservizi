@@ -2842,11 +2842,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
+      "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
       "projectName": "Pagamenti.Repository",
-      "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
+      "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
       "packagesPath": "C:\\Users\\Francesco\\.nuget\\packages\\",
-      "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\obj\\",
+      "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

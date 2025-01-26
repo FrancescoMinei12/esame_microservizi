@@ -15,8 +15,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
     volumes:
-      - C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini\Ordini:/app:rw
-      - C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini:/src:rw
+      - C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini:/app:rw
+      - C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini:/src:rw
       - C:\Users\Francesco\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\Francesco\.nuget\packages:/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/.nuget/fallbackpackages:ro

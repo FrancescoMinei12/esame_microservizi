@@ -906,11 +906,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+      "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
       "projectName": "Pagamenti.ClientHttp",
-      "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
+      "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
       "packagesPath": "C:\\Users\\Francesco\\.nuget\\packages\\",
-      "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\obj\\",
+      "outputPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -931,8 +931,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Shared\\Pagamenti.Shared.csproj": {
-              "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Shared\\Pagamenti.Shared.csproj"
+            "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Shared\\Pagamenti.Shared.csproj": {
+              "projectPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Shared\\Pagamenti.Shared.csproj"
             }
           }
         }

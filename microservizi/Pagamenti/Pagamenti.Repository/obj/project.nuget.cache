@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LX/V574pZ6U=",
+  "dgSpecHash": "P4HkaX8i6CM=",
   "success": true,
-  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\progetto_esame\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
+  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Repository\\Pagamenti.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

@@ -10,3 +10,15 @@ C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini\Ordini.Shar
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\refint\Ordini.Shared.dll
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.pdb
 C:\mega_sync\UniPR\3\microservizi\progetto_esame\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\ref\Ordini.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\bin\Debug\net8.0\Ordini.Shared.deps.json
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\bin\Debug\net8.0\Ordini.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\bin\Debug\net8.0\Ordini.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.AssemblyInfoInputs.cache
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.AssemblyInfo.cs
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.csproj.CoreCompileInputs.cache
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.sourcelink.json
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\refint\Ordini.Shared.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\Ordini.Shared.pdb
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini.Shared\obj\Debug\net8.0\ref\Ordini.Shared.dll
