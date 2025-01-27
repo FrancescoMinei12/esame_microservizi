@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jMdYSVYEopE=",
+  "dgSpecHash": "hydsVipJaSk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Francesco\\Desktop\\progetto_esame\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj",
+  "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.Repository\\Inventario.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

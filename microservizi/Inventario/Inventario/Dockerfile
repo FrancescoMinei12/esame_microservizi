@@ -13,6 +13,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Inventario/Inventario.csproj", "Inventario/"]
 COPY ["Inventario.Business/Inventario.Business.csproj", "Inventario.Business/"]
+COPY ["Inventario.ClientHttp/Inventario.ClientHttp.csproj", "Inventario.ClientHttp/"]
 COPY ["Inventario.Repository/Inventario.Repository.csproj", "Inventario.Repository/"]
 COPY ["Inventario.Shared/Inventario.Shared.csproj", "Inventario.Shared/"]
 RUN dotnet restore "./Inventario/Inventario.csproj"

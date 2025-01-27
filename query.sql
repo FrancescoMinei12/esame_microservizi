@@ -5,7 +5,7 @@ CREATE DATABASE Inventario;
 USE Inventario;
 
 -- Creazione della tabella Fornitori
-CREATE TABLE IF NOT EXISTS Fornitori (
+CREATE TABLE Fornitori (
     Id INT PRIMARY KEY IDENTITY(1,1), -- Chiave primaria
     Nome VARCHAR(255) NOT NULL, -- Nome del Fornitore
     Indirizzo VARCHAR(255), -- Indirizzo del Fornitore
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Fornitori (
 );
 
 -- Creazione della tabella Articoli con chiave esterna per Fornitori
-CREATE TABLE IF NOT EXISTS Articoli (
+CREATE TABLE Articoli (
     Id INT PRIMARY KEY IDENTITY(1,1), -- Chiave primaria con incremento automatico
     Nome VARCHAR(255) NOT NULL, -- Nome dell'Articolo
     Descrizione TEXT, -- Descrizione dell'Articolo
@@ -133,13 +133,13 @@ CREATE DATABASE Pagamenti;
 USE Pagamenti;
 
 -- Creazione della tabella MetodiPagamento
-CREATE TABLE IF NOT EXISTS MetodiPagamento (
+CREATE TABLE MetodiPagamento (
     Id INT PRIMARY KEY IDENTITY(1,1), -- Identificativo univoco del metodo di pagamento
     Nome NVARCHAR(50) NOT NULL -- Nome del metodo di pagamento (es. Carta di Credito, PayPal, Bonifico)
 );
 
 -- Creazione della tabella Pagamenti
-CREATE TABLE IF NOT EXISTS Pagamenti (
+CREATE TABLE Pagamenti (
     Id INT PRIMARY KEY IDENTITY(1,1), -- Identificativo univoco del pagamento
     Importo DECIMAL(10,2) NOT NULL, -- Totale pagato
     DataPagamento DATETIME NOT NULL, -- Data e ora del pagamento

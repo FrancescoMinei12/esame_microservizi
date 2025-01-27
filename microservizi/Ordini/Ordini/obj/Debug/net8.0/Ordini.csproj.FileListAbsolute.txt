@@ -199,3 +199,5 @@ C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\
 C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\obj\Debug\net8.0\Ordini.pdb
 C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\obj\Debug\net8.0\Ordini.genruntimeconfig.cache
 C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\obj\Debug\net8.0\ref\Ordini.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\bin\Debug\net8.0\Inventario.ClientHttp.dll
+C:\mega_sync\UniPR\3\microservizi\esame_microservizi\microservizi\Ordini\Ordini\bin\Debug\net8.0\Inventario.Shared.dll

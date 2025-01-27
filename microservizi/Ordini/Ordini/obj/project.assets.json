@@ -47,6 +47,31 @@
           }
         }
       },
+      "Inventario.ClientHttp/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Inventario.Shared": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Http": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Inventario.ClientHttp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Inventario.ClientHttp.dll": {}
+        }
+      },
+      "Inventario.Shared/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Inventario.Shared.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Inventario.Shared.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
         "type": "package",
         "dependencies": {
@@ -1360,6 +1385,30 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Inventario.ClientHttp/1.0.2": {
+      "sha512": "lOnqm0jseVrEOaNHr7AMZFdWLR0EH16ND75RT7Dhm+R+3M2NnN/YMrGSsU8iIVSGPQP7H0h1hJA5S+nE1O0ZtQ==",
+      "type": "package",
+      "path": "inventario.clienthttp/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "inventario.clienthttp.1.0.2.nupkg.sha512",
+        "inventario.clienthttp.nuspec",
+        "lib/net8.0/Inventario.ClientHttp.dll"
+      ]
+    },
+    "Inventario.Shared/1.0.0": {
+      "sha512": "ZsrlBJcKMLxDrzJfg2mh8vfyPWbTm8GqKJ4FQwq6sjn+Uief/36H6IPkC42FlkQxR/eEBAx5BP1RznbdBFIIag==",
+      "type": "package",
+      "path": "inventario.shared/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "inventario.shared.1.0.0.nupkg.sha512",
+        "inventario.shared.nuspec",
+        "lib/net8.0/Inventario.Shared.dll"
       ]
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
@@ -3765,6 +3814,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Inventario.ClientHttp >= 1.0.2",
       "Microsoft.EntityFrameworkCore >= 9.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.1",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
@@ -3790,6 +3840,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+        "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\NuGet.Config",
         "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3801,7 +3852,8 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
         "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -3832,6 +3884,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Inventario.ClientHttp": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.1, )"

@@ -15,7 +15,7 @@ builder.WebHost.ConfigureKestrel(options =>
 
 // Add services to the container.
 
-IConfigurationSection confSection=builder.Configuration.GetSection(OrdiniClientOptions.SectionName);
+IConfigurationSection confSection = builder.Configuration.GetSection(OrdiniClientOptions.SectionName);
 OrdiniClientOptions options = confSection.Get<OrdiniClientOptions>() ?? new();
 builder.Services.AddHttpClient<IOrdiniClientHttp, OrdiniClientHttp>(client =>
 {

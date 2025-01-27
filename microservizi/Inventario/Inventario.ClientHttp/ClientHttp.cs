@@ -24,7 +24,7 @@ public class ClientHttp(HttpClient httpClient) : IClientHttp
         return await res.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<ArticoloDto?>(cancellationToken: cancellationToken);
     }
 
-    public async Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default)
+    public async Task<ArticoloDto?> GetArticoloAsync(int id, CancellationToken cancellationToken = default)
     {
         var queryString = QueryString.Create(new Dictionary<string, string?>()
         {
