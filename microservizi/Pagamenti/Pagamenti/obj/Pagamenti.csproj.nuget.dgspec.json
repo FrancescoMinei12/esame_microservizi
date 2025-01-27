@@ -17,6 +17,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\NuGet.Config",
           "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -26,7 +27,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -89,6 +93,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\NuGet.Config",
           "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -98,7 +103,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -170,6 +178,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\NuGet.Config",
           "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -179,7 +188,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -235,6 +247,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\NuGet.Config",
           "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -244,7 +257,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -283,6 +299,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.21.0, )"
+            },
+            "Ordini.ClientHttp": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

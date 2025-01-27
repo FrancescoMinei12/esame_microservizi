@@ -3,6 +3,9 @@ using Pagamenti.Business.Abstractions;
 using Pagamenti.Repository;
 using Pagamenti.Repository.Abstraction;
 using Microsoft.EntityFrameworkCore;
+using Ordini.ClientHttp;
+using Ordini.ClientHttp.DependencyInjection;
+using Ordini.ClientHttp.Abstraction;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
@@ -11,6 +14,13 @@ builder.WebHost.ConfigureKestrel(options =>
 });
 
 // Add services to the container.
+
+IConfigurationSection confSection=builder.Configuration.GetSection(OrdiniClientOptions.SectionName);
+OrdiniClientOptions options = confSection.Get<OrdiniClientOptions>() ?? new();
+builder.Services.AddHttpClient<IOrdiniClientHttp, OrdiniClientHttp>(client =>
+{
+    client.BaseAddress = new Uri("http://ordini:5000");
+});
 
 string connectionString = "Server=mssql-server;Database=Pagamenti;User Id=sa;Password=p4ssw0rD;Encrypt=False";
 builder.Services.AddDbContext<PagamentiDbContext>(p => p.UseSqlServer(connectionString));

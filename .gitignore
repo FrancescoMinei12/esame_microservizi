@@ -1,1 +1,53 @@
-.vs
+# Cartelle e file generati automaticamente da Visual Studio e .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Cartelle specifiche per Docker
+**/Container/
+**/Docker/
+**/*.docker-compose/
+
+# File generati da NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# File per configurazioni di ambiente
+.env
+
+# File di log
+*.log
+
+# File di backup e di sistema
+*.bak
+*.swp
+Thumbs.db
+.DS_Store
+
+# Cartelle di runtime .NET
+**/runtimes/
+
+# Configurazioni specifiche per le librerie condivise
+Ordini.Shared/bin/
+Ordini.Shared/obj/
+Inventario.Shared/bin/
+Inventario.Shared/obj/
+Pagamenti.Shared/bin/
+Pagamenti.Shared/obj/
+
+# Configurazioni e build specifiche di ogni microservizio
+Inventario/**/bin/
+Inventario/**/obj/
+Ordini/**/bin/
+Ordini/**/obj/
+Pagamenti/**/bin/
+Pagamenti/**/obj/
+
+# Escludere i pacchetti locali se non pubblicati
+*.nupkg
+*.snupkg

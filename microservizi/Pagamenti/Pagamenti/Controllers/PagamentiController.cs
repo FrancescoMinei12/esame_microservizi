@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pagamenti.Business.Abstractions;
 using Pagamenti.Shared;
+using Ordini.ClientHttp;
 using Microsoft.Extensions.Logging;
+using Ordini.ClientHttp.Abstraction;
 
 namespace Pagamenti.Controllers;
 [ApiController]
@@ -10,12 +12,15 @@ public class PagamentiController : ControllerBase
 {
     private readonly IBusiness _business;
     private readonly ILogger<PagamentiController> _logger;
+    private readonly IOrdiniClientHttp _ordiniClientHttp;
 
-    public PagamentiController(IBusiness business, ILogger<PagamentiController> logger)
+    public PagamentiController(IBusiness business, ILogger<PagamentiController> logger, IOrdiniClientHttp ordiniClientHttp)
     {
         _business = business;
         _logger = logger;
+        _ordiniClientHttp = ordiniClientHttp;
     }
+
     [HttpPost(Name = "CreatePagamento")]
     public async Task<ActionResult> CreatePagamento(decimal importo, DateTime dataPagamento, int fkOrdine, int fkMetodoPagamento, CancellationToken cancellationToken = default)
     {
@@ -63,6 +68,44 @@ public class PagamentiController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dei pagamenti.");
+            return StatusCode(500, "Errore interno del server.");
+        }
+    }
+
+    [HttpGet(Name = "GetAllOrdiniClientHttp")]
+    public async Task<IActionResult> GetAllOrdiniClientHttp(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var ordini = await _ordiniClientHttp.GetAllOrdiniAsync(cancellationToken);
+            if (ordini == null || !ordini.Any())
+            {
+                return NotFound("Nessun ordine trovato.");
+            }
+            return Ok(ordini);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Errore durante il recupero degli ordini: {ex.Message}");
+        }
+    }
+
+    [HttpGet(Name = "GetOrdineByPagamento")]
+    public async Task<IActionResult> GetOrdineByPagamento(int id, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var pagamento = await _business.GetPagamentoByIdAsync(id, cancellationToken);
+            if (pagamento == null)
+                return NotFound($"Pagamento con ID '{id}' non trovato.");
+            var ordine = await _ordiniClientHttp.GetOrdineByIdAsync(pagamento.Fk_Ordine, cancellationToken);
+            if (ordine == null)
+                return NotFound($"Ordine con ID '{pagamento.Fk_Ordine}' non trovato.");
+            return Ok(new { Pagamento = pagamento, Ordine = ordine });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Errore durante il recupero dei dettagli del pagamento e dell'ordine.");
             return StatusCode(500, "Errore interno del server.");
         }
     }

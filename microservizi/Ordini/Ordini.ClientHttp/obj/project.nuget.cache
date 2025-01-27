@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "72W+egl8Caw=",
+  "dgSpecHash": "+16N5SF/fUQ=",
   "success": true,
   "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\Ordini.ClientHttp.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,8 @@
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.1\\microsoft.extensions.options.configurationextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.1\\system.diagnostics.diagnosticsource.9.0.1.nupkg.sha512",
-    "C:\\Users\\Francesco\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512"
+    "C:\\Users\\Francesco\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\ordini.shared\\1.0.0\\ordini.shared.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -26,6 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
+          "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
