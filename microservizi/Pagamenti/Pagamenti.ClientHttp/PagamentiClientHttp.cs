@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Net.Http.Json;
 
 namespace Pagamenti.ClientHttp;
-public class ClientHttp(HttpClient httpClient) : IClientHttp
+public class PagamentiClientHttp(HttpClient httpClient) : IClientHttp
 {
     public async Task<string?> CreatePagamentoAsync(PagamentoDto pagamento, CancellationToken cancellationToken)
     {

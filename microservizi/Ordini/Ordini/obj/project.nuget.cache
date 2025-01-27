@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "r0yo4kU82Do=",
+  "dgSpecHash": "86nq4cMjXFs=",
   "success": true,
   "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\Ordini.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francesco\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
-    "C:\\Users\\Francesco\\.nuget\\packages\\inventario.clienthttp\\1.0.2\\inventario.clienthttp.1.0.2.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\inventario.clienthttp\\1.0.4\\inventario.clienthttp.1.0.4.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\inventario.shared\\1.0.0\\inventario.shared.1.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
@@ -49,6 +49,8 @@
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\pagamenti.clienthttp\\1.0.1\\pagamenti.clienthttp.1.0.1.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\pagamenti.shared\\1.0.0\\pagamenti.shared.1.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

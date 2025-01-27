@@ -2,11 +2,16 @@
 using Ordini.Repository.Abstraction;
 using Ordini.Shared;
 using Microsoft.Extensions.Logging;
+using Inventario.ClientHttp;
 using System.Threading;
+using Inventario.ClientHttp.Abstraction;
+using Ordini.Repository.Model;
+using Pagamenti.ClientHttp;
+using Pagamenti.Shared;
 
 namespace Ordini.Business;
 
-public class Business(IRepository repository, ILogger<Business> logger) : IBusiness
+public class Business(IRepository repository, ILogger<Business> logger, Inventario.ClientHttp.Abstraction.IClientHttp inventarioClientHttp, Pagamenti.ClientHttp.Abstraction.IClientHttp pagamentiClientHttp) : IBusiness
 {
     // Clienti
     public async Task CreateClienteAsync(string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
@@ -74,6 +79,46 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         await repository.CreateOrdineAsync(fk_cliente, totale, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
+
+    public async Task CreateOrdineCompletoAsync(int fk_cliente, List<(int id_prodotto, int quantita)> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            decimal totale = 0;
+            foreach (var (prodotto, quantita) in prodotti)
+            {
+                var articolo = await inventarioClientHttp.GetArticoloAsync(prodotto, cancellationToken);
+                if (articolo == null || articolo.QuantitaDisponibile < quantita)
+                {
+                    throw new Exception($"Prodotto con ID '{prodotto}' non disponibile o quantità insufficiente.");
+                }
+                totale += articolo.Prezzo * quantita;
+            }
+            var ordine = await repository.CreateOrdineAsync(fk_cliente, totale, cancellationToken);
+            await repository.SaveChangesAsync(cancellationToken);
+            foreach (var (prodotto, quantita) in prodotti)
+            {
+                await repository.AddProdottoToOrdineAsync(ordine.Id, prodotto, quantita, cancellationToken);
+                await inventarioClientHttp.ScaricaQuantitaAsync(prodotto, quantita, cancellationToken);
+            }
+            await repository.SaveChangesAsync(cancellationToken);
+
+            var pagamento = new PagamentoDto
+            {
+                Importo = totale,
+                DataPagamento = DateTime.Now,
+                Fk_Ordine = ordine.Id,
+                Fk_MetodoPagamento = metodoPagamentoId
+            };
+            await pagamentiClientHttp.CreatePagamentoAsync(pagamento, cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Errore durante la creazione dell'ordine.");
+            throw;
+        }
+    }
+
     public async Task<OrdineDto?> GetOrdineByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         var ordine = await repository.ReadOrdineAsync(id, cancellationToken);

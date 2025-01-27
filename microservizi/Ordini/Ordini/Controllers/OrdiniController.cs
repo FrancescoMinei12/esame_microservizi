@@ -6,6 +6,13 @@ using Ordini.ClientHttp.Abstraction;
 
 namespace Ordini.Controllers;
 
+public class ProdottoQuantita
+{
+    public int ProdottoId { get; set; }
+    public int Quantita { get; set; }
+}
+
+
 [ApiController]
 [Route("[controller]/[action]")]
 public class OrdiniController : Controller
@@ -32,6 +39,22 @@ public class OrdiniController : Controller
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione dell'ordine.");
+            return StatusCode(500, "Errore interno del server.");
+        }
+    }
+
+    [HttpPost(Name = "CreateOrdineCompleto")]
+    public async Task<ActionResult> CreateOrdineCompleto(int idCliente, [FromBody] List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var prodottiTuple = prodotti.Select(p => (p.ProdottoId, p.Quantita)).ToList();
+            await _business.CreateOrdineCompletoAsync(idCliente, prodottiTuple, metodoPagamentoId, cancellationToken);
+            return Ok("Ordine completo creato con successo!");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Errore durante la creazione dell'ordine completo.");
             return StatusCode(500, "Errore interno del server.");
         }
     }

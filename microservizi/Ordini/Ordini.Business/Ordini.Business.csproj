@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Inventario.ClientHttp" Version="1.0.3" />
+    <PackageReference Include="Pagamenti.ClientHttp" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Ordini.Repository\Ordini.Repository.csproj" />
     <ProjectReference Include="..\Ordini.Shared\Ordini.Shared.csproj" />
   </ItemGroup>

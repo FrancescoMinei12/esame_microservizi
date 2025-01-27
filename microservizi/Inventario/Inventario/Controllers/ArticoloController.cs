@@ -24,6 +24,36 @@ public class ArticoloController : ControllerBase
         return Ok("Articolo creato correttamente!");
     }
 
+    [HttpPost(Name = "ScaricaQuantita")]
+    public async Task<ActionResult> ScaricaQuantita(int prodottoId, int quantita, CancellationToken cancellationToken = default)
+    {
+        if (quantita <= 0)
+        {
+            _logger.LogWarning("La quantità da scalare deve essere maggiore di zero.");
+            return BadRequest("La quantità da scalare deve essere maggiore di zero.");
+        }
+        try
+        {
+            await _business.ScaricaQuantitaAsync(prodottoId, quantita, cancellationToken);
+            return Ok($"Quantità di '{quantita}' scalata correttamente per il prodotto con ID '{prodottoId}'.");
+        }
+        catch (KeyNotFoundException ex)
+        {
+            _logger.LogError(ex, $"Errore: prodotto con ID '{prodottoId}' non trovato.");
+            return NotFound($"Prodotto con ID '{prodottoId}' non trovato.");
+        }
+        catch (InvalidOperationException ex)
+        {
+            _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}': {ex.Message}");
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}'.");
+            return StatusCode(500, "Errore interno del server.");
+        }
+    }
+
     [HttpGet(Name = "ReadArticolo")]
     public async Task<ActionResult<ArticoloDto?>> ReadArticolo(int id)
     {

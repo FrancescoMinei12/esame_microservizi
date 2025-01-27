@@ -5,6 +5,7 @@ using Ordini.Repository.Abstraction;
 using Microsoft.EntityFrameworkCore;
 using Inventario.ClientHttp;
 using Inventario.ClientHttp.Abstraction;
+using Pagamenti.ClientHttp;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
@@ -14,11 +15,18 @@ builder.WebHost.ConfigureKestrel(options =>
 
 // Add services to the container.
 
-IConfigurationSection confSection=builder.Configuration.GetSection(InventarioClientOptions.SectionName);
-InventarioClientOptions options = confSection.Get<InventarioClientOptions>() ?? new();
-builder.Services.AddHttpClient<IClientHttp, ClientHttp>(client =>
+IConfigurationSection confSectionInventario = builder.Configuration.GetSection(InventarioClientOptions.SectionName);
+InventarioClientOptions optionsInventario = confSectionInventario.Get<InventarioClientOptions>() ?? new();
+builder.Services.AddHttpClient<Inventario.ClientHttp.Abstraction.IClientHttp, ClientHttp>("InventarioClient",client =>
 {
     client.BaseAddress = new Uri("http://inventario:5000");
+});
+
+IConfigurationSection confSectionPagamenti = builder.Configuration.GetSection(InventarioClientOptions.SectionName);
+InventarioClientOptions optionsPagamenti = confSectionPagamenti.Get<InventarioClientOptions>() ?? new();
+builder.Services.AddHttpClient<Pagamenti.ClientHttp.Abstraction.IClientHttp, PagamentiClientHttp>("PagamentiClient", client =>
+{
+    client.BaseAddress = new Uri("http://pagamenti:5000");
 });
 
 string connectionString = "Server=mssql-server;Database=Ordini;User Id=sa;Password=p4ssw0rD;Encrypt=False";

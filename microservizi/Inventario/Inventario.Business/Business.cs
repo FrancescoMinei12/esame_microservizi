@@ -13,6 +13,18 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         await repository.CreateArticoloAsync(nome, desc, prezzo, quantita, SKU, categoria, fk_fornitore, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
+    public async Task ScaricaQuantitaAsync(int articoloId, int quantita, CancellationToken cancellationToken = default)
+    {
+        var articolo = await repository.ReadArticoloAsync(articoloId, cancellationToken);
+        if (articolo == null)
+            throw new InvalidOperationException($"Articolo {articoloId} non trovato");
+        if (articolo.QuantitaDisponibile < quantita)
+            throw new InvalidOperationException($"Quantità non disponibile per l'articolo {articoloId}");
+        articolo.QuantitaDisponibile -= quantita;
+        await repository.SaveChangesAsync(cancellationToken);
+        logger.LogInformation($"Quantità aggiornata per il prodotto con ID '{articoloId}'. Nuova quantità disponibile: {articolo.QuantitaDisponibile}.");
+    }
+
     public async Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default)
     {
         var articolo = await repository.ReadArticoloAsync(id, cancellationToken);

@@ -60,6 +60,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Inventario.ClientHttp": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Pagamenti.ClientHttp": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

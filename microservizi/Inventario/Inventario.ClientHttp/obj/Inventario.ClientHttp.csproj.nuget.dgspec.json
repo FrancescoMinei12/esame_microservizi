@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.4",
       "restore": {
         "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
         "projectName": "Inventario.ClientHttp",

@@ -12,7 +12,7 @@ public static class PagamentiClientExtensions
         IConfigurationSection confSection = configuration.GetSection(PagamentiClientOptions.SectionName);
         PagamentiClientOptions options = confSection.Get<PagamentiClientOptions>() ?? new();
 
-        services.AddHttpClient<IClientHttp, ClientHttp>(o =>
+        services.AddHttpClient<IClientHttp, PagamentiClientHttp>(o =>
         {
             o.BaseAddress = new Uri(options.BaseAddress);
         }).ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler

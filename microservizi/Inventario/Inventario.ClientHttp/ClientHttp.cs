@@ -33,4 +33,15 @@ public class ClientHttp(HttpClient httpClient) : IClientHttp
         var res = await httpClient.GetAsync($"/Articolo/ReadArticolo{queryString}", cancellationToken);
         return await res.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<ArticoloDto?>(cancellationToken: cancellationToken);
     }
+
+    public async Task<string?> ScaricaQuantitaAsync(int prodottoId, int quantita, CancellationToken cancellationToken = default)
+    {
+        var queryString = QueryString.Create(new Dictionary<string, string?>
+        {
+            { "prodottoId", prodottoId.ToString() },
+            { "quantita", quantita.ToString() }
+        });
+        var response = await httpClient.PostAsync($"/Articolo/ScaricaQuantita{queryString}", null, cancellationToken);
+        return await response.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<string>(cancellationToken: cancellationToken);
+    }
 }

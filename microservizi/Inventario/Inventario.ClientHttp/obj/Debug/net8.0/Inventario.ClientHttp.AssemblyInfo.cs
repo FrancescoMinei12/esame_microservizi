@@ -14,11 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniPr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Inventario.ClientHttp")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+2ecdc5579df72d9cb11f2dde8cbe389688822e87")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.4.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.4+0bd7ab31ea4053aef37385c1c9a3f3525c0b479b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inventario.ClientHttp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inventario.ClientHttp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.4.0")]
 
 // Generato dalla classe WriteCodeFragment di MSBuild.
 
