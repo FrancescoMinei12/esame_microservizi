@@ -5,7 +5,7 @@ public interface IBusiness
 {
     // Articoli
     Task CreateArticoloAsync(string nome, string desc, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default);
-    Task ScaricaQuantitaAsync(int id, int quantita, CancellationToken cancellationToken = default);
+    Task<ArticoloDto?> ScaricaQuantitaAsync(int id, int quantita, CancellationToken cancellationToken = default);
     Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default);
     Task<ArticoloDto?> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default);
     Task<List<ArticoloDto?>> GetCategoriaAsync(string categoria, CancellationToken cancellationToken = default);

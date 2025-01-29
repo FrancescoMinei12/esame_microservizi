@@ -8,11 +8,13 @@
     ".NETCoreApp,Version=v8.0": {
       "Ordini/1.0.0": {
         "dependencies": {
+          "Inventario.ClientHttp": "1.0.8",
           "Microsoft.EntityFrameworkCore": "9.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
           "Ordini.Business": "1.0.0",
           "Ordini.ClientHttp": "1.0.0",
+          "Pagamenti.ClientHttp": "1.0.1",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
@@ -51,6 +53,29 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "Inventario.ClientHttp/1.0.8": {
+        "dependencies": {
+          "Inventario.Shared": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Http": "9.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Inventario.ClientHttp.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
+          }
+        }
+      },
+      "Inventario.Shared/1.0.0": {
+        "runtime": {
+          "lib/net8.0/Inventario.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -500,6 +525,29 @@
           }
         }
       },
+      "Pagamenti.ClientHttp/1.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Http": "9.0.1",
+          "Pagamenti.Shared": "1.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Pagamenti.ClientHttp.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "Pagamenti.Shared/1.0.0": {
+        "runtime": {
+          "lib/net8.0/Pagamenti.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.6.2": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -760,8 +808,10 @@
       },
       "Ordini.Business/1.0.0": {
         "dependencies": {
+          "Inventario.ClientHttp": "1.0.8",
           "Ordini.Repository": "1.0.0",
-          "Ordini.Shared": "1.0.0"
+          "Ordini.Shared": "1.0.0",
+          "Pagamenti.ClientHttp": "1.0.1"
         },
         "runtime": {
           "Ordini.Business.dll": {
@@ -826,6 +876,20 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "Inventario.ClientHttp/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66NH1zdry0iD8Kx72plvA4s7q+D/LR8D1kH8eJNsOMayEOUjn9sbj0EnY/kM78lGUGstbqcpg3DwMfHjlVEGDg==",
+      "path": "inventario.clienthttp/1.0.8",
+      "hashPath": "inventario.clienthttp.1.0.8.nupkg.sha512"
+    },
+    "Inventario.Shared/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZsrlBJcKMLxDrzJfg2mh8vfyPWbTm8GqKJ4FQwq6sjn+Uief/36H6IPkC42FlkQxR/eEBAx5BP1RznbdBFIIag==",
+      "path": "inventario.shared/1.0.0",
+      "hashPath": "inventario.shared.1.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
       "type": "package",
@@ -1113,6 +1177,20 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "Pagamenti.ClientHttp/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3OPErxTfgr7Q1DJYJxxriE0SL68y3artHRXjmVn/aVgkcol7B9RYBP5OLbXMkLwJE3V6uF3gSUgopVL0NYz6eQ==",
+      "path": "pagamenti.clienthttp/1.0.1",
+      "hashPath": "pagamenti.clienthttp.1.0.1.nupkg.sha512"
+    },
+    "Pagamenti.Shared/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r5L9dPzAetZMFdRp9DpGZOjvB47AATpH3+I8LyM4AHRV3l21szJZoeTpUjYJEkmkUZIB8z5wcNSjioKZJ+BM7Q==",
+      "path": "pagamenti.shared/1.0.0",
+      "hashPath": "pagamenti.shared.1.0.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",

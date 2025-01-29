@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Ordini.Business/1.0.0": {
         "dependencies": {
-          "Inventario.ClientHttp": "1.0.3",
+          "Inventario.ClientHttp": "1.0.8",
           "Ordini.Repository": "1.0.0",
           "Ordini.Shared": "1.0.0",
           "Pagamenti.ClientHttp": "1.0.1"
@@ -17,7 +17,7 @@
           "Ordini.Business.dll": {}
         }
       },
-      "Inventario.ClientHttp/1.0.3": {
+      "Inventario.ClientHttp/1.0.8": {
         "dependencies": {
           "Inventario.Shared": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
@@ -27,8 +27,8 @@
         },
         "runtime": {
           "lib/net8.0/Inventario.ClientHttp.dll": {
-            "assemblyVersion": "1.0.3.0",
-            "fileVersion": "1.0.3.0"
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
           }
         }
       },
@@ -341,12 +341,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Inventario.ClientHttp/1.0.3": {
+    "Inventario.ClientHttp/1.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lC3qIrmgu6INWvQNiJu3+I6DC7Wee8yo9Xw+pB4MJ6tJRzB2QeMGdhLGOBB1YyTlI05nthXMY81VItL2+MUr5g==",
-      "path": "inventario.clienthttp/1.0.3",
-      "hashPath": "inventario.clienthttp.1.0.3.nupkg.sha512"
+      "sha512": "sha512-66NH1zdry0iD8Kx72plvA4s7q+D/LR8D1kH8eJNsOMayEOUjn9sbj0EnY/kM78lGUGstbqcpg3DwMfHjlVEGDg==",
+      "path": "inventario.clienthttp/1.0.8",
+      "hashPath": "inventario.clienthttp.1.0.8.nupkg.sha512"
     },
     "Inventario.Shared/1.0.0": {
       "type": "package",

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.clienthttp\\clienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|solutionrelative:inventario.clienthttp\\clienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.clienthttp\\abstraction\\iinventarioclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|solutionrelative:inventario.clienthttp\\abstraction\\iinventarioclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.clienthttp\\abstraction\\iclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|solutionrelative:inventario.clienthttp\\abstraction\\iclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.clienthttp\\inventario.clienthttp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|solutionrelative:inventario.clienthttp\\inventario.clienthttp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario\\controllers\\articolocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC45CB64-7E70-4196-9B3D-2E36D13A18D1}|Inventario\\Inventario.csproj|solutionrelative:inventario\\controllers\\articolocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.clienthttp\\inventarioclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F041D0E6-0AF6-46CB-AB65-8310B18183E6}|Inventario.ClientHttp\\Inventario.ClientHttp.csproj|solutionrelative:inventario.clienthttp\\inventarioclienthttp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|solutionrelative:inventario.business\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\inventario\\inventario.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AA41087-1162-4C26-BADA-902DAEB474A8}|Inventario.Business\\Inventario.Business.csproj|solutionrelative:inventario.business\\abstractions\\ibusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,37 +34,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientHttp.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\ClientHttp.cs",
-              "RelativeDocumentMoniker": "Inventario.ClientHttp\\ClientHttp.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\ClientHttp.cs",
-              "RelativeToolTip": "Inventario.ClientHttp\\ClientHttp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T09:06:13.355Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IClientHttp.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Abstraction\\IClientHttp.cs",
-              "RelativeDocumentMoniker": "Inventario.ClientHttp\\Abstraction\\IClientHttp.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Abstraction\\IClientHttp.cs",
-              "RelativeToolTip": "Inventario.ClientHttp\\Abstraction\\IClientHttp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IInventarioClientHttp.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Abstraction\\IInventarioClientHttp.cs",
+              "RelativeDocumentMoniker": "Inventario.ClientHttp\\Abstraction\\IInventarioClientHttp.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Abstraction\\IInventarioClientHttp.cs",
+              "RelativeToolTip": "Inventario.ClientHttp\\Abstraction\\IInventarioClientHttp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T09:46:46.984Z",
+              "WhenOpened": "2025-01-28T16:11:23.712Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inventario.ClientHttp.csproj",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+              "RelativeDocumentMoniker": "Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+              "RelativeToolTip": "Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-28T16:11:19.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArticoloController.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario\\Controllers\\ArticoloController.cs",
+              "RelativeDocumentMoniker": "Inventario\\Controllers\\ArticoloController.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario\\Controllers\\ArticoloController.cs",
+              "RelativeToolTip": "Inventario\\Controllers\\ArticoloController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwGEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T14:52:41.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventarioClientHttp.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\InventarioClientHttp.cs",
+              "RelativeDocumentMoniker": "Inventario.ClientHttp\\InventarioClientHttp.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\InventarioClientHttp.cs",
+              "RelativeToolTip": "Inventario.ClientHttp\\InventarioClientHttp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T09:06:13.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBusiness.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.Business\\Abstractions\\IBusiness.cs",
+              "RelativeDocumentMoniker": "Inventario.Business\\Abstractions\\IBusiness.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.Business\\Abstractions\\IBusiness.cs",
+              "RelativeToolTip": "Inventario.Business\\Abstractions\\IBusiness.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T16:07:07.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeDocumentMoniker": "Inventario.Business\\Business.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.Business\\Business.cs",
+              "RelativeToolTip": "Inventario.Business\\Business.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAUwLwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T16:01:39.682Z"
             }
           ]
         }

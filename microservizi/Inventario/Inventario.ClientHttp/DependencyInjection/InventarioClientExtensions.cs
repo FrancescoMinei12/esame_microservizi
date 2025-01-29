@@ -11,7 +11,7 @@ public static class InventarioClientExtensions
         IConfigurationSection confSection = configuration.GetSection(InventarioClientOptions.SectionName);
         InventarioClientOptions options = confSection.Get<InventarioClientOptions>() ?? new();
 
-        services.AddHttpClient<IClientHttp, ClientHttp>(obj =>
+        services.AddHttpClient<IInventarioClientHttp, InventarioClientHttp>(obj =>
         {
             obj.BaseAddress = new Uri(options.BaseAddress);
         }).ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler

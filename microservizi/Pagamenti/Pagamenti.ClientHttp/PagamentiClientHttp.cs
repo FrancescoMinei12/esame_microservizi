@@ -10,7 +10,7 @@ public class PagamentiClientHttp(HttpClient httpClient) : IClientHttp
     public async Task<string?> CreatePagamentoAsync(PagamentoDto pagamento, CancellationToken cancellationToken)
     {
         var response = await httpClient.PostAsync($"/Pagamenti/CreatePagamento", JsonContent.Create(pagamento), cancellationToken);
-        return await response.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<string>(cancellationToken: cancellationToken);
+        return await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync(cancellationToken: cancellationToken);
     }
     public async Task<PagamentoDto?> GetPagamentoAsync(int id, CancellationToken cancellationToken)
     {

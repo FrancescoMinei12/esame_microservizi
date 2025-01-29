@@ -2,15 +2,10 @@
 using Ordini.Business.Abstractions;
 using Ordini.Shared;
 using Inventario.ClientHttp.Abstraction;
-using Ordini.ClientHttp.Abstraction;
 
 namespace Ordini.Controllers;
 
-public class ProdottoQuantita
-{
-    public int ProdottoId { get; set; }
-    public int Quantita { get; set; }
-}
+
 
 
 [ApiController]
@@ -19,9 +14,9 @@ public class OrdiniController : Controller
 {
     private readonly IBusiness _business;
     private readonly ILogger<OrdiniController> _logger;
-    private readonly IClientHttp _inventarioClientHttp;
+    private readonly IInventarioClientHttp _inventarioClientHttp;
 
-    public OrdiniController(IBusiness business, ILogger<OrdiniController> logger, IClientHttp inventarioClientHttp)
+    public OrdiniController(IBusiness business, ILogger<OrdiniController> logger, IInventarioClientHttp inventarioClientHttp)
     {
         _business = business;
         _logger = logger;
@@ -47,9 +42,8 @@ public class OrdiniController : Controller
     public async Task<ActionResult> CreateOrdineCompleto(int idCliente, [FromBody] List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
     {
         try
-        {
-            var prodottiTuple = prodotti.Select(p => (p.ProdottoId, p.Quantita)).ToList();
-            await _business.CreateOrdineCompletoAsync(idCliente, prodottiTuple, metodoPagamentoId, cancellationToken);
+        { 
+            await _business.CreateOrdineCompletoAsync(idCliente, prodotti, metodoPagamentoId, cancellationToken);
             return Ok("Ordine completo creato con successo!");
         }
         catch (Exception ex)

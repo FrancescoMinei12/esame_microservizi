@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 
 namespace Inventario.ClientHttp;
 
-public class ClientHttp(HttpClient httpClient) : IClientHttp
+public class InventarioClientHttp(HttpClient httpClient) : IInventarioClientHttp
 {
     public async Task<string?> CreateArticoloAsync(ArticoloDto articoloDto, CancellationToken cancellationToken = default)
     {
@@ -34,14 +34,14 @@ public class ClientHttp(HttpClient httpClient) : IClientHttp
         return await res.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<ArticoloDto?>(cancellationToken: cancellationToken);
     }
 
-    public async Task<string?> ScaricaQuantitaAsync(int prodottoId, int quantita, CancellationToken cancellationToken = default)
+    public async Task<ArticoloDto?> ScaricaQuantitaAsync(int prodottoId, int quantita, CancellationToken cancellationToken = default)
     {
-        var queryString = QueryString.Create(new Dictionary<string, string?>
+        var queryString = QueryString.Create(new Dictionary<string, string?>()
         {
-            { "prodottoId", prodottoId.ToString() },
-            { "quantita", quantita.ToString() }
+            { "prodottoId", prodottoId.ToString(CultureInfo.InvariantCulture) },
+            { "quantita", quantita.ToString(CultureInfo.InvariantCulture) }
         });
-        var response = await httpClient.PostAsync($"/Articolo/ScaricaQuantita{queryString}", null, cancellationToken);
-        return await response.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<string>(cancellationToken: cancellationToken);
+        var response = await httpClient.GetAsync($"/Articolo/ScaricaQuantita{queryString}", cancellationToken);
+        return await response.EnsureSuccessStatusCode().Content.ReadFromJsonAsync<ArticoloDto>(cancellationToken: cancellationToken);
     }
 }

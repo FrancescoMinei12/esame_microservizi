@@ -13,7 +13,7 @@ public interface IBusiness
 
     // Ordini
     Task CreateOrdineAsync(int fk_cliente, decimal totale, CancellationToken cancellationToken = default);
-    Task CreateOrdineCompletoAsync(int fk_cliente, List<(int id_prodotto, int quantita)> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default);
+    Task CreateOrdineCompletoAsync(int fk_cliente, List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default);
     Task<OrdineDto?> GetOrdineByIdAsync(int id, CancellationToken cancellationToken = default);
     Task<List<OrdineDto>> GetAllOrdiniAsync(CancellationToken cancellationToken = default);
     Task UpdateOrdineAsync(int id, decimal totale, int fk_cliente, CancellationToken cancellationToken = default);

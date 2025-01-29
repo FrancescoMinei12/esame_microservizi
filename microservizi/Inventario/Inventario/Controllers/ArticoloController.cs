@@ -24,33 +24,34 @@ public class ArticoloController : ControllerBase
         return Ok("Articolo creato correttamente!");
     }
 
-    [HttpPost(Name = "ScaricaQuantita")]
-    public async Task<ActionResult> ScaricaQuantita(int prodottoId, int quantita, CancellationToken cancellationToken = default)
+    [HttpGet(Name = "ScaricaQuantita")]
+    public async Task<ActionResult<ArticoloDto?>> ScaricaQuantita(int prodottoId, int quantita, CancellationToken cancellationToken = default)
     {
         if (quantita <= 0)
         {
             _logger.LogWarning("La quantità da scalare deve essere maggiore di zero.");
-            return BadRequest("La quantità da scalare deve essere maggiore di zero.");
+            return BadRequest(new { Error = "La quantità da scalare deve essere maggiore di zero." });
         }
+
         try
         {
-            await _business.ScaricaQuantitaAsync(prodottoId, quantita, cancellationToken);
-            return Ok($"Quantità di '{quantita}' scalata correttamente per il prodotto con ID '{prodottoId}'.");
+            var articoloDto = await _business.ScaricaQuantitaAsync(prodottoId, quantita, cancellationToken);
+            return new JsonResult(articoloDto); // Restituisci il DTO dell'articolo aggiornato
         }
         catch (KeyNotFoundException ex)
         {
             _logger.LogError(ex, $"Errore: prodotto con ID '{prodottoId}' non trovato.");
-            return NotFound($"Prodotto con ID '{prodottoId}' non trovato.");
+            return NotFound(new { Error = $"Prodotto con ID '{prodottoId}' non trovato." });
         }
         catch (InvalidOperationException ex)
         {
             _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}': {ex.Message}");
-            return BadRequest(ex.Message);
+            return BadRequest(new { Error = ex.Message });
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return StatusCode(500, new { Error = "Errore interno del server." });
         }
     }
 

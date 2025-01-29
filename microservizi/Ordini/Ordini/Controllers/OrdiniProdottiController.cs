@@ -1,8 +1,6 @@
 ﻿using Ordini.Business.Abstractions;
-using Ordini.Repository.Model;
 using Ordini.Shared;
 using Microsoft.AspNetCore.Mvc;
-using Ordini.ClientHttp.Abstraction;
 using Inventario.ClientHttp.Abstraction;
 using Inventario.Shared;
 
@@ -14,9 +12,9 @@ public class OrdiniProdottiController : Controller
 {
     private readonly IBusiness _business;
     private readonly ILogger<OrdiniProdottiController> _logger;
-    private readonly IClientHttp _inventarioClientHttp;
+    private readonly IInventarioClientHttp _inventarioClientHttp;
 
-    public OrdiniProdottiController(IBusiness business, ILogger<OrdiniProdottiController> logger, IClientHttp inventarioClientHttp)
+    public OrdiniProdottiController(IBusiness business, ILogger<OrdiniProdottiController> logger, IInventarioClientHttp inventarioClientHttp)
     {
         _business = business;
         _logger = logger;

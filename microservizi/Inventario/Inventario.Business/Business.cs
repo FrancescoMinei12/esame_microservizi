@@ -13,7 +13,7 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         await repository.CreateArticoloAsync(nome, desc, prezzo, quantita, SKU, categoria, fk_fornitore, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
     }
-    public async Task ScaricaQuantitaAsync(int articoloId, int quantita, CancellationToken cancellationToken = default)
+    public async Task<ArticoloDto?> ScaricaQuantitaAsync(int articoloId, int quantita, CancellationToken cancellationToken = default)
     {
         var articolo = await repository.ReadArticoloAsync(articoloId, cancellationToken);
         if (articolo == null)
@@ -23,8 +23,14 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
         articolo.QuantitaDisponibile -= quantita;
         await repository.SaveChangesAsync(cancellationToken);
         logger.LogInformation($"Quantità aggiornata per il prodotto con ID '{articoloId}'. Nuova quantità disponibile: {articolo.QuantitaDisponibile}.");
+        return new ArticoloDto
+        {
+            Id = articolo.Id,
+            CodiceSKU = articolo.CodiceSKU,
+            Nome = articolo.Nome,
+            QuantitaDisponibile = articolo.QuantitaDisponibile
+        };
     }
-
     public async Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default)
     {
         var articolo = await repository.ReadArticoloAsync(id, cancellationToken);

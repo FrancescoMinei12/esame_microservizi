@@ -879,7 +879,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.4",
+    "version": "1.0.8",
     "restore": {
       "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Inventario\\Inventario.ClientHttp\\Inventario.ClientHttp.csproj",
       "projectName": "Inventario.ClientHttp",

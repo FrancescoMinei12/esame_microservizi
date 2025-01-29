@@ -22,12 +22,22 @@ public class PagamentiController : ControllerBase
     }
 
     [HttpPost(Name = "CreatePagamento")]
-    public async Task<ActionResult> CreatePagamento(decimal importo, DateTime dataPagamento, int fkOrdine, int fkMetodoPagamento, CancellationToken cancellationToken = default)
+    public async Task<ActionResult> CreatePagamento([FromBody] PagamentoDto pagamentoDto, CancellationToken cancellationToken = default)
     {
         try
         {
-            await _business.CreatePagamentoAsync(importo, dataPagamento, fkOrdine, fkMetodoPagamento, cancellationToken);
-            return Ok("Pagamento creato con successo!");
+            if (pagamentoDto == null)
+            {
+                return BadRequest("I dati del pagamento non possono essere null.");
+            }
+            await _business.CreatePagamentoAsync(pagamentoDto.Importo, pagamentoDto.DataPagamento, pagamentoDto.Fk_Ordine, pagamentoDto.Fk_MetodoPagamento, cancellationToken);
+            _logger.LogInformation("Pagamento creato con successo!");
+            return new JsonResult(new { message = "Pagamento creato con successo!" }) { StatusCode = 200 };
+        }
+        catch (ArgumentException ex)
+        {
+            _logger.LogWarning(ex, "Dati non validi per la creazione del pagamento.");
+            return BadRequest(ex.Message);
         }
         catch (Exception ex)
         {

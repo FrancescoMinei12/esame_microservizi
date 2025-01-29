@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E46Up4BySSs=",
+  "dgSpecHash": "Q3fm2OFSpl8=",
   "success": true,
   "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Ordini.Business.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Francesco\\.nuget\\packages\\inventario.clienthttp\\1.0.3\\inventario.clienthttp.1.0.3.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\inventario.clienthttp\\1.0.8\\inventario.clienthttp.1.0.8.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\inventario.shared\\1.0.0\\inventario.shared.1.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
@@ -27,7 +27,7 @@
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.extensions.options\\9.0.1\\microsoft.extensions.options.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.1\\microsoft.extensions.options.configurationextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512",
-    "C:\\Users\\Francesco\\.nuget\\packages\\pagamenti.clienthttp\\1.0.1\\pagamenti.clienthttp.1.0.1.nupkg.sha512",
+    "C:\\Users\\Francesco\\.nuget\\packages\\pagamenti.clienthttp\\1.0.2\\pagamenti.clienthttp.1.0.2.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\pagamenti.shared\\1.0.0\\pagamenti.shared.1.0.0.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.1\\system.diagnostics.diagnosticsource.9.0.1.nupkg.sha512",
     "C:\\Users\\Francesco\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",

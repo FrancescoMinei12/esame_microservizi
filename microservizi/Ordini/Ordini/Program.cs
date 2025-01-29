@@ -3,11 +3,16 @@ using Ordini.Business.Abstractions;
 using Ordini.Repository;
 using Ordini.Repository.Abstraction;
 using Microsoft.EntityFrameworkCore;
+using Pagamenti.ClientHttp;
 using Inventario.ClientHttp;
 using Inventario.ClientHttp.Abstraction;
-using Pagamenti.ClientHttp;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders(); // Rimuove i provider predefiniti
+builder.Logging.AddConsole(); // Aggiunge la stampa in console
+builder.Logging.SetMinimumLevel(LogLevel.Debug); // Mostra più dettagli
+
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(5000);
@@ -17,7 +22,7 @@ builder.WebHost.ConfigureKestrel(options =>
 
 IConfigurationSection confSectionInventario = builder.Configuration.GetSection(InventarioClientOptions.SectionName);
 InventarioClientOptions optionsInventario = confSectionInventario.Get<InventarioClientOptions>() ?? new();
-builder.Services.AddHttpClient<Inventario.ClientHttp.Abstraction.IClientHttp, ClientHttp>("InventarioClient",client =>
+builder.Services.AddHttpClient<IInventarioClientHttp, InventarioClientHttp>("InventarioClient", client =>
 {
     client.BaseAddress = new Uri("http://inventario:5000");
 });

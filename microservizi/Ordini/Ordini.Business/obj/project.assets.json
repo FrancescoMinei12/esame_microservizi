@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Inventario.ClientHttp/1.0.3": {
+      "Inventario.ClientHttp/1.0.8": {
         "type": "package",
         "dependencies": {
           "Inventario.Shared": "1.0.0",
@@ -418,7 +418,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Pagamenti.ClientHttp/1.0.1": {
+      "Pagamenti.ClientHttp/1.0.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
@@ -515,14 +515,14 @@
     }
   },
   "libraries": {
-    "Inventario.ClientHttp/1.0.3": {
-      "sha512": "lC3qIrmgu6INWvQNiJu3+I6DC7Wee8yo9Xw+pB4MJ6tJRzB2QeMGdhLGOBB1YyTlI05nthXMY81VItL2+MUr5g==",
+    "Inventario.ClientHttp/1.0.8": {
+      "sha512": "66NH1zdry0iD8Kx72plvA4s7q+D/LR8D1kH8eJNsOMayEOUjn9sbj0EnY/kM78lGUGstbqcpg3DwMfHjlVEGDg==",
       "type": "package",
-      "path": "inventario.clienthttp/1.0.3",
+      "path": "inventario.clienthttp/1.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "inventario.clienthttp.1.0.3.nupkg.sha512",
+        "inventario.clienthttp.1.0.8.nupkg.sha512",
         "inventario.clienthttp.nuspec",
         "lib/net8.0/Inventario.ClientHttp.dll"
       ]
@@ -1120,15 +1120,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Pagamenti.ClientHttp/1.0.1": {
-      "sha512": "3OPErxTfgr7Q1DJYJxxriE0SL68y3artHRXjmVn/aVgkcol7B9RYBP5OLbXMkLwJE3V6uF3gSUgopVL0NYz6eQ==",
+    "Pagamenti.ClientHttp/1.0.2": {
+      "sha512": "RHTijUuujWQBxAreJrPbgy6ymv79dASBuCzy80CK8ZcvOz1P0gOs0uM5DIXSrLT1Hphs4ftY8xM5CmGnSI+OlA==",
       "type": "package",
-      "path": "pagamenti.clienthttp/1.0.1",
+      "path": "pagamenti.clienthttp/1.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net8.0/Pagamenti.ClientHttp.dll",
-        "pagamenti.clienthttp.1.0.1.nupkg.sha512",
+        "pagamenti.clienthttp.1.0.2.nupkg.sha512",
         "pagamenti.clienthttp.nuspec"
       ]
     },
@@ -1224,10 +1224,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Inventario.ClientHttp >= 1.0.3",
+      "Inventario.ClientHttp >= 1.0.8",
       "Ordini.Repository >= 1.0.0",
       "Ordini.Shared >= 1.0.0",
-      "Pagamenti.ClientHttp >= 1.0.1"
+      "Pagamenti.ClientHttp >= 1.0.2"
     ]
   },
   "packageFolders": {
@@ -1293,11 +1293,11 @@
         "dependencies": {
           "Inventario.ClientHttp": {
             "target": "Package",
-            "version": "[1.0.3, )"
+            "version": "[1.0.8, )"
           },
           "Pagamenti.ClientHttp": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.0.2, )"
           }
         },
         "imports": [
