@@ -38,7 +38,17 @@ public class InventarioDbContext(DbContextOptions<InventarioDbContext> dbContext
             fornitore.Property(e => e.Telefono).HasMaxLength(15);
             fornitore.Property(e => e.Email).IsRequired().HasMaxLength(100);
         });
+
+        modelBuilder.Entity<TransactionalOutbox>(outbox =>
+        {
+            outbox.ToTable("TransactionalOutbox");
+            outbox.HasKey(x => x.Id);
+            outbox.Property(e => e.Id).ValueGeneratedOnAdd();
+            outbox.Property(e => e.Tabella).IsRequired().HasMaxLength(255);
+            outbox.Property(e => e.Messaggio).IsRequired().HasColumnType("TEXT");
+        });
     }
     public DbSet<Articolo> Articoli { get; set; }
     public DbSet<Fornitore> Fornitori { get; set; }
+    public DbSet<TransactionalOutbox> TransactionalOutboxes { get; set; }
 }

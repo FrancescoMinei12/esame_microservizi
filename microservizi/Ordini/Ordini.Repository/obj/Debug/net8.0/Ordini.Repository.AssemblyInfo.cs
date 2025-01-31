@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ordini.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9645f20f48545e13996192a0d46c94e2e70507e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1b251b21b2dfda77beea636cd2b86e54fb588c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ordini.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ordini.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

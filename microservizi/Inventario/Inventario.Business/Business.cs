@@ -1,11 +1,12 @@
 ﻿using Inventario.Business.Abstractions;
+using Inventario.Business.Kafka;
 using Inventario.Repository.Abstraction;
 using Inventario.Shared;
 using Microsoft.Extensions.Logging;
 
 namespace Inventario.Business;
 
-public class Business(IRepository repository, ILogger<Business> logger) : IBusiness
+public class Business(IRepository repository, ILogger<Business> logger, ProducerService inventarioProducerService) : IBusiness
 {
     // Articoli
     public async Task CreateArticoloAsync(string nome, string desc, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default)
@@ -129,6 +130,8 @@ public class Business(IRepository repository, ILogger<Business> logger) : IBusin
     {
         await repository.UpdateArticoloAsync(id, nome, descrizione, prezzo, quantitaDisponibile, codiceSKU, categoria, fk_fornitore, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
+        await inventarioProducerService.PublishArticoloAggiornatoAsync(id, nome, quantitaDisponibile, prezzo, cancellationToken);
+        logger.LogInformation($"Evento Kafka inviato per l'articolo {id}.");
     }
 
     public async Task DeleteArticoloAsync(int id, CancellationToken cancellationToken = default)

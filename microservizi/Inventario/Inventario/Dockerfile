@@ -11,12 +11,13 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+COPY NuGet.config ./
 COPY ["Inventario/Inventario.csproj", "Inventario/"]
 COPY ["Inventario.Business/Inventario.Business.csproj", "Inventario.Business/"]
 COPY ["Inventario.ClientHttp/Inventario.ClientHttp.csproj", "Inventario.ClientHttp/"]
 COPY ["Inventario.Repository/Inventario.Repository.csproj", "Inventario.Repository/"]
 COPY ["Inventario.Shared/Inventario.Shared.csproj", "Inventario.Shared/"]
-RUN dotnet restore "./Inventario/Inventario.csproj"
+RUN dotnet restore "./Inventario/Inventario.csproj" --configfile NuGet.config
 COPY . .
 WORKDIR "/src/Inventario"
 RUN dotnet build "./Inventario.csproj" -c $BUILD_CONFIGURATION -o /app/build
