@@ -44,11 +44,12 @@ public class InventarioDbContext(DbContextOptions<InventarioDbContext> dbContext
             outbox.ToTable("TransactionalOutbox");
             outbox.HasKey(x => x.Id);
             outbox.Property(e => e.Id).ValueGeneratedOnAdd();
-            outbox.Property(e => e.Tabella).IsRequired().HasMaxLength(255);
-            outbox.Property(e => e.Messaggio).IsRequired().HasColumnType("TEXT");
+            outbox.Property(e => e.Message).IsRequired().HasColumnType("TEXT");
+            outbox.Property(e => e.CreatedAt).IsRequired().HasDefaultValueSql("GETUTCDATE()");
+            outbox.Property(e => e.Processed).IsRequired().HasDefaultValue(false);
         });
     }
     public DbSet<Articolo> Articoli { get; set; }
     public DbSet<Fornitore> Fornitori { get; set; }
-    public DbSet<TransactionalOutbox> TransactionalOutboxes { get; set; }
+    public DbSet<TransactionalOutbox> Outboxes { get; set; }
 }

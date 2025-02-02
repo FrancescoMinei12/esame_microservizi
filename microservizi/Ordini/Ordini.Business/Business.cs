@@ -4,11 +4,12 @@ using Ordini.Shared;
 using Microsoft.Extensions.Logging;
 using Pagamenti.Shared;
 using Inventario.ClientHttp.Abstraction;
+using Pagamenti.ClientHttp.Abstraction;
 using Ordini.Repository.Model;
 
 namespace Ordini.Business;
 
-public class Business(IRepository repository, ILogger<Business> logger, Inventario.ClientHttp.Abstraction.IInventarioClientHttp inventarioClientHttp, Pagamenti.ClientHttp.Abstraction.IClientHttp pagamentiClientHttp) : IBusiness
+public class Business(IRepository repository, ILogger<Business> logger, IInventarioClientHttp inventarioClientHttp, IClientHttp pagamentiClientHttp) : IBusiness
 {
     // Clienti
     public async Task CreateClienteAsync(string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
@@ -77,6 +78,18 @@ public class Business(IRepository repository, ILogger<Business> logger, Inventar
         await repository.SaveChangesAsync(cancellationToken);
     }
 
+    public async Task<OrdineDto?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
+    {
+        var ordine = await repository.AggiornaTotaleOrdineAsync(id, nuovoTotale, cancellationToken);
+        if (ordine == null) return null;
+        return new OrdineDto
+        {
+            Id = ordine.Id,
+            DataOrdine = ordine.DataOrdine,
+            Totale = ordine.Totale,
+            Fk_cliente = ordine.Fk_cliente
+        };
+    }
     public async Task CreateOrdineCompletoAsync(int fk_cliente, List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
     {
         try

@@ -24,6 +24,20 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
         await ordiniDbContext.Clienti.AddAsync(cliente);
         return cliente;
     }
+    public async Task<Ordine?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
+    {
+        Ordine? ordine = await ordiniDbContext.Ordini.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
+        if (ordine == null)
+        {
+            throw new ArgumentException("Ordine non trovato.", nameof(id));
+        }
+        ordine.Totale = nuovoTotale;
+        return ordine;
+    }
+    public async Task<List<Ordine>> GetOrdiniByArticoloIdAsync(int IdArticolo, CancellationToken cancellationToken = default)
+    {
+        return await ordiniDbContext.Ordini.Where(o => o.Fk_cliente == IdArticolo).ToListAsync(cancellationToken);
+    }
     public async Task<Cliente?> ReadClienteAsync(int id, CancellationToken cancellationToken = default)
     {
         Cliente? cliente = await ordiniDbContext.Clienti.FirstOrDefaultAsync(c => c.Id == id, cancellationToken);

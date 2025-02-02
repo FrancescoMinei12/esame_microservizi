@@ -27,6 +27,14 @@ CREATE TABLE Articoli (
     CONSTRAINT FK_Fornitore FOREIGN KEY (Fk_fornitore) REFERENCES Fornitori(Id) -- Definizione della chiave esterna
 );
 
+CREATE TABLE TransactionalOutbox (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Message NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+    Processed BIT NOT NULL DEFAULT 0
+);
+
+
 -- Inserimento di fornitori nella tabella Fornitori
 INSERT INTO Fornitori (Nome, Indirizzo, Telefono, Email)
 VALUES

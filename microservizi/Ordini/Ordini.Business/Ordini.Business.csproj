@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.8.0" />
     <PackageReference Include="Inventario.ClientHttp" Version="1.0.8" />
-    <PackageReference Include="Pagamenti.ClientHttp" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pagamenti.ClientHttp" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>

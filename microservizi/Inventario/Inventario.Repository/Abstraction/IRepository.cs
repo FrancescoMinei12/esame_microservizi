@@ -8,6 +8,7 @@ public interface IRepository
 
     // Articoli
     Task<Articolo> CreateArticoloAsync(string nome, string descrizione, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default);
+    Task<Articolo?> ModificaPrezzoArticoloAsync(int id, int nuovoPrezzo, CancellationToken cancellationToken = default);
     Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default);
     Task<Articolo?> ReadArticoloAsync(string codiceSKU, CancellationToken cancellationToken = default);
     Task<List<Articolo>> ReadArticoloCategoria(string categoria, CancellationToken cancellationToken = default);

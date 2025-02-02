@@ -904,7 +904,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.ClientHttp\\Pagamenti.ClientHttp.csproj",
       "projectName": "Pagamenti.ClientHttp",
@@ -926,10 +926,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.ClientHttp\\bin\\Debug": {},
-        "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\bin\\Debug": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/FrancescoMinei/index.json": {}
+        "https://nuget.pkg.github.com/FrancescoMinei/index.json": {},
+        "https://nuget.pkg.github.com/FrancescoMinei12/index.json": {}
       },
       "frameworks": {
         "net8.0": {

@@ -47,6 +47,7 @@ services:
       dockerfile: Inventario/Dockerfile
     depends_on:
       - mssql-server
+      - kafka
     ports:
       - "5000:5000"
     environment:
@@ -60,6 +61,7 @@ services:
     depends_on:
       - mssql-server
       - kafka
+      - inventario
     ports:
       - "5001:5000"
     environment:

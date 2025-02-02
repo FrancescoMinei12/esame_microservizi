@@ -38,11 +38,26 @@ public class OrdiniController : Controller
         }
     }
 
+    [HttpPost(Name = "AggiornaTotale")]
+    public async Task<ActionResult> AggiornaTotale(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            await _business.AggiornaTotaleOrdineAsync(id, nuovoTotale, cancellationToken);
+            return Ok("Totale ordine aggiornato con successo!");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Errore durante l'aggiornamento del totale dell'ordine.");
+            return StatusCode(500, "Errore interno del server.");
+        }
+    }
+
     [HttpPost(Name = "CreateOrdineCompleto")]
     public async Task<ActionResult> CreateOrdineCompleto(int idCliente, [FromBody] List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
     {
         try
-        { 
+        {
             await _business.CreateOrdineCompletoAsync(idCliente, prodotti, metodoPagamentoId, cancellationToken);
             return Ok("Ordine completo creato con successo!");
         }

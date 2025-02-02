@@ -1,7 +1,9 @@
 ﻿using Inventario.Repository.Abstraction;
 using Inventario.Repository.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading;
 
 namespace Inventario.Repository;
@@ -30,6 +32,34 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         return articolo;
     }
 
+    public async Task<Articolo?> ModificaPrezzoArticoloAsync(int id, int nuovoPrezzo, CancellationToken cancellationToken = default)
+    {
+        Articolo? articolo = await ReadArticoloAsync(id, cancellationToken);
+        if (articolo == null) return null;
+        if (nuovoPrezzo<=0) return null;
+        articolo.Prezzo = nuovoPrezzo;
+
+        var message = JsonSerializer.Serialize(new
+        {
+            id = articolo.Id,
+            Nome = articolo.Nome,
+            Descrizione = articolo.Descrizione,
+            Prezzo = articolo.Prezzo,
+            Quantita = articolo.QuantitaDisponibile,
+            CodiceSKU = articolo.CodiceSKU,
+            Categoria = articolo.Categoria,
+            DataInserimento = DateTime.Now,
+            Fk_fornitore = articolo.Fk_fornitore
+        });
+        await inventarioDbContext.Outboxes.AddAsync(new TransactionalOutbox
+        {
+            Message = message,
+            CreatedAt = DateTime.Now,
+            Processed = false
+        });
+
+        return articolo;
+    }
     public async Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Articoli
@@ -76,21 +106,6 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         articolo.CodiceSKU = codiceSKU;
         articolo.Categoria = categoria;
         articolo.Fk_fornitore = fk_fornitore;
-
-        var outBoxMessage = new TransactionalOutbox
-        {
-            Tabella = "Articoli",
-            Messaggio = JsonSerializer.Serialize(new
-            {
-                Event = "InventarioAggiornato",
-                ArticoloId = articolo.Id,
-                Nome = articolo.Nome,
-                Quantita = articolo.QuantitaDisponibile,
-                Prezzo = articolo.Prezzo,
-                Timestamp = DateTime.UtcNow
-            })
-        };
-        await inventarioDbContext.TransactionalOutboxes.AddAsync(outBoxMessage);
     }
 
     public async Task DeleteArticoloAsync(int id, CancellationToken cancellationToken)

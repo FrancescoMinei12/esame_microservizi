@@ -1,18 +1,33 @@
 ﻿using Inventario.Business.Abstractions;
-using Inventario.Business.Kafka;
 using Inventario.Repository.Abstraction;
 using Inventario.Shared;
 using Microsoft.Extensions.Logging;
 
 namespace Inventario.Business;
 
-public class Business(IRepository repository, ILogger<Business> logger, ProducerService inventarioProducerService) : IBusiness
+public class Business(IRepository repository, ILogger<Business> logger) : IBusiness
 {
     // Articoli
     public async Task CreateArticoloAsync(string nome, string desc, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default)
     {
         await repository.CreateArticoloAsync(nome, desc, prezzo, quantita, SKU, categoria, fk_fornitore, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
+    }
+    public async Task<ArticoloDto?> ModificaPrezzoArticoloAsync(int id, int nuovoPrezzo, CancellationToken cancellationToken = default)
+    {
+        var articolo = await repository.ModificaPrezzoArticoloAsync(id, nuovoPrezzo, cancellationToken);
+        await repository.SaveChangesAsync(cancellationToken);
+        return new ArticoloDto
+        {
+            Id = articolo.Id,
+            Nome = articolo.Nome,
+            Descrizione = articolo.Descrizione,
+            Prezzo = articolo.Prezzo,
+            QuantitaDisponibile = articolo.QuantitaDisponibile,
+            CodiceSKU = articolo.CodiceSKU,
+            Categoria = articolo.Categoria,
+            Fk_fornitore = articolo.Fk_fornitore
+        };
     }
     public async Task<ArticoloDto?> ScaricaQuantitaAsync(int articoloId, int quantita, CancellationToken cancellationToken = default)
     {
@@ -27,9 +42,13 @@ public class Business(IRepository repository, ILogger<Business> logger, Producer
         return new ArticoloDto
         {
             Id = articolo.Id,
-            CodiceSKU = articolo.CodiceSKU,
             Nome = articolo.Nome,
-            QuantitaDisponibile = articolo.QuantitaDisponibile
+            Descrizione = articolo.Descrizione,
+            Prezzo = articolo.Prezzo,
+            QuantitaDisponibile = articolo.QuantitaDisponibile,
+            CodiceSKU = articolo.CodiceSKU,
+            Categoria = articolo.Categoria,
+            Fk_fornitore = articolo.Fk_fornitore
         };
     }
     public async Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default)
@@ -130,8 +149,6 @@ public class Business(IRepository repository, ILogger<Business> logger, Producer
     {
         await repository.UpdateArticoloAsync(id, nome, descrizione, prezzo, quantitaDisponibile, codiceSKU, categoria, fk_fornitore, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
-        await inventarioProducerService.PublishArticoloAggiornatoAsync(id, nome, quantitaDisponibile, prezzo, cancellationToken);
-        logger.LogInformation($"Evento Kafka inviato per l'articolo {id}.");
     }
 
     public async Task DeleteArticoloAsync(int id, CancellationToken cancellationToken = default)

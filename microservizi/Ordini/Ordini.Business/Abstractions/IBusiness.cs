@@ -1,4 +1,5 @@
-﻿using Ordini.Shared;
+﻿using Ordini.Repository.Model;
+using Ordini.Shared;
 
 namespace Ordini.Business.Abstractions;
 public interface IBusiness
@@ -13,6 +14,7 @@ public interface IBusiness
 
     // Ordini
     Task CreateOrdineAsync(int fk_cliente, decimal totale, CancellationToken cancellationToken = default);
+    Task<OrdineDto?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default);
     Task CreateOrdineCompletoAsync(int fk_cliente, List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default);
     Task<OrdineDto?> GetOrdineByIdAsync(int id, CancellationToken cancellationToken = default);
     Task<List<OrdineDto>> GetAllOrdiniAsync(CancellationToken cancellationToken = default);

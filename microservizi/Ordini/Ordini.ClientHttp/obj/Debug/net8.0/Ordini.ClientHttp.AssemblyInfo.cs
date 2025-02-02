@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Ordini.ClientHttp")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9645f20f48545e13996192a0d46c94e2e70507e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f525b607e49c9f04c23a45ae4854b6890e5fd2cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ordini.ClientHttp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ordini.ClientHttp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

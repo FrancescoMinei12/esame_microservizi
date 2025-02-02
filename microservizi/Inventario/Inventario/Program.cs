@@ -1,11 +1,11 @@
+using Inventario.BackgroundServices;
 using Inventario.Business;
 using Inventario.Business.Abstractions;
-using Inventario.Business.Kafka;
+using Inventario.Business.Services;
 using Inventario.Repository;
 using Inventario.Repository.Abstraction;
+using Inventario.Shared.Configurations;
 using Microsoft.EntityFrameworkCore;
-using Utility.Kafka.Abstractions.Clients;
-using Utility.Kafka.Clients;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
@@ -17,11 +17,13 @@ builder.WebHost.ConfigureKestrel(options =>
 
 string connectionString = "Server=mssql-server;Database=Inventario;User Id=sa;Password=p4ssw0rD;Encrypt=False";
 builder.Services.AddDbContext<InventarioDbContext>(p => p.UseSqlServer(connectionString));
+builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("Kafka"));
 
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IBusiness, Business>();
 
-builder.Services.AddKafkaProducerService<KafkaTopicsOutput, ProducerService>(builder.Configuration);
+builder.Services.AddScoped<IOutboxProcessor, OutboxProcessor>();
+builder.Services.AddHostedService<OutboxBackgroundService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

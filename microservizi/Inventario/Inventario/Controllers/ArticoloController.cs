@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Inventario.Business.Abstractions;
 using Inventario.Shared;
-using Inventario.Repository.Model;
 
 namespace Inventario.Controllers;
 
@@ -24,15 +23,29 @@ public class ArticoloController : ControllerBase
         return Ok("Articolo creato correttamente!");
     }
 
+    [HttpPost(Name = "ModificaPrezzoArticolo")]
+    public async Task<ActionResult> ModificaPrezzoArticolo(int id, [FromBody] int nuovoPrezzo, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            await _business.ModificaPrezzoArticoloAsync(id, nuovoPrezzo, cancellationToken);
+            return new JsonResult(new { message = "Prezzo dell'articolo modificato con successo!" }) { StatusCode = 200 };
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Errore durante la modifica del prezzo");
+            return StatusCode(500, "Errore interno del server.");
+        }
+    }
+
     [HttpGet(Name = "ScaricaQuantita")]
     public async Task<ActionResult<ArticoloDto?>> ScaricaQuantita(int prodottoId, int quantita, CancellationToken cancellationToken = default)
     {
         if (quantita <= 0)
         {
-            _logger.LogWarning("La quantità da scalare deve essere maggiore di zero.");
-            return BadRequest(new { Error = "La quantità da scalare deve essere maggiore di zero." });
+            _logger.LogWarning("La quantita da scalare deve essere maggiore di zero.");
+            return BadRequest(new { Error = "La quantita da scalare deve essere maggiore di zero." });
         }
-
         try
         {
             var articoloDto = await _business.ScaricaQuantitaAsync(prodottoId, quantita, cancellationToken);
@@ -45,12 +58,12 @@ public class ArticoloController : ControllerBase
         }
         catch (InvalidOperationException ex)
         {
-            _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}': {ex.Message}");
+            _logger.LogError(ex, $"Errore durante la scalatura della quantitï¿½ per il prodotto con ID '{prodottoId}': {ex.Message}");
             return BadRequest(new { Error = ex.Message });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Errore durante la scalatura della quantità per il prodotto con ID '{prodottoId}'.");
+            _logger.LogError(ex, $"Errore durante la scalatura della quantitï¿½ per il prodotto con ID '{prodottoId}'.");
             return StatusCode(500, new { Error = "Errore interno del server." });
         }
     }

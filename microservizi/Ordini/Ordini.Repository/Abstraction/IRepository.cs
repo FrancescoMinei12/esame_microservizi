@@ -15,8 +15,10 @@ public interface IRepository
 
     // Ordini
     Task<Ordine> CreateOrdineAsync(int fk_cliente, decimal totale, CancellationToken cancellationToken = default);
+    Task<Ordine?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default);
     Task<Ordine?> ReadOrdineAsync(int id, CancellationToken cancellationToken = default);
     Task<List<Ordine>> GetAllOrdiniAsync(CancellationToken cancellationToken = default);
+    Task<List<Ordine>> GetOrdiniByArticoloIdAsync(int IdArticolo, CancellationToken cancellationToken = default);
     Task UpdateOrdineAsync(int id, decimal totale, int fk_cliente, CancellationToken cancellationToken = default);
     Task DeleteOrdineAsync(int id, CancellationToken cancellationToken = default);
 

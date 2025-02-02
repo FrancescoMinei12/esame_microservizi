@@ -1,10 +1,12 @@
-﻿using Inventario.Shared;
+﻿using Inventario.Repository.Model;
+using Inventario.Shared;
 
 namespace Inventario.Business.Abstractions;
 public interface IBusiness
 {
     // Articoli
     Task CreateArticoloAsync(string nome, string desc, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default);
+    Task<ArticoloDto?> ModificaPrezzoArticoloAsync(int id, int nuovoPrezzo, CancellationToken cancellationToken = default);
     Task<ArticoloDto?> ScaricaQuantitaAsync(int id, int quantita, CancellationToken cancellationToken = default);
     Task<ArticoloDto?> ReadArticoloAsync(int id, CancellationToken cancellationToken = default);
     Task<ArticoloDto?> GetSkuAsync(string CodiceSKU, CancellationToken cancellationToken = default);
