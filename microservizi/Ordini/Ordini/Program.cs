@@ -33,9 +33,9 @@ builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("Kafk
 
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IBusiness, Business>();
-
 builder.Services.AddScoped<IOrdiniEventConsumer, OrdiniEventConsumer>();
 builder.Services.AddScoped<IOrdineService, OrdineService>();
+
 builder.Services.AddHostedService<OrdiniConsumerBackgroundService>();
 
 builder.Services.AddControllers();

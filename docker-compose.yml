@@ -9,8 +9,6 @@ services:
       - 2433:1433
     volumes:
       - "mssql-server:/var/opt/mssql"
-      - ./query.sql:/docker-entrypoint-initdb.d/init.sql
-
   adminer:
     image: adminer:4.8.1
     ports:
@@ -30,8 +28,6 @@ services:
   kafka:
     container_name: kafka
     image: 'bitnami/kafka:3.1.0'
-    ports:
-      - '9092:9092'
     environment:
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
@@ -39,6 +35,14 @@ services:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=host.docker.internal:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+    ports:
+      - '9092:9092'
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "9092" ] # Usa netcat per verificare la porta
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      timeout: 5s
     depends_on:
       - zookeeper
   inventario:
@@ -60,8 +64,8 @@ services:
       dockerfile: Ordini/Dockerfile
     depends_on:
       - mssql-server
-      - kafka
       - inventario
+      - kafka
     ports:
       - "5001:5000"
     environment:

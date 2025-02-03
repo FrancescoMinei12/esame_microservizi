@@ -4,24 +4,35 @@ namespace Ordini.BackgroundServices;
 
 public class OrdiniConsumerBackgroundService : BackgroundService
 {
+    private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<OrdiniConsumerBackgroundService> _logger;
-    private readonly IServiceScopeFactory _serviceScopeFactory;
-    public OrdiniConsumerBackgroundService(ILogger<OrdiniConsumerBackgroundService> logger, IServiceScopeFactory serviceScopeFactory)
+    public OrdiniConsumerBackgroundService(IServiceProvider serviceProvider, ILogger<OrdiniConsumerBackgroundService> logger)
     {
+        _serviceProvider = serviceProvider;
         _logger = logger;
-        _serviceScopeFactory = serviceScopeFactory;
     }
     protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         _logger.LogInformation("Avvio del Consumer Kafka per aggiornamento ordini.");
-        while (!cancellationToken.IsCancellationRequested)
+        bool kafkaReady = false;
+        while (!cancellationToken.IsCancellationRequested && !kafkaReady)
         {
-            using var scope = _serviceScopeFactory.CreateScope();
+            using (var scope = _serviceProvider.CreateScope())
             {
                 var consumer = scope.ServiceProvider.GetRequiredService<IOrdiniEventConsumer>();
-                await consumer.ConsumeAsync(cancellationToken);
+                try
+                {
+                    _logger.LogInformation("Sto per avviare il consumer Kafka...");
+                    await consumer.ConsumeAsync(cancellationToken);  // Attende asincrono
+                    kafkaReady = true;
+                    _logger.LogInformation("Connessione Kafka stabilita correttamente e consumer attivo.");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError($"Errore nel background service: {ex.Message}");
+                }
             }
-            await Task.Delay(5000, cancellationToken);
+            await Task.Delay(TimeSpan.FromSeconds(10), cancellationToken);
         }
     }
 }

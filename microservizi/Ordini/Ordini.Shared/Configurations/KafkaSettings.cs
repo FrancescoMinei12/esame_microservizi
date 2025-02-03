@@ -7,4 +7,10 @@ public class KafkaSettings
     public int Retries { get; set; }
     public int BatchSize { get; set; }
     public int PollIntervalSeconds { get; set; }
+    public bool EnableAutoCommit { get; set; }
+    public int StatisticsIntervalMs { get; set; }
+    public int SessionTimeoutMs { get; set; }
+    public int MaxPollIntervalMs { get; set; }
+    public int MetadataMaxAgeMs { get; set; }
+    public bool EnablePartitionEof { get; set; }
 }
