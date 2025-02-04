@@ -2,6 +2,7 @@
 using Inventario.Business.Abstractions;
 using Inventario.Shared;
 using Microsoft.Extensions.Logging;
+using Inventario.Repository.Model;
 
 namespace Inventario.Controllers;
 
@@ -19,26 +20,19 @@ public class FornitoreController : ControllerBase
     }
 
     [HttpPost(Name = "CreateFornitore")]
-    public async Task<ActionResult> CreateFornitore(
-        string nome,
-        string indirizzo,
-        string telefono,
-        string email)
+    public async Task<ActionResult> CreateFornitore(string nome, string indirizzo, string telefono, string email, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(email))
-        {
-            return BadRequest("Nome e email sono obbligatori.");
-        }
-
+            return new JsonResult(new { message = "Nome e email sono obbligatori." }) { StatusCode = 400 };
         try
         {
-            await _business.CreateFornitoreAsync(nome, indirizzo, telefono, email);
-            return Ok("Fornitore creato correttamente!");
+            await _business.CreateFornitoreAsync(nome, indirizzo, telefono, email, cancellationToken);
+            return new JsonResult(new { message = "Fornitore creato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione del fornitore.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -49,16 +43,13 @@ public class FornitoreController : ControllerBase
         {
             var fornitore = await _business.ReadFornitoreAsync(id);
             if (fornitore == null)
-            {
-                return NotFound($"Fornitore con ID '{id}' non trovato.");
-            }
-
-            return Ok(fornitore);
+                return new JsonResult(new { message = $"Fornitore con ID '{id}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(fornitore) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante la lettura del fornitore con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -69,16 +60,13 @@ public class FornitoreController : ControllerBase
         {
             var fornitori = await _business.GetAllFornitoriAsync();
             if (fornitori == null || !fornitori.Any())
-            {
-                return NotFound("Nessun fornitore trovato.");
-            }
-
-            return Ok(fornitori);
+                return new JsonResult(new { message = "Nessun fornitore trovato." }) { StatusCode = 404 };
+            return new JsonResult(fornitori) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero della lista dei fornitori.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -86,27 +74,19 @@ public class FornitoreController : ControllerBase
     public async Task<ActionResult> UpdateFornitore(int id, [FromBody] FornitoreDto fornitoreDto, CancellationToken cancellationToken = default)
     {
         if (fornitoreDto == null)
-        {
-            return BadRequest("Dati fornitore non validi.");
-        }
+            return new JsonResult(new { message = "Dati fornitore non validi." }) { StatusCode = 400 };
         try
         {
-            // Verifica se il fornitore esiste già prima di procedere con l'update
             var fornitoreEsistente = await _business.ReadFornitoreAsync(id, cancellationToken);
             if (fornitoreEsistente == null)
-            {
-                return NotFound($"Fornitore con ID '{id}' non trovato.");
-            }
-
-            // Chiama il metodo di business per eseguire l'aggiornamento del fornitore
+                return new JsonResult(new { message = $"Fornitore con ID '{id}' non trovato." }) { StatusCode = 404 };
             await _business.UpdateFornitoreAsync(id, fornitoreDto.Nome, fornitoreDto.Indirizzo, fornitoreDto.Telefono, fornitoreDto.Email, cancellationToken);
-
-            return Ok($"Fornitore con ID '{id}' aggiornato correttamente!");
+            return new JsonResult(new { message = $"Fornitore con ID '{id}' aggiornato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'aggiornamento del fornitore con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -116,12 +96,12 @@ public class FornitoreController : ControllerBase
         try
         {
             await _business.DeleteFornitoreAsync(id);
-            return Ok($"Fornitore con ID '{id}' eliminato correttamente!");
+            return new JsonResult(new { message = $"Fornitore con ID '{id}' eliminato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'eliminazione del fornitore con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

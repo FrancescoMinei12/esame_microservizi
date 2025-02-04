@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ordini.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02455791ebb4964c446943ebbaab2ec97c2d0c7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0a0b5898e8e63ff62e91d3c2346e88252fb2e90")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ordini.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ordini.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

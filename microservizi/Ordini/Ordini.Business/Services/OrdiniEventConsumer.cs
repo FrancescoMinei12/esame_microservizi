@@ -40,10 +40,15 @@ public class OrdiniEventConsumer : IOrdiniEventConsumer
         {
             try
             {
-                var consumeResult = _consumer.Consume(cancellationToken);
+                var consumeResult = _consumer.Consume(TimeSpan.FromSeconds(5));
                 if (consumeResult == null)
                 {
                     _logger.LogWarning("Messaggio non valido");
+                    continue;
+                }
+                if (consumeResult.Message?.Value == null)
+                {
+                    _logger.LogWarning("Messaggio non valido: Message.Value è null");
                     continue;
                 }
                 _logger.LogInformation($"Messaggio ricevuto: {consumeResult.Message.Value}");

@@ -1,10 +1,7 @@
 ﻿using Inventario.Repository.Abstraction;
-using Inventario.Repository.Model;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
+using Inventario.Repository.Model;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading;
 
 namespace Inventario.Repository;
 
@@ -25,18 +22,18 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
             QuantitaDisponibile = quantita,
             CodiceSKU = SKU,
             Categoria = categoria,
-            DataInserimento = DateTime.Now,
+            DataInserimento = DateTime.UtcNow,
             Fk_fornitore = fk_fornitore
         };
         await inventarioDbContext.Articoli.AddAsync(articolo, cancellationToken);
         return articolo;
     }
 
-    public async Task<Articolo?> ModificaPrezzoArticoloAsync(int id, int nuovoPrezzo, CancellationToken cancellationToken = default)
+    public async Task<Articolo?> ModificaPrezzoArticoloAsync(int id, decimal nuovoPrezzo, CancellationToken cancellationToken = default)
     {
+        if (nuovoPrezzo <= 0) return null;
         Articolo? articolo = await ReadArticoloAsync(id, cancellationToken);
         if (articolo == null) return null;
-        if (nuovoPrezzo<=0) return null;
         articolo.Prezzo = nuovoPrezzo;
 
         var message = JsonSerializer.Serialize(new
@@ -48,13 +45,13 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
             Quantita = articolo.QuantitaDisponibile,
             CodiceSKU = articolo.CodiceSKU,
             Categoria = articolo.Categoria,
-            DataInserimento = DateTime.Now,
+            DataInserimento = DateTime.UtcNow,
             Fk_fornitore = articolo.Fk_fornitore
         });
         await inventarioDbContext.Outboxes.AddAsync(new TransactionalOutbox
         {
             Message = message,
-            CreatedAt = DateTime.Now,
+            CreatedAt = DateTime.UtcNow,
             Processed = false
         });
 
@@ -63,35 +60,35 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
     public async Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Articoli
-            .Where(a => a.Id == id)
-            .SingleOrDefaultAsync(cancellationToken);
+            .AsNoTracking()
+            .SingleOrDefaultAsync(a => a.Id == id,cancellationToken);
     }
 
     public async Task<Articolo?> ReadArticoloAsync(string codiceSKU, CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Articoli
-            .Where(a => a.CodiceSKU == codiceSKU)
-            .SingleOrDefaultAsync(cancellationToken);
+            .AsNoTracking()
+            .SingleOrDefaultAsync(a => a.CodiceSKU == codiceSKU, cancellationToken);
     }
 
     public async Task<List<Articolo>> ReadArticoloCategoria(string categoria, CancellationToken cancellationToken = default)
     {
         return await inventarioDbContext.Articoli
+            .AsNoTracking()
             .Where(a => a.Categoria == categoria)
             .ToListAsync(cancellationToken);
     }
-    public async Task<List<Articolo?>> ReadArticoloFornitore(int id_fornitore, CancellationToken cancellationToken = default)
+    public async Task<List<Articolo>> ReadArticoloFornitore(int id_fornitore, CancellationToken cancellationToken = default)
     {
-        var articoli = await inventarioDbContext.Articoli
-        .Where(a => a.Fk_fornitore == id_fornitore)
-        .ToListAsync(cancellationToken);
-
-        return articoli;
+        return await inventarioDbContext.Articoli
+            .AsNoTracking()
+            .Where(a => a.Fk_fornitore == id_fornitore)
+            .ToListAsync(cancellationToken);
     }
 
     public async Task<List<Articolo>> ReadAllArticoli()
     {
-        return await inventarioDbContext.Articoli.ToListAsync();
+        return await inventarioDbContext.Articoli.AsNoTracking().ToListAsync();
     }
 
     public async Task UpdateArticoloAsync(int id, string nome, string descrizione, decimal prezzo, int quantitaDisponibile, string codiceSKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default)
@@ -132,13 +129,14 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
     public async Task<Fornitore?> ReadFornitoreAsync(int id, CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Fornitori
-            .Where(f => f.Id == id)
-            .SingleOrDefaultAsync(cancellationToken);
+            .AsNoTracking()
+            .SingleOrDefaultAsync(f => f.Id == id,cancellationToken);
     }
 
     public async Task<List<Fornitore>> GetAllFornitoriAsync(CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Fornitori
+            .AsNoTracking()
             .ToListAsync(cancellationToken);
     }
 

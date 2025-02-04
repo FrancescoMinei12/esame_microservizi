@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini.shared\\articoloaggiornatoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9C0B49-7E49-4BDD-A704-BA83179ECFC3}|Ordini.Shared\\Ordini.Shared.csproj|solutionrelative:ordini.shared\\articoloaggiornatoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini\\ordini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\ordini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini.business\\services\\ordinieventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini.business\\services\\ordineservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EE94BA-F525-4A39-AAAC-5A557D9AB978}|Ordini.Business\\Ordini.Business.csproj|solutionrelative:ordini.business\\services\\ordineservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|c:\\mega_sync\\unipr\\3\\microservizi\\esame_microservizi\\microservizi\\ordini\\ordini\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CE75C71A-5AE1-4163-9AC9-5854529A7819}|Ordini\\Ordini.csproj|solutionrelative:ordini\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,53 +39,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ArticoloAggiornatoEvent.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\ArticoloAggiornatoEvent.cs",
-              "RelativeDocumentMoniker": "Ordini.Shared\\ArticoloAggiornatoEvent.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Shared\\ArticoloAggiornatoEvent.cs",
-              "RelativeToolTip": "Ordini.Shared\\ArticoloAggiornatoEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T20:09:38.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrdiniEventConsumer.cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdiniEventConsumer.cs",
-              "RelativeDocumentMoniker": "Ordini.Business\\Services\\OrdiniEventConsumer.cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdiniEventConsumer.cs",
-              "RelativeToolTip": "Ordini.Business\\Services\\OrdiniEventConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T16:23:21.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrdineService .cs",
-              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdineService .cs",
-              "RelativeDocumentMoniker": "Ordini.Business\\Services\\OrdineService .cs",
-              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdineService .cs",
-              "RelativeToolTip": "Ordini.Business\\Services\\OrdineService .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T16:09:47.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\appsettings.json",
               "RelativeDocumentMoniker": "Ordini\\appsettings.json",
               "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\appsettings.json",
               "RelativeToolTip": "Ordini\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-02T15:33:46.011Z",
+              "WhenOpened": "2025-02-03T16:34:14.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\Dockerfile",
+              "RelativeDocumentMoniker": "Ordini\\Dockerfile",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\Dockerfile",
+              "RelativeToolTip": "Ordini\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-03T16:32:44.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ordini",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\Ordini.csproj",
+              "RelativeDocumentMoniker": "Ordini\\Ordini.csproj",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini\\Ordini.csproj",
+              "RelativeToolTip": "Ordini\\Ordini.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-03T16:32:42.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdiniEventConsumer.cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdiniEventConsumer.cs",
+              "RelativeDocumentMoniker": "Ordini.Business\\Services\\OrdiniEventConsumer.cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdiniEventConsumer.cs",
+              "RelativeToolTip": "Ordini.Business\\Services\\OrdiniEventConsumer.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAC8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T16:21:36.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdineService .cs",
+              "DocumentMoniker": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdineService .cs",
+              "RelativeDocumentMoniker": "Ordini.Business\\Services\\OrdineService .cs",
+              "ToolTip": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Ordini\\Ordini.Business\\Services\\OrdineService .cs",
+              "RelativeToolTip": "Ordini.Business\\Services\\OrdineService .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T16:21:29.339Z",
               "EditorCaption": ""
             }
           ]

@@ -23,7 +23,9 @@ public class OutboxProcessor : IOutboxProcessor
         {
             BootstrapServers = _kafkaSettings.BootstrapServers,
             BatchSize = _kafkaSettings.BatchSize,
-            MessageTimeoutMs = 5000
+            MessageTimeoutMs = 5000,
+            AllowAutoCreateTopics = _kafkaSettings.AllowAutoCreateTopic,
+            Acks = Acks.All
         };
         _producer = new ProducerBuilder<string, string>(config).Build();
     }

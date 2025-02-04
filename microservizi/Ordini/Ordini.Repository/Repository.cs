@@ -26,7 +26,7 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
     public async Task<Ordine?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
     {
-        Ordine? ordine = await ordiniDbContext.Ordini.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
+        Ordine? ordine = await ordiniDbContext.Ordini.SingleOrDefaultAsync(o => o.Id == id, cancellationToken);
         if (ordine == null)
         {
             throw new ArgumentException("Ordine non trovato.", nameof(id));
@@ -40,28 +40,26 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
     public async Task<Cliente?> ReadClienteAsync(int id, CancellationToken cancellationToken = default)
     {
-        Cliente? cliente = await ordiniDbContext.Clienti.FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
-        return cliente;
+        return await ordiniDbContext.Clienti
+            .AsNoTracking()
+            .SingleOrDefaultAsync(c => c.Id == id, cancellationToken);
     }
 
     public async Task<Cliente?> ReadClienteByEmailAsync(string email, CancellationToken cancellationToken = default)
     {
-        Cliente? cliente = await ordiniDbContext.Clienti.FirstOrDefaultAsync(c => c.Email == email, cancellationToken);
-        return cliente;
+       return await ordiniDbContext.Clienti
+            .AsNoTracking()
+            .SingleOrDefaultAsync(c => c.Email == email, cancellationToken);
     }
     public async Task<List<Cliente>> GetAllClientiAsync(CancellationToken cancellationToken = default)
     {
-        List<Cliente> clienti = await ordiniDbContext.Clienti.ToListAsync(cancellationToken);
-        return clienti;
+        return await ordiniDbContext.Clienti.AsNoTracking().ToListAsync(cancellationToken);
     }
     public async Task UpdateClienteAsync(int id, string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
     {
-
-        Cliente? cliente = await ordiniDbContext.Clienti.FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+        Cliente? cliente = await ReadClienteAsync(id, cancellationToken);
         if (cliente == null)
-        {
             return;
-        }
         cliente.Nome = nome;
         cliente.Cognome = cognome;
         cliente.Email = email;
@@ -70,11 +68,9 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
     public async Task DeleteClienteAsync(int id, CancellationToken cancellationToken = default)
     {
-        Cliente? cliente = await ordiniDbContext.Clienti.FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+        Cliente? cliente = await ReadClienteAsync(id, cancellationToken);
         if (cliente == null)
-        {
             return;
-        }
         ordiniDbContext.Clienti.Remove(cliente);
     }
 
@@ -92,29 +88,29 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
     public async Task<Ordine?> ReadOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
-        return await ordiniDbContext.Ordini.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
+        return await ordiniDbContext.Ordini
+            .AsNoTracking()
+            .SingleOrDefaultAsync(o => o.Id == id, cancellationToken);
     }
     public async Task<List<Ordine>> GetAllOrdiniAsync(CancellationToken cancellationToken = default)
     {
-        return await ordiniDbContext.Ordini.ToListAsync(cancellationToken);
+        return await ordiniDbContext.Ordini
+            .AsNoTracking()
+            .ToListAsync(cancellationToken);
     }
     public async Task UpdateOrdineAsync(int id, decimal totale, int fk_cliente, CancellationToken cancellationToken = default)
     {
-        Ordine? ordine = await ordiniDbContext.Ordini.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
+        Ordine? ordine = await ReadOrdineAsync(id, cancellationToken);
         if (ordine == null)
-        {
             return;
-        }
         ordine.Totale = totale;
         ordine.Fk_cliente = fk_cliente;
     }
     public async Task DeleteOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
-        Ordine? ordine = await ordiniDbContext.Ordini.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
+        Ordine? ordine = await ReadOrdineAsync(id, cancellationToken);
         if (ordine == null)
-        {
             return;
-        }
         ordiniDbContext.Ordini.Remove(ordine);
     }
 
@@ -132,26 +128,29 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
     }
     public async Task<OrdineProdotti?> ReadOrdiniProdottiAsync(int id, CancellationToken cancellationToken = default)
     {
-        return await ordiniDbContext.OrdineProdotti.FirstOrDefaultAsync(op => op.Id == id, cancellationToken);
+        return await ordiniDbContext.OrdineProdotti
+            .AsNoTracking()
+            .SingleOrDefaultAsync(op => op.Id == id, cancellationToken);
     }
     public async Task<List<OrdineProdotti>> GetProdottiByOrdineAsync(int fk_ordine, CancellationToken cancellationToken = default)
     {
-        return await ordiniDbContext.OrdineProdotti.Where(op => op.Fk_ordine == fk_ordine).ToListAsync(cancellationToken);
+        return await ordiniDbContext.OrdineProdotti
+            .AsNoTracking()
+            .Where(op => op.Fk_ordine == fk_ordine)
+            .ToListAsync(cancellationToken);
     }
     public async Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default)
     {
-        var ordineProdotti = await ordiniDbContext.OrdineProdotti.FirstOrDefaultAsync(op => op.Id == id, cancellationToken);
+        var ordineProdotti = await ReadOrdiniProdottiAsync(id, cancellationToken);
         if (ordineProdotti == null)
-        {
             throw new ArgumentException("OrdineProdotti non trovato.", nameof(id));
-        }
         ordineProdotti.Quantita = quantita;
         ordineProdotti.Fk_ordine = fk_ordine;
         ordineProdotti.Fk_prodotto = fk_prodotto;
     }
     public async Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
-        var ordineProdotti = await ordiniDbContext.OrdineProdotti.FirstOrDefaultAsync(op => op.Id == id, cancellationToken);
+        var ordineProdotti = await ReadOrdiniProdottiAsync(id, cancellationToken);
         if (ordineProdotti == null)
         {
             throw new ArgumentException("OrdineProdotti non trovato.", nameof(id));

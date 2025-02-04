@@ -5,9 +5,6 @@ using Inventario.ClientHttp.Abstraction;
 
 namespace Ordini.Controllers;
 
-
-
-
 [ApiController]
 [Route("[controller]/[action]")]
 public class OrdiniController : Controller
@@ -29,12 +26,12 @@ public class OrdiniController : Controller
         try
         {
             await _business.CreateOrdineAsync(fk_cliente, totale, cancellationToken);
-            return Ok("Ordine creato con successo!");
+            return new JsonResult(new { message = "Ordine creato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione dell'ordine.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -44,12 +41,12 @@ public class OrdiniController : Controller
         try
         {
             await _business.AggiornaTotaleOrdineAsync(id, nuovoTotale, cancellationToken);
-            return Ok("Totale ordine aggiornato con successo!");
+            return new JsonResult(new { message = "Totale ordine aggiornato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante l'aggiornamento del totale dell'ordine.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -59,12 +56,12 @@ public class OrdiniController : Controller
         try
         {
             await _business.CreateOrdineCompletoAsync(idCliente, prodotti, metodoPagamentoId, cancellationToken);
-            return Ok("Ordine completo creato con successo!");
+            return new JsonResult(new { message = "Ordine completo creato con successo!" }) { StatusCode = 201 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione dell'ordine completo.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -75,14 +72,13 @@ public class OrdiniController : Controller
         {
             var ordine = await _business.GetOrdineByIdAsync(id, cancellationToken);
             if (ordine == null)
-                return NotFound($"Ordine con ID '{id}' non trovato.");
-
-            return Ok(ordine);
+                return new JsonResult(new { message = $"Ordine con ID '{id}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(ordine) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dell'ordine.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -93,14 +89,13 @@ public class OrdiniController : Controller
         {
             var ordini = await _business.GetAllOrdiniAsync(cancellationToken);
             if (ordini == null || ordini.Count == 0)
-                return NotFound("Nessun ordine trovato.");
-
-            return Ok(ordini);
+                return new JsonResult(new { message = "Nessun ordine trovato." }) { StatusCode = 404 };
+            return new JsonResult(ordini) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero degli ordini.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -110,19 +105,18 @@ public class OrdiniController : Controller
         if (ordineDto == null)
         {
             _logger.LogWarning("Richiesta non valida: il corpo dell'ordine è nullo.");
-            return BadRequest("Dati ordine non validi.");
+            return new JsonResult(new { message = "Dati ordine non validi." }) { StatusCode = 400 };
         }
-
         try
         {
             await _business.UpdateOrdineAsync(id, ordineDto.Totale, ordineDto.Fk_cliente, cancellationToken);
             _logger.LogInformation($"Ordine con ID '{id}' aggiornato con successo.");
-            return Ok($"Ordine con ID '{id}' aggiornato con successo!");
+            return new JsonResult(new { message = $"Ordine con ID '{id}' aggiornato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'aggiornamento dell'ordine con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -132,12 +126,12 @@ public class OrdiniController : Controller
         try
         {
             await _business.DeleteOrdineAsync(id, cancellationToken);
-            return Ok($"Ordine con ID '{id}' eliminato con successo!");
+            return new JsonResult(new { message = $"Ordine con ID '{id}' eliminato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante l'eliminazione dell'ordine.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

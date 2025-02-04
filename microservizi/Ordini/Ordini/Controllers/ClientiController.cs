@@ -24,12 +24,12 @@ public class ClientiController : ControllerBase
         try
         {
             await _business.CreateClienteAsync(nome, cognome, email, telefono, indirizzo, cancellationToken);
-            return Ok("Cliente creato con successo!");
+            return new JsonResult(new { messaggio = "Cliente creato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione del cliente.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -40,14 +40,13 @@ public class ClientiController : ControllerBase
         {
             var cliente = await _business.GetClienteByIdAsync(id, cancellationToken);
             if (cliente == null)
-                return NotFound($"Cliente con ID '{id}' non trovato.");
-
-            return Ok(cliente);
+                return new JsonResult(new { errore = $"Cliente con ID '{id}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(cliente) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero del cliente.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -58,14 +57,13 @@ public class ClientiController : ControllerBase
         {
             var cliente = await _business.GetClienteByEmailAsync(email, cancellationToken);
             if (cliente == null)
-                return NotFound($"Cliente con email '{email}' non trovato.");
-
-            return Ok(cliente);
+                return new JsonResult(new { errore = $"Cliente con email '{email}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(cliente) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero del cliente per email.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -76,14 +74,13 @@ public class ClientiController : ControllerBase
         {
             var clienti = await _business.GetAllClientiAsync(cancellationToken);
             if (clienti == null || clienti.Count == 0)
-                return NotFound("Nessun cliente trovato.");
-
-            return Ok(clienti);
+                return new JsonResult(new { errore = "Nessun cliente trovato." }) { StatusCode = 404 };
+            return new JsonResult(clienti) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dei clienti.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -92,14 +89,17 @@ public class ClientiController : ControllerBase
     {
         try
         {
+            if (clienteDto == null)
+                return new JsonResult(new { errore = "I dati del cliente sono obbligatori." }) { StatusCode = 400 };
+
             await _business.UpdateClienteAsync(id, clienteDto.Nome, clienteDto.Cognome, clienteDto.Email, clienteDto.Telefono, clienteDto.Indirizzo, cancellationToken);
             _logger.LogInformation($"Cliente con ID '{id}' aggiornato correttamente.");
-            return Ok($"Cliente con ID '{id}' aggiornato correttamente!");
+            return new JsonResult(new { messaggio = $"Cliente con ID '{id}' aggiornato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'aggiornamento del cliente con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -109,12 +109,12 @@ public class ClientiController : ControllerBase
         try
         {
             await _business.DeleteClienteAsync(id, cancellationToken);
-            return Ok($"Cliente con ID '{id}' eliminato con successo!");
+            return new JsonResult(new { messaggio = $"Cliente con ID '{id}' eliminato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante l'eliminazione del cliente.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { errore = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

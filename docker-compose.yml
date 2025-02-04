@@ -38,13 +38,14 @@ services:
     ports:
       - '9092:9092'
     healthcheck:
-      test: [ "CMD", "nc", "-z", "localhost", "9092" ] # Usa netcat per verificare la porta
+      test: [ "CMD", "nc", "-z", "localhost", "9092" ]
       interval: 10s
       retries: 5
       start_period: 10s
       timeout: 5s
     depends_on:
       - zookeeper
+      
   inventario:
     build:
       context: ./microservizi/Inventario

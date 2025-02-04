@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using Inventario.Business.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 using Inventario.Shared;
 
 namespace Inventario.Controllers;
@@ -20,11 +20,11 @@ public class ArticoloController : ControllerBase
     public async Task<ActionResult> CreateArticolo(string nome, string descrizione, decimal prezzo, int quantita, string SKU, string categoria, int fk_fornitore, CancellationToken cancellationToken = default)
     {
         await _business.CreateArticoloAsync(nome, descrizione, prezzo, quantita, SKU, categoria, fk_fornitore, cancellationToken);
-        return Ok("Articolo creato correttamente!");
+        return new JsonResult(new { message = "Articolo creato correttamente!" }) { StatusCode = 200 };
     }
 
     [HttpPost(Name = "ModificaPrezzoArticolo")]
-    public async Task<ActionResult> ModificaPrezzoArticolo(int id, [FromBody] int nuovoPrezzo, CancellationToken cancellationToken = default)
+    public async Task<ActionResult> ModificaPrezzoArticolo(int id, [FromBody] decimal nuovoPrezzo, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -34,7 +34,7 @@ public class ArticoloController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la modifica del prezzo");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { message = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -44,27 +44,22 @@ public class ArticoloController : ControllerBase
         if (quantita <= 0)
         {
             _logger.LogWarning("La quantita da scalare deve essere maggiore di zero.");
-            return BadRequest(new { Error = "La quantita da scalare deve essere maggiore di zero." });
+            return new JsonResult(new { Error = "La quantita da scalare deve essere maggiore di zero." }) { StatusCode = 400 };
         }
         try
         {
             var articoloDto = await _business.ScaricaQuantitaAsync(prodottoId, quantita, cancellationToken);
-            return new JsonResult(articoloDto); // Restituisci il DTO dell'articolo aggiornato
-        }
-        catch (KeyNotFoundException ex)
-        {
-            _logger.LogError(ex, $"Errore: prodotto con ID '{prodottoId}' non trovato.");
-            return NotFound(new { Error = $"Prodotto con ID '{prodottoId}' non trovato." });
-        }
-        catch (InvalidOperationException ex)
-        {
-            _logger.LogError(ex, $"Errore durante la scalatura della quantit� per il prodotto con ID '{prodottoId}': {ex.Message}");
-            return BadRequest(new { Error = ex.Message });
+            if (articoloDto == null)
+            {
+                _logger.LogWarning($"Articolo con ID '{prodottoId}' non trovato.");
+                return new JsonResult(new { Error = $"Articolo con ID '{prodottoId}' non trovato." }) { StatusCode = 404 };
+            }
+            return new JsonResult(articoloDto);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Errore durante la scalatura della quantit� per il prodotto con ID '{prodottoId}'.");
-            return StatusCode(500, new { Error = "Errore interno del server." });
+            _logger.LogError(ex, $"Errore durante la scalatura della quantita per il prodotto con ID '{prodottoId}'.");
+            return new JsonResult(new { Error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -72,6 +67,8 @@ public class ArticoloController : ControllerBase
     public async Task<ActionResult<ArticoloDto?>> ReadArticolo(int id)
     {
         var articolo = await _business.ReadArticoloAsync(id);
+        if (articolo == null)
+            return new JsonResult(new { Error = $"Articolo con ID '{id}' non trovato." }) { StatusCode = 404 };
         return new JsonResult(articolo);
     }
 
@@ -79,47 +76,50 @@ public class ArticoloController : ControllerBase
     public async Task<ActionResult<ArticoloDto?>> GetCodiceSku(string codiceSku)
     {
         var articolo = await _business.GetSkuAsync(codiceSku);
-        return new JsonResult(articolo);
+        if (articolo == null)
+            return new JsonResult(new { Error = $"Articolo con il codice '{codiceSku}' non trovato." }) { StatusCode = 404 };
+        return new JsonResult(articolo) { StatusCode = 200 };
     }
 
     [HttpGet(Name = "GetCategoria")]
     public async Task<ActionResult<List<ArticoloDto>>> GetCategoria(string categoria)
     {
         var articoli = await _business.GetCategoriaAsync(categoria);
-        return new JsonResult(articoli);
+        if (articoli.Count() == 0)
+            return new JsonResult(new { Error = $"Articoli con categoria '{categoria}' non trovati." }) { StatusCode = 404 };
+        return new JsonResult(articoli) { StatusCode = 200 };
     }
 
     [HttpGet(Name = "ReadArticoloFornitore")]
     public async Task<ActionResult<List<ArticoloDto>>> ReadArticoloFornitore(int id_fornitore, CancellationToken cancellationToken = default)
     {
         var articoli = await _business.ReadArticoloFornitore(id_fornitore, cancellationToken);
-        return Ok(articoli);
+        if (articoli.Count() == 0)
+            return new JsonResult(new { Error = $"Articoli con fornitore '{id_fornitore}' non trovati." }) { StatusCode = 404 };
+        return new JsonResult(articoli) { StatusCode = 200 };
     }
 
     [HttpGet(Name = "GetAllArticoli")]
     public async Task<ActionResult<List<ArticoloDto>>> GetAllArticoli(CancellationToken cancellationToken = default)
     {
         var articoli = await _business.ReadAllArticoli();
-        return Ok(articoli);
+        return new JsonResult(articoli) { StatusCode = 200 };
     }
 
     [HttpPut(Name = "UpdateArticolo")]
     public async Task<ActionResult> UpdateArticolo(int id, [FromBody] ArticoloDto articoloDto, CancellationToken cancellationToken = default)
     {
         if (articoloDto == null)
-        {
-            return BadRequest("Dati articolo non validi.");
-        }
+            return new JsonResult(new { Error = "Dati articolo non validi." }) { StatusCode = 400 };
         try
         {
             await _business.UpdateArticoloAsync(id, articoloDto.Nome, articoloDto.Descrizione, articoloDto.Prezzo, articoloDto.QuantitaDisponibile, articoloDto.CodiceSKU, articoloDto.Categoria, articoloDto.Fk_fornitore, cancellationToken);
-            return Ok($"Articolo con ID '{id}' aggiornato correttamente!");
+            return new JsonResult(new { Message = $"Articolo con ID '{id}' aggiornato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Errore durante l'aggiornamento dell'articolo: {ex.Message}");
             _logger.LogError(ex, $"Errore durante l'aggiornamento dell'articolo con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { Error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -129,12 +129,12 @@ public class ArticoloController : ControllerBase
         try
         {
             await _business.DeleteArticoloAsync(id);
-            return Ok($"Articolo con ID '{id}' eliminato correttamente!");
+            return new JsonResult(new { Message = $"Articolo con ID '{id}' eliminato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'eliminazione dell'articolo con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { Error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

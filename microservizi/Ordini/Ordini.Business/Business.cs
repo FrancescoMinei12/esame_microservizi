@@ -5,7 +5,9 @@ using Microsoft.Extensions.Logging;
 using Pagamenti.Shared;
 using Inventario.ClientHttp.Abstraction;
 using Pagamenti.ClientHttp.Abstraction;
-using Ordini.Repository.Model;
+using Inventario.Shared;
+using Confluent.Kafka;
+using Inventario.ClientHttp;
 
 namespace Ordini.Business;
 
@@ -21,44 +23,20 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var cliente = await repository.ReadClienteAsync(id, cancellationToken);
         if (cliente == null) return null;
-        return new ClienteDto
-        {
-            Id = cliente.Id,
-            Nome = cliente.Nome,
-            Cognome = cliente.Cognome,
-            Email = cliente.Email,
-            Telefono = cliente.Telefono,
-            Indirizzo = cliente.Indirizzo
-        };
+        return cliente.MapToDto();
     }
     public async Task<ClienteDto?> GetClienteByEmailAsync(string email, CancellationToken cancellationToken = default)
     {
         var cliente = await repository.ReadClienteByEmailAsync(email, cancellationToken);
         if (cliente == null) return null;
-        return new ClienteDto
-        {
-            Id = cliente.Id,
-            Nome = cliente.Nome,
-            Cognome = cliente.Cognome,
-            Email = cliente.Email,
-            Telefono = cliente.Telefono,
-            Indirizzo = cliente.Indirizzo
-        };
+        return cliente.MapToDto();
     }
     public async Task<List<ClienteDto>> GetAllClientiAsync(CancellationToken cancellationToken = default)
     {
         var clienti = await repository.GetAllClientiAsync(cancellationToken);
-        var clientiDto = clienti
-            .Select(c => new ClienteDto
-            {
-                Id = c.Id,
-                Nome = c.Nome,
-                Cognome = c.Cognome,
-                Email = c.Email,
-                Telefono = c.Telefono,
-                Indirizzo = c.Indirizzo
-            }).ToList();
-        return clientiDto;
+        return clienti
+            .Select(c =>c.MapToDto())
+            .ToList();
     }
     public async Task UpdateClienteAsync(int id, string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
     {
@@ -82,13 +60,7 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var ordine = await repository.AggiornaTotaleOrdineAsync(id, nuovoTotale, cancellationToken);
         if (ordine == null) return null;
-        return new OrdineDto
-        {
-            Id = ordine.Id,
-            DataOrdine = ordine.DataOrdine,
-            Totale = ordine.Totale,
-            Fk_cliente = ordine.Fk_cliente
-        };
+        return ordine.MapToDto();
     }
     public async Task CreateOrdineCompletoAsync(int fk_cliente, List<ProdottoQuantita> prodotti, int metodoPagamentoId, CancellationToken cancellationToken = default)
     {
@@ -143,26 +115,14 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var ordine = await repository.ReadOrdineAsync(id, cancellationToken);
         if (ordine == null) return null;
-        return new OrdineDto
-        {
-            Id = ordine.Id,
-            DataOrdine = ordine.DataOrdine,
-            Totale = ordine.Totale,
-            Fk_cliente = ordine.Fk_cliente
-        };
+        return ordine.MapToDto();
     }
     public async Task<List<OrdineDto>> GetAllOrdiniAsync(CancellationToken cancellationToken = default)
     {
         var ordini = await repository.GetAllOrdiniAsync(cancellationToken);
-        var ordiniDto = ordini
-            .Select(o => new OrdineDto
-            {
-                Id = o.Id,
-                DataOrdine = o.DataOrdine,
-                Totale = o.Totale,
-                Fk_cliente = o.Fk_cliente
-            }).ToList();
-        return ordiniDto;
+        return ordini
+            .Select(o => o.MapToDto())
+            .ToList();
     }
     public async Task UpdateOrdineAsync(int id, decimal totale, int fk_cliente, CancellationToken cancellationToken = default)
     {
@@ -185,26 +145,28 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var ordineProdotto = await repository.ReadOrdiniProdottiAsync(id, cancellationToken);
         if (ordineProdotto == null) return null;
-        return new OrdineProdottiDto
-        {
-            Id = ordineProdotto.Id,
-            Quantita = ordineProdotto.Quantita,
-            Fk_ordine = ordineProdotto.Fk_ordine,
-            Fk_prodotto = ordineProdotto.Fk_prodotto
-        };
+        return ordineProdotto.MapToDto();
     }
     public async Task<List<OrdineProdottiDto>> GetProdottiByOrdineAsync(int fk_ordine, CancellationToken cancellationToken = default)
     {
         var prodotti = await repository.GetProdottiByOrdineAsync(fk_ordine, cancellationToken);
-        var prodottiDto = prodotti
-            .Select(p => new OrdineProdottiDto
-            {
-                Id = p.Id,
-                Quantita = p.Quantita,
-                Fk_ordine = p.Fk_ordine,
-                Fk_prodotto = p.Fk_prodotto
-            }).ToList();
-        return prodottiDto;
+        return prodotti
+            .Select(p => p.MapToDto())
+            .ToList();
+    }
+    public async Task<List<ArticoloDto>> GetProdottiDetailsByOrdine(int fk_ordine, CancellationToken cancellationToken = default)
+    {
+        var prodotti = await GetProdottiByOrdineAsync(fk_ordine, cancellationToken);
+        if (prodotti == null || prodotti.Count == 0)
+           throw new Exception($"Nessun prodotto trovato per l'ordine con ID '{fk_ordine}'.");
+        var dettagliProdotti = new List<ArticoloDto>();
+        foreach (var articolo in prodotti)
+        {
+            var dettagliProdotto = await inventarioClientHttp.GetArticoloAsync(articolo.Fk_prodotto, cancellationToken);
+            if (dettagliProdotto != null)
+                dettagliProdotti.Add(dettagliProdotto);
+        }
+        return dettagliProdotti;
     }
     public async Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default)
     {
