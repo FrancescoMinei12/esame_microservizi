@@ -11,8 +11,10 @@ public interface IRepository
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     // Pagamenti
     Task<Pagamento> CreatePagamentoAsync(decimal importo, DateTime dataPagamento, int fk_Ordine, int fk_MetodoPagamento, CancellationToken cancellationToken = default);
+    Task<Pagamento?> AggiornaTotalePagamentoAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default);
     Task<Pagamento?> ReadPagamentoAsync(int id, CancellationToken cancellationToken = default);
     Task<List<Pagamento>> GetAllPagamentiAsync(CancellationToken cancellationToken = default);
+    Task<Pagamento?> GetPagamentoByOrdine(int idOrdine, CancellationToken cancellationToken = default);
     Task UpdatePagamentoAsync(int id, decimal importo, DateTime dataPagamento, int fk_Ordine, int fk_MetodoPagamento, CancellationToken cancellationToken = default);
     Task DeletePagamentoAsync(int id, CancellationToken cancellationToken = default);
 

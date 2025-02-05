@@ -60,7 +60,7 @@ public class OrdiniEventConsumer : IOrdiniEventConsumer
                     continue;
                 }
                 _logger.LogInformation($"ArticoloId: {articoloEvent.ArticoloId}, NuovoPrezzo: {articoloEvent.NuovoPrezzo}");
-                await _ordineService.RicalcolaTotaleOrdiniAsync(articoloEvent.ArticoloId, articoloEvent.NuovoPrezzo, cancellationToken);
+                await _ordineService.RicalcolaTotaleOrdiniAsync(articoloEvent.ArticoloId, cancellationToken);
                 _consumer.Commit(consumeResult);
             }
             catch (ConsumeException e)

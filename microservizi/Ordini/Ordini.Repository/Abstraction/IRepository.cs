@@ -28,4 +28,7 @@ public interface IRepository
     Task<List<OrdineProdotti>> GetProdottiByOrdineAsync(int fk_ordine, CancellationToken cancellationToken = default);
     Task UpdateOrdineProdottoAsync(int id, int quantita, int fk_ordine, int fk_prodotto, CancellationToken cancellationToken = default);
     Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default);
+
+    // TransactionalOutbox
+    Task AddTransactionalOutboxAsync(string message, CancellationToken cancellationToken = default);
 }

@@ -31,8 +31,10 @@ builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IBusiness, Business>();
 builder.Services.AddScoped<IOrdiniEventConsumer, OrdiniEventConsumer>();
 builder.Services.AddScoped<IOrdineService, OrdineService>();
+builder.Services.AddScoped<IOutboxProcessor, OutboxProcessor>();
 
 builder.Services.AddHostedService<OrdiniConsumerBackgroundService>();
+builder.Services.AddHostedService<OrdiniProducerBackgroundService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

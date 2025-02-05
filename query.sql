@@ -112,6 +112,13 @@ CREATE TABLE OrdiniProdotti (
     CONSTRAINT FK_Ordine FOREIGN KEY (Fk_ordine) REFERENCES Ordini(Id), -- Definizione della chiave esterna per Ordini
 );
 
+CREATE TABLE TransactionalOutbox (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Message NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+    Processed BIT NOT NULL DEFAULT 0
+);
+
 -- Inserimento dati nella tabella Clienti
 INSERT INTO Clienti (Nome, Cognome, Email, Telefono, Indirizzo)
 VALUES

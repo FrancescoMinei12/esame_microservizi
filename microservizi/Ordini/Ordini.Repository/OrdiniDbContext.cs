@@ -18,6 +18,7 @@ public class OrdiniDbContext(DbContextOptions<OrdiniDbContext> dbContextOptions)
             cliente.Property(e => e.Telefono).HasMaxLength(15);
             cliente.Property(e => e.Indirizzo).HasMaxLength(255);
         });
+
         modelBuilder.Entity<Ordine>(ordine =>
         {
             ordine.ToTable("Ordini");
@@ -31,6 +32,7 @@ public class OrdiniDbContext(DbContextOptions<OrdiniDbContext> dbContextOptions)
                   .HasForeignKey(o => o.Fk_cliente)
                   .OnDelete(DeleteBehavior.Cascade);
         });
+
         modelBuilder.Entity<OrdineProdotti>(ordiniProdotti =>
         {
             ordiniProdotti.ToTable("OrdiniProdotti");
@@ -45,8 +47,19 @@ public class OrdiniDbContext(DbContextOptions<OrdiniDbContext> dbContextOptions)
                           .HasForeignKey(op => op.Fk_ordine)
                           .OnDelete(DeleteBehavior.Cascade);
         });
+
+        modelBuilder.Entity<TransactionalOutbox>(outbox =>
+        {
+            outbox.ToTable("TransactionalOutbox");
+            outbox.HasKey(x => x.Id);
+            outbox.Property(e => e.Id).ValueGeneratedOnAdd();
+            outbox.Property(e => e.Message).IsRequired().HasColumnType("TEXT");
+            outbox.Property(e => e.CreatedAt).IsRequired().HasDefaultValueSql("GETUTCDATE()");
+            outbox.Property(e => e.Processed).IsRequired().HasDefaultValue(false);
+        });
     }
     public DbSet<Cliente> Clienti { get; set; }
     public DbSet<Ordine> Ordini { get; set; }
     public DbSet<OrdineProdotti> OrdineProdotti { get; set; }
+    public DbSet<TransactionalOutbox> TransactionalOutbox { get; set; }
 }

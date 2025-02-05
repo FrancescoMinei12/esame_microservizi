@@ -4,6 +4,7 @@ using Pagamenti.Shared;
 using Ordini.ClientHttp;
 using Microsoft.Extensions.Logging;
 using Ordini.ClientHttp.Abstraction;
+using Pagamenti.Repository.Model;
 
 namespace Pagamenti.Controllers;
 [ApiController]
@@ -28,21 +29,16 @@ public class PagamentiController : ControllerBase
         {
             if (pagamentoDto == null)
             {
-                return BadRequest("I dati del pagamento non possono essere null.");
+                return new JsonResult(new { error = "I dati del pagamento non possono essere null." }) { StatusCode = 400 };
             }
             await _business.CreatePagamentoAsync(pagamentoDto.Importo, pagamentoDto.DataPagamento, pagamentoDto.Fk_Ordine, pagamentoDto.Fk_MetodoPagamento, cancellationToken);
             _logger.LogInformation("Pagamento creato con successo!");
             return new JsonResult(new { message = "Pagamento creato con successo!" }) { StatusCode = 200 };
         }
-        catch (ArgumentException ex)
-        {
-            _logger.LogWarning(ex, "Dati non validi per la creazione del pagamento.");
-            return BadRequest(ex.Message);
-        }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione del pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -53,14 +49,13 @@ public class PagamentiController : ControllerBase
         {
             var pagamento = await _business.GetPagamentoByIdAsync(id, cancellationToken);
             if (pagamento == null)
-                return NotFound($"Pagamento con ID '{id}' non trovato.");
-
-            return Ok(pagamento);
+                return new JsonResult(new { error = $"Pagamento con ID '{id}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(pagamento) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero del pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -71,14 +66,13 @@ public class PagamentiController : ControllerBase
         {
             var pagamenti = await _business.GetAllPagamentiAsync(cancellationToken);
             if (pagamenti == null || pagamenti.Count == 0)
-                return NotFound("Nessun pagamento trovato.");
-
-            return Ok(pagamenti);
+                return new JsonResult(new { error = "Nessun pagamento trovato." }) { StatusCode = 404 };
+            return new JsonResult(pagamenti) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dei pagamenti.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -89,14 +83,12 @@ public class PagamentiController : ControllerBase
         {
             var ordini = await _ordiniClientHttp.GetAllOrdiniAsync(cancellationToken);
             if (ordini == null || !ordini.Any())
-            {
-                return NotFound("Nessun ordine trovato.");
-            }
-            return Ok(ordini);
+                return new JsonResult(new { error = "Nessun ordine trovato." }) { StatusCode = 404 };
+            return new JsonResult(ordini) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
-            return StatusCode(500, $"Errore durante il recupero degli ordini: {ex.Message}");
+            return new JsonResult(new { error = $"Errore durante il recupero degli ordini: {ex.Message}" }) { StatusCode = 500 };
         }
     }
 
@@ -107,16 +99,16 @@ public class PagamentiController : ControllerBase
         {
             var pagamento = await _business.GetPagamentoByIdAsync(id, cancellationToken);
             if (pagamento == null)
-                return NotFound($"Pagamento con ID '{id}' non trovato.");
+                return new JsonResult(new { error = $"Pagamento con ID '{id}' non trovato." }) { StatusCode = 404 };
             var ordine = await _ordiniClientHttp.GetOrdineByIdAsync(pagamento.Fk_Ordine, cancellationToken);
             if (ordine == null)
-                return NotFound($"Ordine con ID '{pagamento.Fk_Ordine}' non trovato.");
-            return Ok(new { Pagamento = pagamento, Ordine = ordine });
+                return new JsonResult(new { error = $"Ordine con ID '{pagamento.Fk_Ordine}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(new { Pagamento = pagamento, Ordine = ordine }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dei dettagli del pagamento e dell'ordine.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -134,12 +126,12 @@ public class PagamentiController : ControllerBase
                 cancellationToken
             );
             _logger.LogInformation($"Pagamento con ID '{id}' aggiornato correttamente.");
-            return Ok($"Pagamento con ID '{id}' aggiornato correttamente!");
+            return new JsonResult(new { message = $"Pagamento con ID '{id}' aggiornato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'aggiornamento del pagamento con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -150,12 +142,12 @@ public class PagamentiController : ControllerBase
         try
         {
             await _business.DeletePagamentoAsync(id, cancellationToken);
-            return Ok($"Pagamento con ID '{id}' eliminato con successo!");
+            return new JsonResult(new { message = $"Pagamento con ID '{id}' eliminato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante l'eliminazione del pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

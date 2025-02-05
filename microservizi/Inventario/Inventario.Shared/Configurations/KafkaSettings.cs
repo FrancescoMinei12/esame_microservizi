@@ -7,5 +7,4 @@ public class KafkaSettings
     public int BatchSize { get; set; }
     public int PollIntervalSeconds { get; set; }
     public bool AllowAutoCreateTopic { get; set; } = false; 
-
 }

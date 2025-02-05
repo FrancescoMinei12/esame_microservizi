@@ -24,19 +24,10 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
         await ordiniDbContext.Clienti.AddAsync(cliente);
         return cliente;
     }
-    public async Task<Ordine?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
-    {
-        Ordine? ordine = await ordiniDbContext.Ordini.SingleOrDefaultAsync(o => o.Id == id, cancellationToken);
-        if (ordine == null)
-        {
-            throw new ArgumentException("Ordine non trovato.", nameof(id));
-        }
-        ordine.Totale = nuovoTotale;
-        return ordine;
-    }
+
     public async Task<List<Ordine>> GetOrdiniByArticoloIdAsync(int IdArticolo, CancellationToken cancellationToken = default)
     {
-        return await ordiniDbContext.Ordini.Where(o => o.Fk_cliente == IdArticolo).ToListAsync(cancellationToken);
+        return await ordiniDbContext.Ordini.Where(o => o.OrdiniProdotti.Any(op => op.Fk_prodotto == IdArticolo)).ToListAsync();
     }
     public async Task<Cliente?> ReadClienteAsync(int id, CancellationToken cancellationToken = default)
     {
@@ -65,6 +56,7 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
         cliente.Email = email;
         cliente.Telefono = telefono;
         cliente.Indirizzo = indirizzo;
+        ordiniDbContext.Clienti.Update(cliente);
     }
     public async Task DeleteClienteAsync(int id, CancellationToken cancellationToken = default)
     {
@@ -86,6 +78,17 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
         await ordiniDbContext.Ordini.AddAsync(ordine, cancellationToken);
         return ordine;
     }
+    public async Task<Ordine?> AggiornaTotaleOrdineAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
+    {
+        Ordine? ordine = await ordiniDbContext.Ordini.SingleOrDefaultAsync(o => o.Id == id, cancellationToken);
+        if (ordine == null)
+        {
+            throw new ArgumentException("Ordine non trovato.", nameof(id));
+        }
+        ordine.Totale = nuovoTotale;
+        ordiniDbContext.Ordini.Update(ordine);
+        return ordine;
+    }
     public async Task<Ordine?> ReadOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
         return await ordiniDbContext.Ordini
@@ -105,6 +108,7 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
             return;
         ordine.Totale = totale;
         ordine.Fk_cliente = fk_cliente;
+        ordiniDbContext.Ordini.Update(ordine);
     }
     public async Task DeleteOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
@@ -147,6 +151,7 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
         ordineProdotti.Quantita = quantita;
         ordineProdotti.Fk_ordine = fk_ordine;
         ordineProdotti.Fk_prodotto = fk_prodotto;
+        ordiniDbContext.OrdineProdotti.Update(ordineProdotti);
     }
     public async Task RemoveProdottoFromOrdineAsync(int id, CancellationToken cancellationToken = default)
     {
@@ -156,5 +161,16 @@ public class Repository(OrdiniDbContext ordiniDbContext) : IRepository
             throw new ArgumentException("OrdineProdotti non trovato.", nameof(id));
         }
         ordiniDbContext.OrdineProdotti.Remove(ordineProdotti);
+    }
+
+    // transactionalOutbox
+    public async Task AddTransactionalOutboxAsync(string message, CancellationToken cancellationToken = default)
+    {
+        await ordiniDbContext.TransactionalOutbox.AddAsync(new TransactionalOutbox
+        {
+            Message = message,
+            CreatedAt = DateTime.UtcNow,
+            Processed = false
+        });
     }
 }

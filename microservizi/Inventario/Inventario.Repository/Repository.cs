@@ -29,12 +29,15 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         return articolo;
     }
 
-    public async Task<Articolo?> ModificaPrezzoArticoloAsync(int id, decimal nuovoPrezzo, CancellationToken cancellationToken = default)
+    public async Task<Articolo?> ModificaPrezzoArticoloAsync(int articoloId, decimal nuovoPrezzo, CancellationToken cancellationToken = default)
     {
-        if (nuovoPrezzo <= 0) return null;
-        Articolo? articolo = await ReadArticoloAsync(id, cancellationToken);
-        if (articolo == null) return null;
+        if (nuovoPrezzo <= 0) 
+            return null;
+        Articolo? articolo = await ReadArticoloAsync(articoloId, cancellationToken);
+        if (articolo == null) 
+            return null;
         articolo.Prezzo = nuovoPrezzo;
+        inventarioDbContext.Articoli.Update(articolo);
 
         var message = JsonSerializer.Serialize(new
         {
@@ -57,6 +60,18 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
 
         return articolo;
     }
+    public async Task<Articolo?> ScaricaQuantitaAsync(int articoloId, int quantita, CancellationToken cancellationToken = default)
+    {
+        if (quantita <= 0)
+            return null;
+        Articolo? articolo = await ReadArticoloAsync(articoloId, cancellationToken);
+        if (articolo == null)
+            return null;
+        articolo.QuantitaDisponibile = quantita;
+        inventarioDbContext.Articoli.Update(articolo);
+        return articolo;
+    }
+
     public async Task<Articolo?> ReadArticoloAsync(int id, CancellationToken cancellationToken)
     {
         return await inventarioDbContext.Articoli
@@ -103,6 +118,7 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         articolo.CodiceSKU = codiceSKU;
         articolo.Categoria = categoria;
         articolo.Fk_fornitore = fk_fornitore;
+        inventarioDbContext.Articoli.Update(articolo);
     }
 
     public async Task DeleteArticoloAsync(int id, CancellationToken cancellationToken)
@@ -148,6 +164,7 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         fornitore.Indirizzo = indirizzo;
         fornitore.Telefono = telefono;
         fornitore.Email = email;
+        inventarioDbContext.Fornitori.Update(fornitore);
     }
 
     public async Task DeleteFornitoreAsync(int id, CancellationToken cancellationToken = default)

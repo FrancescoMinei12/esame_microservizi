@@ -6,11 +6,8 @@ using Pagamenti.Shared;
 using Inventario.ClientHttp.Abstraction;
 using Pagamenti.ClientHttp.Abstraction;
 using Inventario.Shared;
-using Confluent.Kafka;
-using Inventario.ClientHttp;
 
 namespace Ordini.Business;
-
 public class Business(IRepository repository, ILogger<Business> logger, IInventarioClientHttp inventarioClientHttp, IClientHttp pagamentiClientHttp) : IBusiness
 {
     // Clienti

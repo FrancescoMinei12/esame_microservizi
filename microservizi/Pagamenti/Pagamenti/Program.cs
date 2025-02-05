@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Ordini.ClientHttp;
 using Ordini.ClientHttp.DependencyInjection;
 using Ordini.ClientHttp.Abstraction;
+using Pagamenti.Business.Services;
+using Pagamenti.BackgroundServices;
+using Pagamenti.Shared.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
@@ -15,18 +18,19 @@ builder.WebHost.ConfigureKestrel(options =>
 
 // Add services to the container.
 
-IConfigurationSection confSection = builder.Configuration.GetSection(OrdiniClientOptions.SectionName);
-OrdiniClientOptions options = confSection.Get<OrdiniClientOptions>() ?? new();
-builder.Services.AddHttpClient<IOrdiniClientHttp, OrdiniClientHttp>(client =>
-{
-    client.BaseAddress = new Uri("http://ordini:5000");
-});
+builder.Services.AddOrdiniClient(builder.Configuration);
 
 string connectionString = "Server=mssql-server;Database=Pagamenti;User Id=sa;Password=p4ssw0rD;Encrypt=False";
 builder.Services.AddDbContext<PagamentiDbContext>(p => p.UseSqlServer(connectionString));
+builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("Kafka"));
+
 
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IBusiness, Business>();
+builder.Services.AddScoped<IPagamentiEventConsumer, PagamentiEventConsumer>();
+builder.Services.AddScoped<IPagamentiService, PagamentiService>();
+
+builder.Services.AddHostedService<PagamentiConsumerBackgroundService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

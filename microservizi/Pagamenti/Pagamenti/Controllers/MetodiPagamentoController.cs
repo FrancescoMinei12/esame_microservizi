@@ -22,12 +22,12 @@ public class MetodiPagamentoController : ControllerBase
         try
         {
             await _business.CreateMetodoPagamentoAsync(nome, cancellationToken);
-            return Ok("Metodo di pagamento creato con successo!");
+            return new JsonResult(new { message = "Metodo di pagamento creato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante la creazione del metodo di pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -38,14 +38,13 @@ public class MetodiPagamentoController : ControllerBase
         {
             var metodoPagamento = await _business.GetMetodoPagamentoByIdAsync(id, cancellationToken);
             if (metodoPagamento == null)
-                return NotFound($"Metodo di pagamento con ID '{id}' non trovato.");
-
-            return Ok(metodoPagamento);
+                return new JsonResult(new { error = $"Metodo di pagamento con ID '{id}' non trovato." }) { StatusCode = 404 };
+            return new JsonResult(metodoPagamento) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero del metodo di pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -56,14 +55,13 @@ public class MetodiPagamentoController : ControllerBase
         {
             var metodiPagamento = await _business.GetAllMetodiPagamentoAsync(cancellationToken);
             if (metodiPagamento == null || metodiPagamento.Count == 0)
-                return NotFound("Nessun metodo di pagamento trovato.");
-
-            return Ok(metodiPagamento);
+                return new JsonResult(new { error = "Nessun metodo di pagamento trovato." }) { StatusCode = 404 };
+            return new JsonResult(metodiPagamento) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante il recupero dei metodi di pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -74,12 +72,12 @@ public class MetodiPagamentoController : ControllerBase
         {
             await _business.UpdateMetodoPagamentoAsync(id, metodoPagamentoDto.Nome, cancellationToken);
             _logger.LogInformation($"Metodo di pagamento con ID '{id}' aggiornato correttamente.");
-            return Ok($"Metodo di pagamento con ID '{id}' aggiornato correttamente!");
+            return new JsonResult(new { message = $"Metodo di pagamento con ID '{id}' aggiornato correttamente!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Errore durante l'aggiornamento del metodo di pagamento con ID '{id}'.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 
@@ -89,12 +87,12 @@ public class MetodiPagamentoController : ControllerBase
         try
         {
             await _business.DeleteMetodoPagamentoAsync(id, cancellationToken);
-            return Ok($"Metodo di pagamento con ID '{id}' eliminato con successo!");
+            return new JsonResult(new { message = $"Metodo di pagamento con ID '{id}' eliminato con successo!" }) { StatusCode = 200 };
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Errore durante l'eliminazione del metodo di pagamento.");
-            return StatusCode(500, "Errore interno del server.");
+            return new JsonResult(new { error = "Errore interno del server." }) { StatusCode = 500 };
         }
     }
 }

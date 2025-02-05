@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "z3lyKhF+ews=",
+  "dgSpecHash": "/9Mg9IuC4zM=",
   "success": true,
   "projectFilePath": "C:\\mega_sync\\UniPR\\3\\microservizi\\esame_microservizi\\microservizi\\Pagamenti\\Pagamenti.Shared\\Pagamenti.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Francesco\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

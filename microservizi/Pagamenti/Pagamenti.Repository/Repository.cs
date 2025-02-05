@@ -22,9 +22,22 @@ public class Repository(PagamentiDbContext pagamentoDbContext) : IRepository
         await pagamentoDbContext.Pagamenti.AddAsync(pagamento, cancellationToken);
         return pagamento;
     }
+    public async Task<Pagamento?> AggiornaTotalePagamentoAsync(int id, decimal nuovoTotale, CancellationToken cancellationToken = default)
+    {
+        var pagamento = await ReadPagamentoAsync(id, cancellationToken);
+        if (pagamento == null)
+            return null;
+        pagamento.Importo = nuovoTotale;
+        pagamentoDbContext.Pagamenti.Update(pagamento);
+        return pagamento;
+    }
     public async Task<Pagamento?> ReadPagamentoAsync(int id, CancellationToken cancellationToken = default)
     {
         return await pagamentoDbContext.Pagamenti.AsNoTracking().SingleOrDefaultAsync(p => p.Id == id, cancellationToken);
+    }
+    public async Task<Pagamento?> GetPagamentoByOrdine(int idOrdine, CancellationToken cancellationToken = default)
+    {
+        return await pagamentoDbContext.Pagamenti.AsNoTracking().SingleOrDefaultAsync(p => p.Fk_Ordine == idOrdine);
     }
     public async Task<List<Pagamento>> GetAllPagamentiAsync(CancellationToken cancellationToken = default)
     {
@@ -41,10 +54,11 @@ public class Repository(PagamentiDbContext pagamentoDbContext) : IRepository
         pagamento.DataPagamento = dataPagamento;
         pagamento.Fk_Ordine = fk_Ordine;
         pagamento.Fk_MetodoPagamento = fk_MetodoPagamento;
+        pagamentoDbContext.Pagamenti.Update(pagamento);
     }
     public async Task DeletePagamentoAsync(int id, CancellationToken cancellationToken = default)
     {
-        Pagamento? pagamento = await ReadPagamentoAsync(id, cancellationToken);
+        Pagamento? pagamento = await pagamentoDbContext.Pagamenti.SingleOrDefaultAsync(p => p.Id == id, cancellationToken);
         if (pagamento == null)
         {
             throw new ArgumentException("Pagamento non trovato");
@@ -78,10 +92,11 @@ public class Repository(PagamentiDbContext pagamentoDbContext) : IRepository
             throw new ArgumentException("Metodo di pagamento non trovato");
         }
         metodoPagamento.Nome = nome;
+        pagamentoDbContext.MetodiPagamento.Update(metodoPagamento);
     }
     public async Task DeleteMetodoPagamentoAsync(int id, CancellationToken cancellationToken = default)
     {
-        MetodoPagamento? metodoPagamento = await ReadMetodoPagamentoAsync(id,cancellationToken);
+        MetodoPagamento? metodoPagamento = await ReadMetodoPagamentoAsync(id, cancellationToken);
         if (metodoPagamento == null)
         {
             throw new ArgumentException("Metodo di pagamento non trovato");

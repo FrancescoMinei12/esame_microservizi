@@ -28,7 +28,7 @@ public class OrdiniConsumerBackgroundService : BackgroundService
             {
                 using var adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers =  _kafkaSettings.BootstrapServers}).Build();
                 _logger.LogInformation("Kafka è pronto!");
-                return; // Kafka è pronto, esci dal loop
+                return;
             }
             catch (Exception ex)
             {
