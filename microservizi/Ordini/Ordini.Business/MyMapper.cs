@@ -4,7 +4,7 @@ using Ordini.Shared;
 namespace Ordini.Business;
 public static class MyMapper
 {
-    public static ClienteDto MapToDto(this Cliente cliente) =>new()
+    public static ClienteDto MapToDto(this Cliente cliente) => new()
     {
         Id = cliente.Id,
         Nome = cliente.Nome,
