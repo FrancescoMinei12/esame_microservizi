@@ -67,7 +67,7 @@ public class Repository(InventarioDbContext inventarioDbContext) : IRepository
         Articolo? articolo = await ReadArticoloAsync(articoloId, cancellationToken);
         if (articolo == null)
             return null;
-        articolo.QuantitaDisponibile = quantita;
+        articolo.QuantitaDisponibile -= quantita;
         inventarioDbContext.Articoli.Update(articolo);
         return articolo;
     }

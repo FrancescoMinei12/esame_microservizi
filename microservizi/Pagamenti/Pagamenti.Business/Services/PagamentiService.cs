@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Pagamenti.Business.Abstractions;
 using Pagamenti.Repository.Abstraction;
-using Pagamenti.Repository.Model;
 
 namespace Pagamenti.Business.Services;
 public class PagamentiService : IPagamentiService

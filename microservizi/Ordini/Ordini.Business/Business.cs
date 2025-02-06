@@ -32,7 +32,7 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var clienti = await repository.GetAllClientiAsync(cancellationToken);
         return clienti
-            .Select(c =>c.MapToDto())
+            .Select(c => c.MapToDto())
             .ToList();
     }
     public async Task UpdateClienteAsync(int id, string nome, string cognome, string email, string telefono, string indirizzo, CancellationToken cancellationToken = default)
@@ -75,6 +75,7 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
                 }
                 logger.LogInformation($"Articolo recuperato: {articolo.Nome}, Prezzo: {articolo.Prezzo}, Quantità disponibile: {articolo.QuantitaDisponibile}");
                 totale += articolo.Prezzo * prodotto.Quantita;
+                logger.LogInformation($"Totale parziale: {totale}");
             }
 
             logger.LogInformation($"Totale ordine calcolato: {totale}");
@@ -84,7 +85,8 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
             logger.LogInformation($"Ordine creato con ID {ordine.Id}");
             foreach (var prodotto in prodotti)
             {
-                await repository.AddProdottoToOrdineAsync(ordine.Id, prodotto.ProdottoId, prodotto.Quantita, cancellationToken);
+                logger.LogInformation($"Aggiunta prodotto {prodotto.ProdottoId} all'ordine {ordine.Id} con quantita: {prodotto.Quantita}.");
+                await repository.AddProdottoToOrdineAsync(prodotto.Quantita, ordine.Id, prodotto.ProdottoId, cancellationToken);
                 await inventarioClientHttp.ScaricaQuantitaAsync(prodotto.ProdottoId, prodotto.Quantita, cancellationToken);
             }
             await repository.SaveChangesAsync(cancellationToken);
@@ -155,7 +157,7 @@ public class Business(IRepository repository, ILogger<Business> logger, IInventa
     {
         var prodotti = await GetProdottiByOrdineAsync(fk_ordine, cancellationToken);
         if (prodotti == null || prodotti.Count == 0)
-           throw new Exception($"Nessun prodotto trovato per l'ordine con ID '{fk_ordine}'.");
+            throw new Exception($"Nessun prodotto trovato per l'ordine con ID '{fk_ordine}'.");
         var dettagliProdotti = new List<ArticoloDto>();
         foreach (var articolo in prodotti)
         {

@@ -32,8 +32,8 @@ public class OrdineService : IOrdineService
                 OrdineId = ordine.Id,
                 NuovoTotale = nuovoTotale
             }), cancellationToken);
+            await _repository.SaveChangesAsync(cancellationToken);
         }
-        await _repository.SaveChangesAsync(cancellationToken);
         _logger.LogInformation("Totale ordini aggiornato con successo.");
     }
     private async Task<decimal> CalcolaTotale(int ordineId, CancellationToken cancellationToken)
